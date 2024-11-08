@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 07 Nov 2024 08:52:00 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年11月7日16点43分&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 08 Nov 2024 05:32:13 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>设置 TC 为系统默认的资源管理器</title><link>https://Carolynhomes.github.io/Carolynhomes/post/she-zhi-%20TC%20-wei-xi-tong-mo-ren-de-zi-yuan-guan-li-qi.html</link><description>&gt; 亲测生效&#13;
+1. 打开注册表：Win+R → regedit&#13;
+&#13;
+2. 定位 HKEY_CLASSES_ROOT\Directory\shell，修改 shell 默认值为 TC&#13;
+&#13;
+3. 在 shell 下新建一个子项 TC&#13;
+&#13;
+4. 在 TC 下继续新建一个子项 Command，修改默认值为：&#13;
+`'C:\TotalCommander\TOTALCMD64.EXE' '/R=%1'`&#13;
+（第一个引号内的加重字体代表 TC 的安装路径，以个人电脑为准）。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/she-zhi-%20TC%20-wei-xi-tong-mo-ren-de-zi-yuan-guan-li-qi.html</guid><pubDate>Fri, 08 Nov 2024 05:31:45 +0000</pubDate></item><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年11月7日16点43分&#13;
 主站点降智问题目前已经解决，目前不需要传图或者其他操作即可正常使用，待后续持续观察&#13;
 &gt; 防降智通道转为备用节点，数据与主站点同步，当主站点不可用时，可尝试使用备用节点&#13;
 &#13;
