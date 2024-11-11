@@ -41,7 +41,7 @@ e = a[-3:]
 print('e = ', e)
 ```
 # 基本算法
-# 4. 阶乘和
+## 4. 阶乘和
 
 ```python
 n = int(input())
@@ -60,7 +60,7 @@ print(res)
 
 ```
 
-# 5. 素数
+## 5. 素数
 
 `输出L~R中的所有素数`
 
@@ -80,7 +80,7 @@ for i in range(L, R+1):
         print(i)
 ```
 
-# 6. 打印菱形
+## 6. 打印菱形
 
 ```python
 # 改变的只有循环条件
@@ -105,7 +105,7 @@ for i in range(n-1, 0, -1):
 
 ```
 
-# 7. 一个数的所有因子
+## 7. 一个数的所有因子
 
 ```python
 # 遍历1——n的平方根
@@ -126,7 +126,7 @@ def find_factors(n):
     return factors
 ```
 
-# 8. 最大公因数
+## 8. 最大公因数
 
 ```python
 m = int(input())
@@ -196,7 +196,7 @@ e = a[-3:]
 print('e = ', e)
 ```
 # 基本算法
-# 4. 阶乘和
+## 4. 阶乘和
 
 ```python
 n = int(input())
@@ -215,7 +215,7 @@ print(res)
 
 ```
 
-# 5. 素数
+## 5. 素数
 
 `输出L~R中的所有素数`
 
@@ -235,7 +235,7 @@ for i in range(L, R+1):
         print(i)
 ```
 
-# 6. 打印菱形
+## 6. 打印菱形
 
 ```python
 # 改变的只有循环条件
@@ -260,7 +260,7 @@ for i in range(n-1, 0, -1):
 
 ```
 
-# 7. 一个数的所有因子
+## 7. 一个数的所有因子
 
 ```python
 # 遍历1——n的平方根
@@ -281,7 +281,7 @@ def find_factors(n):
     return factors
 ```
 
-# 8. 最大公因数
+## 8. 最大公因数
 
 ```python
 m = int(input())
@@ -415,7 +415,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">e</span> <span class="pl-c1">=</span> <span class="pl-s1">a</span>[<span class="pl-c1">-</span><span class="pl-c1">3</span>:]
 <span class="pl-en">print</span>(<span class="pl-s">"e = "</span>, <span class="pl-s1">e</span>)</pre></div>
 <h1>基本算法</h1>
-<h1>4. 阶乘和</h1>
+<h2>4. 阶乘和</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-s1">res</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 
@@ -429,7 +429,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-s1">res</span> <span class="pl-c1">+=</span> <span class="pl-s1">now_res</span>
 
 <span class="pl-en">print</span>(<span class="pl-s1">res</span>)</pre></div>
-<h1>5. 素数</h1>
+<h2>5. 素数</h2>
 <p><code class="notranslate">输出L~R中的所有素数</code></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 一个比较基础的筛选素数的方法</span>
 <span class="pl-v">L</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
@@ -444,7 +444,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     
     <span class="pl-k">if</span> <span class="pl-s1">ok</span> <span class="pl-c1">and</span> <span class="pl-s1">i</span> <span class="pl-c1">!=</span> <span class="pl-c1">1</span>:
         <span class="pl-en">print</span>(<span class="pl-s1">i</span>)</pre></div>
-<h1>6. 打印菱形</h1>
+<h2>6. 打印菱形</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 改变的只有循环条件</span>
 <span class="pl-c"># 其余都不改变</span>
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
@@ -464,7 +464,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">for</span> <span class="pl-s1">j</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">2</span><span class="pl-c1">*</span><span class="pl-s1">i</span><span class="pl-c1">-</span><span class="pl-c1">1</span>):
         <span class="pl-en">print</span>(<span class="pl-s">"*"</span>, <span class="pl-s1">end</span><span class="pl-c1">=</span><span class="pl-s">''</span>)
     <span class="pl-en">print</span>()</pre></div>
-<h1>7. 一个数的所有因子</h1>
+<h2>7. 一个数的所有因子</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 遍历1——n的平方根</span>
 <span class="pl-c"># 因为大于平方根的因子才可以通过除法求得</span>
 <span class="pl-c"># 这样可以缩小一半的长度</span>
@@ -481,7 +481,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-s1">factors</span>.<span class="pl-en">remove</span>(<span class="pl-s1">n</span>)  <span class="pl-c"># 去掉自身</span>
     <span class="pl-s1">factors</span>.<span class="pl-en">sort</span>()  <span class="pl-c"># 升序排列</span>
     <span class="pl-k">return</span> <span class="pl-s1">factors</span></pre></div>
-<h1>8. 最大公因数</h1>
+<h2>8. 最大公因数</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">m</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 
