@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 13 Nov 2024 16:17:23 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>学习算法第四天</title><link>https://Carolynhomes.github.io/Carolynhomes/post/xue-xi-suan-fa-di-si-tian.html</link><description># 12. math库&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 14 Nov 2024 04:23:38 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>vue在vscode中运行</title><link>https://Carolynhomes.github.io/Carolynhomes/post/vue-zai-vscode-zhong-yun-xing.html</link><description>- 首先使用vscode打开vue文件&#13;
+- 然后，打开终端 ，快捷键：**ctrl  + `**&#13;
+- 然后查看是否安装 Node.js 和 npm&#13;
+&gt; node -v&#13;
+&gt; npm -v&#13;
+- 然后安装项目依赖&#13;
+&#13;
+在 VS Code 中打开你的 Vue 项目目录（即包含 package.json 的目录），然后执行`npm install`，这回执行package.json中的全部依赖&#13;
+- 然后启动项目&#13;
+&gt; npm run dev。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/vue-zai-vscode-zhong-yun-xing.html</guid><pubDate>Thu, 14 Nov 2024 04:23:15 +0000</pubDate></item><item><title>学习算法第四天</title><link>https://Carolynhomes.github.io/Carolynhomes/post/xue-xi-suan-fa-di-si-tian.html</link><description># 12. math库&#13;
 &#13;
 | 常量     | 描述                                                         |&#13;
 | -------- | ------------------------------------------------------------ |&#13;
