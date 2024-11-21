@@ -1,6 +1,6 @@
 # 2024年11月20日11点49分
 界面进行了改版，帐号是之前那个码，密码：1-6
-而且可以自己注册，续费等等，链接贴一下：[点击跳转，邀请链接](https://nbai.site/list/#/register?inviter=null) 
+而且可以自己注册，续费等等，链接贴一下：[点击跳转，邀请链接](https://nbai.site/list/#/register?inviter=S85SL3) 
 
 现在官网的链接是下面图片这样，我现在的套餐还能3个月，之后就可能换成这些套餐了。。。。怎么办怎么办~(￣▽￣)~：
 ![image](https://github.com/user-attachments/assets/adeda897-fad3-4913-b08c-14a014a6da47)
