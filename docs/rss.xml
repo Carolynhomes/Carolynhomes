@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 25 Nov 2024 12:59:02 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>双指针</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-zhi-zhen.html</link><description>双指针：在区间操作时，利用两个下标同时遍历，进行高效操作&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 26 Nov 2024 06:48:12 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>代码粘贴</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dai-ma-zhan-tie.html</link><description>没挂梯子的时候：https://www.codepaste.cn/#/&#13;
+挂梯子的时候：https://paste.org.cn/&#13;
+&gt; [!tip]&#13;
+&gt; 下面这个证书过期了，可能会报不安全，无碍~&#13;
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/dai-ma-zhan-tie.html</guid><pubDate>Tue, 26 Nov 2024 06:47:44 +0000</pubDate></item><item><title>双指针</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-zhi-zhen.html</link><description>双指针：在区间操作时，利用两个下标同时遍历，进行高效操作&#13;
 &#13;
 `双指针利用性质可以把O(n²)时间降低到O(n)`&#13;
 &#13;
