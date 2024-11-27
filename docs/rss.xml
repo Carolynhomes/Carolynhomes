@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 26 Nov 2024 13:50:46 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>进制转换</title><link>https://Carolynhomes.github.io/Carolynhomes/post/jin-zhi-zhuan-huan.html</link><description># 1. 任意进制转十进制&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 27 Nov 2024 05:41:46 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>进制转换</title><link>https://Carolynhomes.github.io/Carolynhomes/post/jin-zhi-zhuan-huan.html</link><description># 1. 任意进制转十进制&#13;
 &#13;
 ```python&#13;
 int_to_char = '0123456789ABCDEF'&#13;
@@ -281,7 +281,10 @@ print(ans)&#13;
 &#13;
 。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/tan-xin.html</guid><pubDate>Mon, 25 Nov 2024 12:10:25 +0000</pubDate></item><item><title>看剧看剧</title><link>https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</link><description>奈飞工厂：https://www.netflixgc.com&#13;
 &#13;
-七味网：https://www.qwnull.com。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</guid><pubDate>Mon, 25 Nov 2024 11:35:48 +0000</pubDate></item><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年11月24日20点12分&#13;
+七味网：https://www.qwnull.com。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</guid><pubDate>Mon, 25 Nov 2024 11:35:48 +0000</pubDate></item><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年11月27日13点41分&#13;
+啥情况，都开始摸鱼了，不用了是吧 笑死哈哈哈哈哈哈&#13;
+&#13;
+# 2024年11月24日20点12分&#13;
 如果出现问题，需要回到首页，选择一个其他的房间&#13;
 &#13;
 &#13;
