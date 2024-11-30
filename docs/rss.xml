@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 29 Nov 2024 13:10:33 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>位运算</title><link>https://Carolynhomes.github.io/Carolynhomes/post/wei-yun-suan.html</link><description># 位运算简介&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 30 Nov 2024 04:54:31 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>直接访问谷歌等网站的方式</title><link>https://Carolynhomes.github.io/Carolynhomes/post/zhi-jie-fang-wen-gu-ge-deng-wang-zhan-de-fang-shi.html</link><description>https://bulianglin.com/archives/snibypass.html&#13;
+&#13;
+这个可以直接不要梯子就可以访问谷歌等网站，可以看这个教程：https://www.youtube.com/watch?v=kbpxGOKVBSA&amp;t=226s&#13;
+&#13;
+不过好像油管视频不能播放，只能浏览评论等等&#13;
+&#13;
+$\textcolor{red}{而且好像看评论说，不安全什么的，仅做个记录}$&#13;
+&#13;
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/zhi-jie-fang-wen-gu-ge-deng-wang-zhan-de-fang-shi.html</guid><pubDate>Sat, 30 Nov 2024 04:54:10 +0000</pubDate></item><item><title>位运算</title><link>https://Carolynhomes.github.io/Carolynhomes/post/wei-yun-suan.html</link><description># 位运算简介&#13;
 &#13;
 对二进制进行操作的运算方式&#13;
 &#13;
