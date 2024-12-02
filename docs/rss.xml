@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 30 Nov 2024 13:49:34 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>dfs</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dfs.html</link><description># DFS简介&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 02 Dec 2024 06:11:55 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>追剧记录</title><link>https://Carolynhomes.github.io/Carolynhomes/post/zhui-ju-ji-lu.html</link><description># 电视剧&#13;
+白夜追凶——&#13;
+&#13;
+# 电影&#13;
+&#13;
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/zhui-ju-ji-lu.html</guid><pubDate>Mon, 02 Dec 2024 06:11:32 +0000</pubDate></item><item><title>dfs</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dfs.html</link><description># DFS简介&#13;
 &#13;
 搜索算法：穷举问题解空间部分/所有情况，从而求出问题的解&#13;
 &#13;
