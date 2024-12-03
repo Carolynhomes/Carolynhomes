@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 双线性映射
+
+双线性映射（Bilinear Mapping）是数学中一种重要的运算，其核心思想是`映射一个两变量函数到另一个值`，但这个映射对两个变量都是线性的。">
+<meta property="og:title" content="论文碰到的点-01">
+<meta property="og:description" content="# 双线性映射
+
+双线性映射（Bilinear Mapping）是数学中一种重要的运算，其核心思想是`映射一个两变量函数到另一个值`，但这个映射对两个变量都是线性的。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://Carolynhomes.github.io/Carolynhomes/post/lun-wen-peng-dao-de-dian--01.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>论文碰到的点-01</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+<style>.markdown-alert{padding:0.5rem 1rem;margin-bottom:1rem;border-left:.25em solid var(--borderColor-default,var(--color-border-default));}.markdown-alert .markdown-alert-title {display:flex;font-weight:var(--base-text-weight-medium,500);align-items:center;line-height:1;}.markdown-alert>:first-child {margin-top:0;}.markdown-alert>:last-child {margin-bottom:0;}</style><style>.markdown-alert.markdown-alert-tip {border-left-color:var(--borderColor-success-emphasis, var(--color-success-emphasis));background-color:var(--color-success-subtle);}.markdown-alert.markdown-alert-tip .markdown-alert-title {color: var(--fgColor-success,var(--color-success-fg));}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">论文碰到的点-01</h1>
+<div class="title-right">
+    <a href="https://Carolynhomes.github.io/Carolynhomes" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/Carolynhomes/Carolynhomes/issues/69" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>双线性映射</h1>
+<p>双线性映射（Bilinear Mapping）是数学中一种重要的运算，其核心思想是<code class="notranslate">映射一个两变量函数到另一个值</code>，但这个映射对两个变量都是线性的。</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/483262f35fe6bf68197a7f971b54af13f32be0fad7db76ee965f74888e4e89e2/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132323136322e706e67"><img src="https://camo.githubusercontent.com/483262f35fe6bf68197a7f971b54af13f32be0fad7db76ee965f74888e4e89e2/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132323136322e706e67" alt="image-20241121212251117" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/ImageForScholar@main/202411212122162.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/e07ad043366b5673e15de0ff03035886104da293947a9550dee82144ffbd4600/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132333439322e706e67"><img src="https://camo.githubusercontent.com/e07ad043366b5673e15de0ff03035886104da293947a9550dee82144ffbd4600/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132333439322e706e67" alt="image-20241121212339446" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/ImageForScholar@main/202411212123492.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/a1c3b85c44232a4e13ccced434c6c2046052a6f3b4b5fec341eb36eaa70dbd89/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313231303934373030332e706e67"><img src="https://camo.githubusercontent.com/a1c3b85c44232a4e13ccced434c6c2046052a6f3b4b5fec341eb36eaa70dbd89/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313231303934373030332e706e67" alt="image.png" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411210947003.png" style="max-width: 100%;"></a></p>
+<p>应用场景：</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/ff1f486a9f9b0043c62e19a8933850393eadf350b0f1b4ee9a2fce7c1da0fb59/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132343330302e706e67"><img src="https://camo.githubusercontent.com/ff1f486a9f9b0043c62e19a8933850393eadf350b0f1b4ee9a2fce7c1da0fb59/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f496d616765466f725363686f6c6172406d61696e2f3230323431313231323132343330302e706e67" alt="image-20241121212442247" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/ImageForScholar@main/202411212124300.png" style="max-width: 100%;"></a></p>
+<h1>两阶段提交</h1>
+<p>“两阶段提交”（Two-Phase Commit, 2PC）是一种<code class="notranslate">分布式系统</code>中用来<strong>保证多个参与方一致性</strong>的协议。它可以通俗地理解为“<code class="notranslate">大家一起决定做某事，但需要分两步来确保所有人都同意并执行</code>”。在分布式系统中是非常重要的，因为它<strong>保证了数据的统一性和安全性</strong>！</p>
+<p><strong>阶段1：准备阶段（Prepare Phase）</strong></p>
+<p>协调者（Coordinator）问参与方:</p>
+<ul>
+<li>协调者像一个“主持人”，告诉所有参与方：“我要执行这个任务，你们准备好了吗？”。</li>
+<li>每个参与方检查自己是否可以完成任务。</li>
+<li>如果可以完成，就回复“可以准备好”（Yes/OK）；如果不能，就回复“无法完成”（No）。</li>
+</ul>
+<p><strong>阶段2：提交阶段（Commit Phase）</strong></p>
+<ul>
+<li>
+<p>协调者根据大家的回复做决定：</p>
+<ul>
+<li>
+<p>如果所有参与方都说“可以准备好”，协调者就广播“执行任务”。</p>
+</li>
+<li>
+<p>如果有任何一个参与方说“无法完成”，协调者就广播“取消任务”。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>每个参与方接到协调者的指令后：</p>
+<ul>
+<li>
+<p>如果是“执行任务”，就真正完成任务。</p>
+</li>
+<li>
+<p>如果是“取消任务”，就放弃任务，回滚到之前的状态。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1>伪随机函数-PRF</h1>
+<p><strong>伪随机函数</strong>（Pseudorandom Function, PRF）和<strong>伪随机排列</strong>（Pseudorandom Permutation, PRP）是密码学和计算机科学中非常重要的概念，主要用于实现各种加密算法、哈希函数、以及密钥生成等<strong>安全性需求。</strong></p>
+<p><strong>伪随机函数</strong>是一种在计算上不可区分于真正的随机函数的确定性函数。简单来说，它是一个从输入产生输出的函数，输出看起来像是随机生成的，但实际上是由算法和密钥控制生成的。它的特性包括：</p>
+<ul>
+<li><strong>确定性</strong>：相同的输入在相同的密钥下始终会得到相同的输出。</li>
+<li><strong>不可预测性</strong>：对于给定的输入，输出在<strong>没有密钥的情况</strong>下应该无法预测。这意味着对于攻击者而言，PRF的输出与真正的随机数是不可区分的。</li>
+<li><strong>密钥依赖性</strong>：伪随机函数的行为取决于一个<strong>密钥</strong>，不同密钥会使得函数表现为不同的随机函数。</li>
+</ul>
+<p>伪随机函数的典型应用有：</p>
+<ul>
+<li><strong>加密算法中的密钥扩展</strong>：用于将较短的密钥扩展为较长的伪随机序列。</li>
+<li><strong>消息认证码（MAC）</strong>：如HMAC使用伪随机函数来保证数据的完整性和认证。</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/b7070d2d4cab415b72a6bfa408038f317134bb8772519ae3c21542063cfdbf4d/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313231313031313934372e706e67"><img src="https://camo.githubusercontent.com/b7070d2d4cab415b72a6bfa408038f317134bb8772519ae3c21542063cfdbf4d/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313231313031313934372e706e67" alt="image.png" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411211011947.png" style="max-width: 100%;"></a></p>
+<h1>伪随机排列-PRP</h1>
+<p><strong>伪随机排列</strong>是伪随机函数的一种特殊情况，它是一种对输入空间的<strong>置换</strong>，即它对输入的所有可能值进行重新排列，形成一个一一映射。伪随机排列也需要一个<strong>密钥</strong>来控制其行为，通常具备以下特性：</p>
+<ul>
+<li><strong>置换性质</strong>：伪随机排列会对一个有限输入空间（如一个有限的整数集）进行重新排列，确保对每一个输入都有唯一的输出且每个输出也只有一个对应的输入。</li>
+<li><strong>密钥控制</strong>：伪随机排列的行为同样依赖于密钥，不同密钥会产生不同的排列方式。</li>
+<li><strong>伪随机性</strong>：与伪随机函数类似，伪随机排列也需要具有伪随机性，即对于攻击者来说，它应当与真正的随机排列不可区分。</li>
+</ul>
+<p>伪随机排列最经典的例子就是<strong>分组密码</strong>（如AES）。AES是一种对128位的数据块进行加密的对称加密算法，可以将输入的明文块通过某种特定的密钥转换为唯一的密文块，这种变换过程即是一种伪随机排列。</p>
+<p>伪随机排列通常用于：</p>
+<ul>
+<li><strong>加密算法</strong>：分组加密算法本质上是将明文块映射为密文块，通过伪随机排列使得加密结果不可预测。</li>
+<li><strong>置换加密</strong>：用于安全地重新排列输入空间，以实现数据的保密性。</li>
+</ul>
+<h1>ABE-属性基加密</h1>
+<p>属性基加密是一种<strong>公共密钥加密技术</strong>，它允许<strong>对数据进行基于用户属性的加密与解密</strong>。用户的访问权限由一组<strong>属性</strong>决定，而不是依赖单一的密钥或身份认证。这种方法特别适用于需要实现<strong>细粒度访问控制</strong>的场景，例如<strong>云计算、物联网和电子医疗记录管理。</strong></p>
+<h2>核心思想</h2>
+<p>在属性基加密中：</p>
+<ol>
+<li>数据加密时附加了一个<strong>访问策略</strong>（Access Policy），例如“必须是医生且部门为心脏科”。</li>
+<li>解密者需要具备满足<strong>访问策略</strong>的属性（如“医生”和“心脏科”）<strong>才能解密数据</strong>。</li>
+</ol>
+<p><strong>属性基加密</strong>将数据的加密权限与解密权限==从特定用户或设备绑定==，变为==基于特定属性或角色的控制==。</p>
+<h2>主要类型</h2>
+<p><strong>基于属性的密文策略（Ciphertext-Policy ABE, CP-ABE）</strong></p>
+<ul>
+<li>
+<p><strong>访问策略</strong>嵌入在密文中。</p>
+</li>
+<li>
+<p>数据拥有者<strong>在加密数据时</strong>定义访问策略，只有<strong>属性集合</strong>满足<strong>访问策略</strong>的用户才能解密。</p>
+</li>
+<li>
+<p>适用于<strong>数据发布者</strong>希望<strong>控制谁能访问其数据的场景</strong>。</p>
+</li>
+<li>
+<p><strong>示例</strong>：医生将患者记录加密时，指定“角色为医生且部门为心脏科”的访问策略，只有满足该条件的用户才能解密。</p>
+</li>
+</ul>
+<p><strong>基于属性的密钥策略（Key-Policy ABE, KP-ABE）</strong>：</p>
+<ul>
+<li>
+<p><strong>访问策略</strong>嵌入在用户的私钥中。</p>
+</li>
+<li>
+<p>数据加密时用一组属性标记，只有用户的私钥访问策略匹配这些属性时，才能解密。</p>
+</li>
+<li>
+<p>适用于<strong>数据管理者</strong>希望<strong>控制用户权限</strong>的场景。</p>
+</li>
+<li>
+<p><strong>示例</strong>：系统管理员分配一个<strong>私钥</strong>，嵌入的策略为“必须为医生且心脏科”，持有该私钥的用户只能解密满足该属性的数据。</p>
+</li>
+</ul>
+<h2>技术特点</h2>
+<ol>
+<li><strong>细粒度访问控制</strong>：
+<ul>
+<li>可以基于<strong>具体的属性组合</strong>实现灵活的<strong>访问控制</strong>，适合<strong>多用户共享</strong>环境。</li>
+</ul>
+</li>
+<li><strong>无中心化限制</strong>：
+<ul>
+<li>通常不需要依赖单一可信中心，尤其是结合区块链等技术时，可以避免中心化管理带来的单点故障问题。</li>
+</ul>
+</li>
+<li><strong>动态扩展</strong>：
+<ul>
+<li>可以通过更新访问策略动态调整用户权限，例如添加或撤销用户的某些属性。</li>
+</ul>
+</li>
+<li><strong>安全性强</strong>：
+<ul>
+<li>即使攻击者窃取了某些用户的密钥，但由于密钥绑定了特定属性集合，不满足访问策略的情况下无法解密数据。</li>
+</ul>
+</li>
+</ol>
+<h2>应用场景</h2>
+<p><strong>智慧医疗</strong>：</p>
+<ul>
+<li>对患者的医疗记录进行加密，只有符合访问策略的医生或医疗工作人员才能访问数据。</li>
+</ul>
+<p><strong>云存储</strong>：</p>
+<ul>
+<li>用户可以将数据上传到云端，通过属性基加密限制访问权限，例如“公司财务部的员工”。</li>
+</ul>
+<p><strong>物联网（IoT）</strong>：</p>
+<ul>
+<li>限制设备间的通信和数据访问，例如智能家居中，只有特定权限的设备才能访问敏感数据。</li>
+</ul>
+<p><strong>电子政务</strong>：</p>
+<ul>
+<li>政府部门可以基于角色或权限共享加密文档，例如“税务官员”和“审计员”。</li>
+</ul>
+<h2>优势与挑战</h2>
+<h4>优势</h4>
+<ol>
+<li><strong>访问控制灵活</strong>：基于属性而不是身份实现加密和解密。</li>
+<li><strong>多用户环境友好</strong>：适合多用户的共享环境，不需要为每个用户单独加密数据。</li>
+<li><strong>隐私保护</strong>：只有满足策略的用户可以解密，其他人无法获取数据内容。</li>
+</ol>
+<h4>挑战</h4>
+<ol>
+<li><strong>计算开销大</strong>：尤其是<strong>双线性配对</strong>等加密操作，对计算资源有限的设备（如物联网设备）可能构成负担。</li>
+<li><strong>动态性问题</strong>：实现高效的属性更新、撤销或扩展<strong>需要额外的设计</strong>。</li>
+<li><strong>密钥管理复杂</strong>：多个属性中心的协作可能增加<strong>密钥分发和管理的难度</strong>。</li>
+</ol>
+<h1>物联网-IoT</h1>
+<p><strong>物联网</strong>是指<strong>互联设备的集合网络，以及促进设备与云之间以及设备自身之间通信的技术</strong></p>
+<h1>IPFS-星际文件系统</h1>
+<p><code class="notranslate">IPFS</code>，全称<strong>星际文件系统（<code class="notranslate">InterPlanetary File System</code>）</strong>，是一种基于<strong>内容寻址</strong>的<strong>分布式文件存储和共享网络协议</strong>。它通过将<strong>文件分块存储</strong>在<strong>分布式节点</strong>中，提供了一种<strong>高效、去中心化的文件存储和访问方式。</strong></p>
+<h2>核心特点</h2>
+<p><strong>内容寻址</strong>：</p>
+<ul>
+<li>文件存储后生成一个唯一的<strong>内容标识符（CID）</strong>，基于<strong>文件内容的哈希值</strong>，而非传统的 URL 地址。</li>
+<li><code class="notranslate">只要文件内容不变，其 CID 始终保持一致，这样保证了文件的唯一性和完整性</code>。</li>
+</ul>
+<p><strong>分布式存储</strong>：</p>
+<ul>
+<li>文件被切分为多个小块（chunk）存储在不同的节点中，类似于 P2P 文件共享技术（如 BitTorrent）。</li>
+<li>数据访问无需依赖中心服务器，任何节点都可以通过<code class="notranslate">内容标识符</code>访问文件。</li>
+</ul>
+<p><strong>去中心化</strong>：</p>
+<ul>
+<li>没有中心化的存储服务器，所有存储由分布在<code class="notranslate">全球的节点</code>共同维护。</li>
+<li>通过去中心化方式，IPFS 避免了<code class="notranslate">单点故障</code>，提高了系统的容错性。</li>
+</ul>
+<p><strong>版本控制</strong>：</p>
+<ul>
+<li>支持文件内容的版本管理，通过 Merkle DAG（有向无环图）数据结构记录文件历史，便于数据追踪和溯源。</li>
+</ul>
+<p><strong>高效与安全</strong>：</p>
+<ul>
+<li>使用加密技术和内容校验机制，确保文件的安全性和完整性。</li>
+<li>文件访问通过 P2P 网络更快且更高效，尤其在局域网或邻近节点访问时表现突出。</li>
+</ul>
+<h2>工作原理</h2>
+<p><strong>内容分块</strong>：</p>
+<ul>
+<li>文件在存储前被分块（chunk），每个分块生成唯一的哈希值。</li>
+</ul>
+<p><strong>生成内容标识符（CID）</strong>：</p>
+<ul>
+<li>文件的<strong>每个分块哈希值</strong>组成一个 <strong>Merkle DAG</strong>，最终为整个文件生成唯一的 CID。</li>
+</ul>
+<p><strong>分发和存储</strong>：</p>
+<ul>
+<li>文件分块后分布在多个节点上，所有节点通过 <strong>DHT</strong>（分布式哈希表）记录文件位置。</li>
+</ul>
+<p><strong>数据检索</strong>：</p>
+<ul>
+<li>用户通过文件的 CID 向网络发送请求，<strong>IPFS 网络</strong>会找到<strong>离用户最近的节点</strong>并传输数据。</li>
+</ul>
+<h2>应用场景</h2>
+<ol>
+<li><strong>分布式数据存储</strong>：
+<ul>
+<li>替代传统云存储，将数据分布存储在全球节点中，适用于对可靠性要求高的场景。</li>
+</ul>
+</li>
+<li><strong>去中心化应用（DApp）</strong>：
+<ul>
+<li>在区块链项目中广泛使用，存储智能合约相关数据或链下大文件（如 NFT 文件、交易凭证等）。</li>
+</ul>
+</li>
+<li><strong>内容分发</strong>：
+<ul>
+<li>提供内容共享服务，<strong>无需依赖 CDN</strong>（内容分发网络），实现快速数据传输。</li>
+</ul>
+</li>
+<li><strong>档案管理</strong>：
+<ul>
+<li>存储需要长期保存的历史数据和档案，确保数据不会因单点故障丢失。</li>
+</ul>
+</li>
+<li><strong>电子医疗记录存储</strong>：
+<ul>
+<li>在智慧医疗系统中，与区块链结合，存储加密后的患者数据，保证隐私和数据追溯。</li>
+</ul>
+</li>
+</ol>
+<h2>优点和局限性</h2>
+<p>==优点：==</p>
+<p><strong>高效可靠</strong>：</p>
+<ul>
+<li>文件存储在多个节点中，即使某些节点宕机，文件仍可从其他节点访问。</li>
+<li>基于内容寻址，数据获取效率高，避免了 DNS 等传统寻址方式的延迟。</li>
+</ul>
+<p><strong>抗审查</strong>：</p>
+<ul>
+<li>去中心化存储避免了因某一中心节点被封禁而导致的数据不可用。</li>
+</ul>
+<p><strong>永久性存储</strong>：</p>
+<ul>
+<li>文件通过内容标识符存储在网络中，只要有节点保留文件，数据就不会丢失。</li>
+</ul>
+<p><strong>节省存储空间</strong>：</p>
+<ul>
+<li>相同内容只需存储一次，不会重复占用存储资源。</li>
+</ul>
+<p><strong>支持版本管理</strong>：</p>
+<ul>
+<li>提供文件版本控制功能，能够追溯文件内容的变更历史。</li>
+</ul>
+<p>==局限性==</p>
+<p><strong>存储可靠性依赖节点</strong>：</p>
+<ul>
+<li>文件并非永久存储在网络中，需要<strong>节点持续维护或支付存储费用</strong>（如结合 Filecoin）。</li>
+</ul>
+<p><strong>数据检索复杂性</strong>：</p>
+<ul>
+<li><strong>若没有足够的在线节点</strong>，可能导致检索数据困难。</li>
+</ul>
+<p><strong>网络性能限制</strong>：</p>
+<ul>
+<li>在较差的网络环境中，分布式存储的检索效率<strong>可能不及</strong>传统集中式存储。</li>
+</ul>
+<h1>雾节点-FN</h1>
+<p>雾节点（Fog Nodes）是<strong>雾计算（Fog Computing）中的核心组件</strong>，位于<strong>云计算数据中心</strong>和<strong>边缘设备</strong>（如物联网设备）<strong>之间</strong>，提供计算、存储和网络服务。</p>
+<p>它们通过<strong>在物理位置上</strong> <strong>靠近用户或设备</strong>，分担云计算中心的负担，为延迟敏感、计算资源有限的场景提供更高效的解决方案。</p>
+<h2>工作原理</h2>
+<p><strong>靠近边缘设备</strong>：</p>
+<ul>
+<li>雾节点通常部署在靠近边缘设备的物理位置，如路由器、网关或小型服务器。</li>
+<li>通过减少数据传输距离，降低通信延迟。</li>
+</ul>
+<p><strong>任务分发</strong>：</p>
+<ul>
+<li>将部分计算任务从云端分发到雾节点，由雾节点处理本地数据。</li>
+<li>雾节点可以将预处理后的数据发送回云端，减轻云端的负担。</li>
+</ul>
+<p><strong>协同工作</strong>：</p>
+<ul>
+<li>雾节点通过相互协作或与云端协作，分担网络流量、计算任务和存储压力。</li>
+</ul>
+<h2>与云节点的区别</h2>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>特性</th>
+<th>雾节点</th>
+<th>云节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署位置</td>
+<td>靠近边缘设备，分布式部署</td>
+<td>集中在数据中心</td>
+</tr>
+<tr>
+<td>延迟</td>
+<td>低延迟</td>
+<td>较高延迟</td>
+</tr>
+<tr>
+<td>计算能力</td>
+<td>限制于本地硬件</td>
+<td>高性能服务器</td>
+</tr>
+<tr>
+<td>存储能力</td>
+<td>较小，本地化存储</td>
+<td>大规模集中存储</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>实时处理、低延迟场景</td>
+<td>数据分析、大规模计算</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h2>应用场景</h2>
+<p><strong>智慧城市</strong>：</p>
+<ul>
+<li>雾节点处理交通摄像头采集的<strong>视频流</strong>，<strong>实时分析交通状况</strong>，优化红绿灯控制。</li>
+</ul>
+<p><strong>工业物联网（IIoT）</strong>：</p>
+<ul>
+<li>在智能工厂中，雾节点处理传感器数据，<strong>实时监控设备运行状态</strong>，检测潜在故障。</li>
+</ul>
+<p><strong>智慧医疗</strong>：</p>
+<ul>
+<li>雾节点对患者的实时健康数据进行分析，支持<strong>低延迟的医疗响应和诊断</strong>。</li>
+</ul>
+<p><strong>自动驾驶</strong>：</p>
+<ul>
+<li>雾节点与车载设备协作，<strong>实时</strong>处理路况数据，提升驾驶安全性。</li>
+</ul>
+<p><strong>智能家居</strong>：</p>
+<ul>
+<li>雾节点支持智能设备的本地化管理与控制，实现<strong>快速</strong>响应。</li>
+</ul>
+<h2>挑战</h2>
+<p><strong>硬件限制</strong>：</p>
+<ul>
+<li>雾节点的计算和存储能力有限，可能无法满足<strong>高复杂度</strong>任务需求。</li>
+</ul>
+<p><strong>分布式管理复杂性</strong>：</p>
+<ul>
+<li>大量分布式雾节点的<strong>维护、调度和协调管理较为复杂</strong>。</li>
+</ul>
+<p><strong>安全威胁</strong>：</p>
+<ul>
+<li>雾节点容易受到物理和网络攻击，需要<strong>额外的安全措施保护数据和服务</strong>。</li>
+</ul>
+<p><strong>标准化问题</strong>：</p>
+<ul>
+<li>雾计算仍缺乏<strong>统一的标准</strong>，可能导致不同厂商设备的<strong>兼容性</strong>问题。</li>
+</ul>
+<h2>总结</h2>
+<p>雾节点是<code class="notranslate">云计算和边缘计算之间的桥梁</code>，为实时性、低延迟和高效性需求提供了解决方案。在智慧医疗、工业物联网和智能家居等领域，雾节点有着广泛的应用前景，但需要进一步解决其硬件限制、安全性和管理复杂性问题，以实现更大规模的部署和应用。</p>
+<h1>数字签名</h1>
+<p>数字签名是一种密码学技术，用于验证<strong>数字消息</strong>的完整性和来源，同时提供<strong>不可否认性</strong>。数字签名的<strong>主要目的是确保消息在传输过程中未被篡改，并且确认消息确实是由声称的发送者发送的</strong>。</p>
+<h2>关键特性</h2>
+<ol>
+<li><strong>身份验证</strong>：数字签名可以验证消息的发送者身份，确保消息是由声称的发送者发送的。</li>
+<li><strong>完整性</strong>：数字签名可以确保消息在传输过程中未被篡改或更改。</li>
+<li><strong>不可否认性</strong>：数字签名使得发送者无法否认他们发送过的消息，因为发送者不能伪造自己的签名。</li>
+<li><strong>非对称加密</strong>：数字签名通常使用非对称加密算法，如RSA、DSA（数字签名算法）或ECDSA（椭圆曲线数字签名算法）。这意味着使用一对密钥：一个私钥用于创建签名，一个公钥用于验证签名。</li>
+</ol>
+<h2>工作流程</h2>
+<ol>
+<li><strong>签名生成</strong>：
+<ul>
+<li><strong>发送者</strong>使用自己的<strong>私钥</strong>对消息的<strong>哈希值</strong>进行加密，生成数字签名。</li>
+<li>这个<strong>签名与消息</strong>一起发送给接收者。</li>
+</ul>
+</li>
+<li><strong>签名验证</strong>：
+<ul>
+<li>接收者使用<strong>发送者的公钥</strong>对数字签名进行解密，得到消息的<strong>哈希值</strong>。</li>
+<li>接收者同时<strong>计算收到的消息的哈希值。</strong></li>
+<li>如果两个哈希值匹配，说明消息未被篡改，且确实是由持有相应私钥的发送者发送的。</li>
+</ul>
+</li>
+</ol>
+<h2>应用场景</h2>
+<ul>
+<li><strong>电子邮件</strong>：用于验证电子邮件的发送者，并确保邮件内容在传输过程中未被更改。</li>
+<li><strong>软件分发</strong>：软件开发者使用数字签名来确保软件在分发过程中未被篡改，并证明软件的来源。</li>
+<li><strong>金融交易</strong>：在金融交易中，数字签名用于验证交易双方的身份，并确保交易数据的完整性。</li>
+<li><strong>电子合同</strong>：在电子合同中，数字签名用于确保合同的法律效力，同时提供不可否认性。</li>
+</ul>
+<h1>边缘计算</h1>
+<p><strong>边缘计算</strong>（Edge Computing）是一种分布式计算方式，其核心思想是在靠近数据源或终端设备的地方处理和分析数据，而不是将所有数据传输到远程的云数据中心进行处理。通过这种方式，边缘计算可以减少数据传输的延迟、降低带宽需求，同时提升数据隐私性和实时处理能力。</p>
+<h2>关键特点</h2>
+<p><strong>分布式架构</strong>： 数据处理和计算任务分布在靠近用户或设备的边缘节点上，而非集中在中央服务器或云端。</p>
+<p><strong>低延迟</strong>： 因为数据处理发生在本地或更接近数据源的地方，边缘计算可以显著减少数据传输所需的时间，满足对实时性要求高的场景。</p>
+<p><strong>减少带宽消耗</strong>： 边缘计算只将处理后的数据或必要数据上传到云端，从而减少了网络传输的压力和成本。</p>
+<p><strong>数据隐私与安全性</strong>： 边缘计算在本地或设备附近处理敏感数据，减少数据暴露在传输过程中的风险。</p>
+<h2>应用场景</h2>
+<p><strong>智能家居</strong>：如智能音箱、安防监控摄像头，在本地快速响应用户指令或处理视频数据。</p>
+<p><strong>自动驾驶</strong>：车辆通过边缘计算处理传感器数据，实现实时决策。</p>
+<p><strong>工业物联网</strong>：边缘设备监控生产线状态，快速响应异常。</p>
+<p><strong>增强现实（AR）/虚拟现实（VR）</strong>：通过边缘计算降低延迟，提升用户体验。</p>
+<p><strong>远程医疗</strong>：设备在本地处理患者生理数据，实现快速诊断和响应。</p>
+<h2>与云计算的关系</h2>
+<p>边缘计算不是取代云计算，而是对其补充。在边缘处理实时性要求高的数据，而云计算处理大规模、长期存储和深度分析的任务。</p>
+<blockquote>
+<p>边缘计算的目的是将计算能力从云端延伸到靠近用户或设备的边缘，满足低延迟、高效率和隐私保护等需求，是现代物联网和智能应用的重要技术支撑。</p>
+</blockquote>
+<h1>变色龙哈希函数</h1>
+<p>Chameleon Hash Function——是一种具有特殊性质的密码学哈希函数。其特点是，在拥有<strong>特定秘密密钥</strong>的情况下，<code class="notranslate">可以对哈希值进行“碰撞”操作</code>，也就是找到<code class="notranslate">不同的输入</code>使其产生<code class="notranslate">相同的哈希值</code>。这种特性使得它在某些需要<strong>可控碰撞</strong>的场景中非常有用，比如<code class="notranslate">区块链中的智能合约、数字签名和承诺方案</code>。</p>
+<h2>特点</h2>
+<ol>
+<li><strong>抗碰撞性（无密钥时）</strong>：和普通哈希函数一样，拥有抗碰撞性。</li>
+<li><strong>可控碰撞性（有密钥时）</strong>：掌握密钥的一方可以根据需要生成碰撞输入。</li>
+<li><strong>应用场景</strong>：主要用于需要可控性的加密协议中，如需要调整合约或内容而保证哈希值不变的场景。</li>
+</ol>
+<p>变色龙哈希是一种既能确保安全性，又能在需要时灵活操作的哈希函数。</p>
+<h1>椭圆曲线加密-ECC</h1>
+<p>Elliptic Curve Cryptography</p>
+<p>是一种基于<strong>椭圆曲线数学结构</strong>的<strong>公钥加密方法</strong>，用于提供数据加密、数字签名和密钥交换等安全功能。ECC因其高效性和较小的密钥长度而广泛应用于现代信息安全中，包括移动设备、TLS协议和加密货币等场景。</p>
+<h2>基本概念</h2>
+<p><strong>椭圆曲线</strong>：ECC基于一种特殊的数学曲线，称为椭圆曲线，其形式为：<code class="notranslate">y^2 = x^3 + ax + b</code>，其中a和b是定义曲线的常数。在有限域中，椭圆曲线上的点形成一个特殊的代数结构，有加法运算性质。</p>
+<p><strong>安全性原理</strong>：ECC的安全性依赖于<code class="notranslate">"椭圆曲线离散对数问题"</code>（ECDLP），即<code class="notranslate">已知两个点 P 和 Q = kP（k是整数）</code>，很难通过计算找出 k 的值，这种计算难度在大整数上极其复杂，使其非常适合用于加密。</p>
+<h2>特点</h2>
+<p><strong>较小的密钥长度</strong>：与传统的RSA加密相比，ECC能够<strong>以更短的密钥</strong>提供<strong>相同级别的安全性</strong>。例如，256位的ECC密钥可以提供相当于3072位RSA密钥的安全性，因此ECC在<strong>资源有限的设备</strong>（如智能手机和物联网设备）中更有优势。</p>
+<p><strong>高效性</strong>：由于密钥长度较小，ECC的计算效率更高，能减少处理时间和内存消耗，尤其适合需要<strong>快速</strong>加密/解密的场景。</p>
+<p><strong>适用场景</strong>：ECC广泛用于数字签名（如ECDSA），密钥交换（如ECDH），以及区块链（如比特币的加密算法）中。ECC的高效性使其特别适合无线通信和嵌入式设备中进行安全通信。</p>
+<h2>工作流程</h2>
+<p>典型的ECC加密包括以下几个步骤：</p>
+<ol>
+<li><strong>密钥生成</strong>：选择一个椭圆曲线和基点，然后生成私钥（随机整数）和公钥（通过椭圆曲线上的基点乘以私钥得到）。</li>
+<li><strong>加密</strong>：发送方使用接收方的公钥来加密数据。</li>
+<li><strong>解密</strong>：接收方使用自己的私钥来解密接收到的数据。</li>
+<li><strong>签名和验证</strong>：在数字签名中，签名方使用私钥生成签名，而验证方使用公钥验证签名的合法性。</li>
+</ol>
+<h2>应用场景</h2>
+<p><strong>网络安全协议</strong>：ECC用于TLS/SSL协议，以保护互联网通信的安全。</p>
+<p><strong>加密货币</strong>：比特币和以太坊等加密货币中使用ECC进行<strong>钱包地址生成和交易签名。</strong></p>
+<p><strong>移动设备和物联网</strong>：由于密钥短、计算效率高，ECC适用于<strong>计算和存储资源受限的设备。</strong></p>
+<h1>wwwww  RSA加密</h1>
+<h1>共识机制</h1>
+<h2>基本概念</h2>
+<p><strong>目的</strong>：让网络中的所有节点就<strong>某一状态</strong>或<strong>交易</strong>达成<strong>一致。</strong></p>
+<p><strong>核心要求</strong>：</p>
+<ul>
+<li><strong>安全性</strong>：确保没有恶意节点能篡改数据。</li>
+<li><strong>活性</strong>：确保网络能够正常运行，不因节点宕机或故障而停滞。</li>
+<li><strong>去中心化</strong>：所有节点都能公平参与，不依赖中心化权威。</li>
+</ul>
+<h2>常见的共识机制</h2>
+<h4><strong>（1）工作量证明（Proof of Work, PoW）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>节点通过解决复杂的数学难题（称为“<code class="notranslate">挖矿</code>”）来竞争<strong>记账权</strong>。</li>
+<li>难题的解需要大量计算，但验证过程简单。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>去中心化强，安全性高。</li>
+<li>能耗高，效率低（如<code class="notranslate">比特币</code>）。</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>防止<code class="notranslate">女巫攻击</code>和恶意篡改。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>高能耗，低交易速度。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>（2）权益证明（Proof of Stake, PoS）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>节点根据持有的<code class="notranslate">代币数量</code>和<code class="notranslate">时间长短</code>来竞争<code class="notranslate">记账权</code>。</li>
+<li>持有<strong>更多代币的节点</strong>有更高的概率被选为验证者。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>能耗低，速度快。</li>
+<li>适合大规模网络（如<code class="notranslate">以太坊2.0</code>）。</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>更环保，效率高。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>持币者可能拥有更大的权力，<strong>导致去中心化程度降低</strong>。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>（3）委托权益证明（Delegated Proof of Stake, DPoS）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>持币者选举<code class="notranslate">代表</code>（<strong>验证节点</strong>）来<code class="notranslate">生成区块</code>和<code class="notranslate">验证交易</code>。</li>
+<li>验证节点按<code class="notranslate">轮次</code>工作。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>提高效率，但依赖选举的公平性。</li>
+<li>适合企业级应用（如<code class="notranslate">EOS</code>）。</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>快速达成共识。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>易出现中心化风险。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>（4）拜占庭容错机制（Practical Byzantine Fault Tolerance, PBFT）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>系统容忍<code class="notranslate">最多1/3节点</code>为恶意节点，仍能正常运行。</li>
+<li>通过多轮投票和消息交换达成共识。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>高性能，低延迟。</li>
+<li>适用于许可链和联盟链。</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>适合小规模网络。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>随节点数量增加，通信复杂度急剧上升。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>（5）权益权重证明（Proof of Authority, PoA）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>通过<code class="notranslate">预选</code>的“权威节点”验证和生成区块。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>高效，适合<code class="notranslate">私有链</code>。</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>快速达成共识，资源需求低。</li>
+</ul>
+</li>
+<li>缺点：
+<ul>
+<li>中心化程度高。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>（6）其他共识机制</strong></h4>
+<ul>
+<li><strong>证明空间（Proof of Space, PoSpace）</strong>：通过存储空间的使用量竞争记账权。</li>
+<li><strong>燃烧证明（Proof of Burn, PoB）</strong>：通过“销毁”代币证明贡献。</li>
+<li><strong>时间证明（Proof of Elapsed Time, PoET）</strong>：基于随机等待时间的竞争（多用于英特尔SGX环境）。</li>
+</ul>
+<h2>共识机制的评价指标</h2>
+<ul>
+<li>
+<p><strong>去中心化程度</strong>：是否避免中心化权力过大。</p>
+</li>
+<li>
+<p><strong>安全性</strong>：能否抵御51%攻击和其他威胁。</p>
+</li>
+<li>
+<p><strong>性能（吞吐量）</strong>：每秒能处理的交易数量。</p>
+</li>
+<li>
+<p><strong>能耗</strong>：运行消耗的能源和资源。</p>
+</li>
+<li>
+<p><strong>适用场景</strong>：是否适用于公有链、联盟链或私有链。</p>
+</li>
+</ul>
+<h2>共识机制的选择</h2>
+<p>不同场景适合不同的共识机制：</p>
+<ul>
+<li><strong>公有链</strong>：通常选择PoW或PoS，以确保高度去中心化和安全性。</li>
+<li><strong>联盟链</strong>：通常选择PBFT或PoA，追求高效和低延迟。</li>
+<li><strong>私有链</strong>：由于节点可信，选择PoA或类似的轻量级机制。</li>
+</ul>
+<h2>共识机制的挑战和发展方向</h2>
+<p><strong>挑战</strong>：</p>
+<ul>
+<li>能耗：传统机制如PoW存在高能耗问题。</li>
+<li>可扩展性：提高交易处理能力以支持大规模应用。</li>
+<li>去中心化：平衡效率和去中心化程度。</li>
+</ul>
+<p><strong>发展方向</strong>：</p>
+<ul>
+<li>混合共识机制：结合多个机制的优点（如PoW+PoS）。</li>
+<li>更高效的机制：如DAG（有向无环图）等非区块结构。</li>
+<li>环保设计：开发低能耗或无能耗的共识方法。</li>
+</ul>
+<h1>供应链区块链系统</h1>
+<p>供应链区块链系统是一种将<code class="notranslate">区块链技术</code>应用于<code class="notranslate">供应链管理</code>的系统，用于提高供应链的透明性、效率和安全性。它将供应链中的各个环节（如原材料供应商、制造商、分销商、零售商和消费者）通过分布式账本连接在一起，记录和追踪所有交易和操作。</p>
+<h3><strong>主要特点</strong></h3>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+<p>其实就是区块链的主要特点</p>
+</div>
+<ol>
+<li><strong>分布式账本</strong>：
+<ul>
+<li>数据记录在一个共享的、不可篡改的分布式账本中，每个参与者都可以查看相关信息。</li>
+<li>提供透明性和防篡改能力。</li>
+</ul>
+</li>
+<li><strong>智能合约</strong>：
+<ul>
+<li>使用智能合约自动执行供应链中的<code class="notranslate">交易和流程</code>，确保<code class="notranslate">合同条款</code>得以执行。</li>
+<li>降低人为干预和操作错误的可能性。</li>
+</ul>
+</li>
+<li><strong>去中心化</strong>：
+<ul>
+<li>消除对中心化中介的依赖，每个节点都有权访问账本中的相关部分。</li>
+<li>提高了系统的安全性和可靠性。</li>
+</ul>
+</li>
+<li><strong>可追溯性</strong>：
+<ul>
+<li>通过区块链记录供应链上每一步操作的<code class="notranslate">时间戳</code>和<code class="notranslate">相关数据</code>，实现<code class="notranslate">全程可追踪</code>。</li>
+<li>有助于快速发现和解决问题，例如产品召回或质量控制。</li>
+</ul>
+</li>
+</ol>
+<h3><strong>主要功能</strong></h3>
+<ol>
+<li>数据透明性：
+<ul>
+<li>所有交易和操作在网络中透明化，减少了欺诈和信息不对称。</li>
+</ul>
+</li>
+<li>提高效率：
+<ul>
+<li>自动化流程减少了交易时间和成本。</li>
+</ul>
+</li>
+<li>增强信任：
+<ul>
+<li>不可篡改的记录让各方可以放心地依赖数据。</li>
+</ul>
+</li>
+<li>供应链优化：
+<ul>
+<li>实时跟踪和分析数据，优化供应链的物流和库存管理。</li>
+</ul>
+</li>
+</ol>
+<h3><strong>应用场景</strong></h3>
+<ol>
+<li>食品供应链：
+<ul>
+<li>追踪食品从农场到餐桌的全流程，确保食品安全。</li>
+</ul>
+</li>
+<li>医药供应链：
+<ul>
+<li>确保药品来源合法，避免假药流入市场。</li>
+</ul>
+</li>
+<li>奢侈品和电子产品：
+<ul>
+<li>验证产品的真实性，防止假冒伪劣商品。</li>
+</ul>
+</li>
+<li>零售供应链：
+<ul>
+<li>提高物流效率，优化库存管理。</li>
+</ul>
+</li>
+</ol>
+<p>供应链区块链系统通过增强供应链的透明性和效率，同时解决了传统供应链中<code class="notranslate">信任</code>和<code class="notranslate">数据管理</code>的难题。</p>
+<h1>RAFT算法</h1>
+<p><strong>RAFT算法</strong>（<strong>Replicated and Fault-Tolerant</strong>）是一种<code class="notranslate">一致性算法</code>，用于在分布式系统中实现<code class="notranslate">日志复制</code>和<code class="notranslate">一致性</code>。它通过选举一个<strong>领导节点</strong>（Leader）管理其他节点的<strong>状态和日志同步</strong>，确保分布式系统在网络故障或节点失效时仍能保持一致性。</p>
+<h2>主要目标</h2>
+<ul>
+<li><strong>一致性</strong>：确保所有节点的数据和状态在分布式系统中保持一致。</li>
+<li><strong>高可用性</strong>：支持节点故障恢复，保持系统正常运行。</li>
+<li><strong>易于理解和实现</strong>：相比Paxos算法，RAFT更直观，更容易实现。</li>
+</ul>
+<h2>核心概念</h2>
+<ol>
+<li><strong>节点角色</strong>：
+<ul>
+<li><strong>Leader</strong>（领导者）：负责处理客户端请求、日志复制和管理其他节点。</li>
+<li><strong>Follower</strong>（追随者）：被动接受Leader的指令并同步日志。</li>
+<li><strong>Candidate</strong>（候选者）：在Leader失效时发起选举，尝试成为新的Leader。</li>
+</ul>
+</li>
+<li><strong>术语（Term）</strong>：
+<ul>
+<li>分布式系统中用来表示逻辑时间的编号，每次选举或状态变更都会增加术语编号。</li>
+</ul>
+</li>
+<li><strong>日志条目</strong>：
+<ul>
+<li>记录系统操作或事务的数据，按顺序存储，确保所有节点最终拥有一致的日志。</li>
+</ul>
+</li>
+</ol>
+<h2>工作原理</h2>
+<p>RAFT算法主要分为两个阶段：<strong>Leader选举</strong>和<strong>日志复制</strong>。</p>
+<h4><strong>1. Leader选举</strong></h4>
+<p>当系统启动或现有Leader失效时，进行Leader选举。</p>
+<ul>
+<li><strong>触发条件</strong>：Follower在一段时间内没有收到Leader的“心跳”信号。</li>
+<li>过程：
+<ol>
+<li>Follower变为Candidate，增加当前术语，并向其他节点发送“选票请求”。</li>
+<li>节点收到请求后，如果未投票且术语较新，则投票支持该Candidate。</li>
+<li>如果Candidate获得超过半数节点的投票，成为Leader。</li>
+<li>成为Leader后，开始发送“心跳”信号保持角色，并防止其他选举。</li>
+</ol>
+</li>
+</ul>
+<h4><strong>2. 日志复制</strong></h4>
+<p>Leader处理客户端请求并将日志条目复制到所有Follower节点。</p>
+<ul>
+<li>过程：
+<ol>
+<li>客户端将请求发送给Leader。</li>
+<li>Leader将请求记录为日志条目，并广播给所有Follower。</li>
+<li>Follower收到日志条目后，保存并返回确认。</li>
+<li>当Leader收到多数节点确认后，提交日志并通知Follower更新状态。</li>
+</ol>
+</li>
+</ul>
+<h2>核心机制</h2>
+<p><strong>心跳信号</strong>：</p>
+<ul>
+<li>Leader定期向Follower发送心跳信号，防止Follower触发选举。</li>
+</ul>
+<p><strong>多数投票原则</strong>：</p>
+<ul>
+<li>选举和日志复制都基于多数节点的同意，以确保数据一致性。</li>
+</ul>
+<p><strong>日志一致性检查</strong>：</p>
+<ul>
+<li>每次日志复制时，Leader会对比Follower的日志状态，确保日志顺序和内容一致。</li>
+</ul>
+<h2>优点</h2>
+<p><strong>易于理解</strong>：</p>
+<ul>
+<li>结构清晰，角色分工明确，便于开发者实现和调试。</li>
+</ul>
+<p><strong>高性能</strong>：</p>
+<ul>
+<li>单个Leader集中处理请求，简化了节点间的通信复杂度。</li>
+</ul>
+<p><strong>容错性强</strong>：</p>
+<ul>
+<li>容忍部分节点故障，保持系统稳定运行。</li>
+</ul>
+<h2>缺点</h2>
+<p><strong>集中化</strong>：</p>
+<ul>
+<li>依赖Leader，若Leader性能瓶颈或故障，系统吞吐量会受限。</li>
+</ul>
+<p><strong>网络开销</strong>：</p>
+<ul>
+<li>需要频繁发送心跳信号和日志广播，可能增加通信成本。</li>
+</ul>
+<h2>适用场景</h2>
+<ul>
+<li>分布式数据库：如ETCD和Consul。</li>
+<li>分布式文件系统：如GlusterFS。</li>
+<li>分布式锁服务和协调服务：如ZooKeeper的替代品。</li>
+</ul>
+<h2>与 Paxos 的对比</h2>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/80d095ec23a301c62d4dfee3e5fb27b0ccc7f57d73e7b50851b65c25445ffb77/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230313637302e706e67"><img src="https://camo.githubusercontent.com/80d095ec23a301c62d4dfee3e5fb27b0ccc7f57d73e7b50851b65c25445ffb77/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230313637302e706e67" alt="image-20241203220130418" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202412032201670.png" style="max-width: 100%;"></a></p>
+<h1>女巫攻击</h1>
+<p><strong>定义</strong></p>
+<p>女巫攻击是指<code class="notranslate">攻击者``Alice</code>通过创建<code class="notranslate">大量虚假身份</code>（或<code class="notranslate">节点</code>）来<code class="notranslate">试图操纵分布式系统中的决策或共识过程</code>。</p>
+<p><strong>在区块链中的表现</strong></p>
+<ul>
+<li>攻击者可能试图通过控制多数节点（例如超过51%）来篡改区块链数据、插入虚假交易或拒绝其他合法交易。</li>
+<li>在没有成本约束的系统中，攻击者可以轻松制造大量伪装节点。</li>
+</ul>
+<p><strong>PoW如何防止女巫攻击</strong></p>
+<ul>
+<li>PoW机制要求每个节点完成高成本的计算任务（如解决哈希难题）来竞争记账权。</li>
+<li>攻击者要控制多数节点并发起女巫攻击，需要投入巨大的计算资源和电力成本。</li>
+<li>由于创建虚假身份并不能绕过计算任务的限制，攻击者制造大量节点的经济成本极高，因此难以成功实施女巫攻击。</li>
+</ul>
+<h1>恶意篡改</h1>
+<p><strong>定义</strong></p>
+<p>恶意篡改是指攻击者试图更改区块链中的<code class="notranslate">历史数据</code>或<code class="notranslate">交易记录</code>，从而破坏数据的完整性和可信性。</p>
+<p><strong>在区块链中的表现</strong></p>
+<ul>
+<li>攻击者可能试图更改过去的<code class="notranslate">区块内容</code>（例如修改交易金额或接收方地址）。</li>
+<li>由于区块链是一个链式结构，<code class="notranslate">更改一个区块会影响其后的所有区块</code>，因此需要重新计算整个链条的工作量。</li>
+</ul>
+<p><strong>PoW如何防止恶意篡改</strong></p>
+<ul>
+<li>在PoW机制下，每个区块都需要大量计算才能生成，且后续区块依赖前一区块的<code class="notranslate">哈希值</code>。</li>
+<li>若攻击者试图篡改某个区块内容，必须重新计算该区块及其后的所有区块的工作量。</li>
+<li>攻击者还需要超过全网51%的计算能力（算力），才能在与合法节点竞争中获胜，这在实际中几乎不可能实现。</li>
+</ul>
+<h1>Schnorr签名技术</h1>
+<p>Schnorr签名是一种基于数学离散对数问题的数字签名算法，以其高效性和简单性著称。</p>
+<h2>核心特点</h2>
+<p><strong>安全性</strong>：基于离散对数问题，具有很强的抗破解能力。</p>
+<p><strong>简单性</strong>：签名和验证过程结构简洁，计算效率高。</p>
+<p><strong>紧凑性</strong>：生成的签名长度较短，节省存储和通信成本。</p>
+<p><strong>可扩展性</strong>：支持聚合签名和多重签名，适合区块链等需要多方签署的场景。</p>
+<h2>工作原理</h2>
+<p><strong>Schnorr签名依赖椭圆曲线密码学和哈希函数，通过私钥和公钥配合实现签名和验证。</strong></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/da690a3dbbe5500e6424d502ab54c3e35eef060db3537c87831711d88d8f4655/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230363138372e706e67"><img src="https://camo.githubusercontent.com/da690a3dbbe5500e6424d502ab54c3e35eef060db3537c87831711d88d8f4655/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230363138372e706e67" alt="image-20241203220605078" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202412032206187.png" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/aa993dfb201aab2d5452f61853a51d41c22e1b7f8b194cb2f9338331bf255e18/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230363133302e706e67"><img src="https://camo.githubusercontent.com/aa993dfb201aab2d5452f61853a51d41c22e1b7f8b194cb2f9338331bf255e18/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431323033323230363133302e706e67" alt="image-20241203220636993" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202412032206130.png" style="max-width: 100%;"></a></p>
+<h2>数学安全性</h2>
+<p>Schnorr签名的安全性基于离散对数问题的计算难度：</p>
+<ul>
+<li>攻击者即使知道公钥 <strong>P</strong> 和签名 (R,s)，也无法推导出私钥 <strong>x</strong>。</li>
+<li>使用随机数 <strong>k</strong> 防止攻击者通过<strong>重复的消息签名</strong>推测私钥。</li>
+</ul>
+<h2>优点</h2>
+<p><strong>计算高效</strong>：算法简单，适合高性能需求场景。</p>
+<p><strong>短签名</strong>：签名比其他算法（如RSA）更短，适合存储和通信资源有限的场景。</p>
+<p><strong>安全性强</strong>：防止重放攻击和伪造签名，支持抗量子计算的增强版本。</p>
+<p><strong>支持多重签名</strong>：允许多个签名者协作生成单个签名，适合区块链中的多方交易。</p>
+<blockquote>
+<p>Schnorr签名以其简单、高效和安全的特点，成为区块链技术的重要支柱，特别是在多重签名和隐私增强场景中表现优异。</p>
+</blockquote>
+<h1>Schnorr多重签名技术</h1>
+<p><strong>Schnorr多重签名技术</strong>是一种基于Schnorr签名的加密技术，<strong>允许多个参与者协作生成一个统一的签名，以验证多个签名者共同签署的消息或交易</strong>。这种技术有效地提高了签名效率，减少了存储和通信开销，是区块链等分布式系统中的重要工具。</p>
+<h2>核心原理</h2>
+<p><strong>基础技术</strong>：</p>
+<ul>
+<li>基于Schnorr签名，Schnorr签名是一种简单、高效的数字签名算法，<code class="notranslate">基于离散对数问题</code>，具有安全性和可扩展性。</li>
+<li>签名过程基于<code class="notranslate">公钥加密</code>，<strong>每个参与者都有公钥和私钥。</strong></li>
+</ul>
+<p>Schnorr多重签名技术是一种高效、灵活、安全的数字签名方法，特别适用于需要多方参与的场景。它在提高区块链系统效率、降低成本和增强隐私方面具有重要作用，是区块链技术发展的重要组成部分。</p>
+<p><strong>多重签名的生成</strong>：</p>
+<ul>
+<li>多个签名者共同生成<strong>一个签名</strong>，而不是分别生成独立签名。</li>
+<li>签名的验证者<strong>只需要验证一个签名</strong>，即可确认所有签名者的参与。</li>
+</ul>
+<h2>具体流程</h2>
+<p><strong>密钥生成</strong>：</p>
+<ul>
+<li>每个签名者生成自己的公私钥对。</li>
+<li>签名者的公钥集合形成一个<code class="notranslate">聚合公钥</code>。</li>
+</ul>
+<p><strong>随机数生成</strong>：</p>
+<ul>
+<li>每个签名者生成一个<code class="notranslate">随机数</code>，并将其<code class="notranslate">广播</code>给其他参与者。</li>
+</ul>
+<p><strong>签名生成</strong>：</p>
+<ul>
+<li>每个签名者使用自己的私钥、随机数和消息生成部分签名。</li>
+<li>所有部分签名被<code class="notranslate">聚合为一个完整的多重签名</code>。</li>
+</ul>
+<p><strong>签名验证</strong>：</p>
+<ul>
+<li>验证者使用<code class="notranslate">聚合公钥</code>和<code class="notranslate">多重签名</code>验证消息，无需分别验证每个签名。</li>
+</ul>
+<h2>技术优势</h2>
+<p><strong>高效性</strong>：</p>
+<ul>
+<li>多个签名被压缩为一个签名，减少了存储和通信成本。</li>
+<li>验证签名的速度较快。</li>
+</ul>
+<p><strong>灵活性</strong>：</p>
+<ul>
+<li>支持签名者的动态选择，无需提前固定签名者。</li>
+</ul>
+<p><strong>隐私性</strong>：</p>
+<ul>
+<li>签名者的身份对外隐藏，仅显示聚合的签名结果。</li>
+</ul>
+<p><strong>安全性</strong>：</p>
+<ul>
+<li>基于离散对数问题，抗量子计算攻击。</li>
+<li>防止签名篡改，保护数据完整性。</li>
+</ul>
+<h2>在区块链中的应用</h2>
+<p><strong>交易签名</strong>：</p>
+<ul>
+<li>用于多方交易场景（如多重钱包），确保多个参与者同意后才能完成交易。</li>
+</ul>
+<p><strong>共识机制</strong>：</p>
+<ul>
+<li>在区块链共识中用于高效验证多个验证者的参与。</li>
+</ul>
+<p><strong>智能合约</strong>：</p>
+<ul>
+<li>支持多方协作的智能合约签名，提高合约执行的可信度。</li>
+</ul>
+<h1>抗量子计算</h1>
+<p><code class="notranslate">抗量子计算攻击</code>是一种密码学领域的研究方向，旨在开发能够<code class="notranslate">抵御未来量子计算机威胁</code>的新型加密算法。随着量子计算机的发展，传统基于数学难题（如离散对数问题、因子分解问题）的加密算法（如RSA、ECDSA、Diffie-Hellman）可能会被量子计算机的高效算法（如Shor算法）破解。</p>
+<h2>量子计算机</h2>
+<p><strong>量子计算的核心能力</strong>：</p>
+<ul>
+<li>量子计算机通过<code class="notranslate">量子叠加</code>和<code class="notranslate">量子并行</code>计算，可以<code class="notranslate">同时</code>处理<code class="notranslate">大量状态</code>。</li>
+</ul>
+<div class="markdown-alert markdown-alert-tip"><p class="markdown-alert-title"><svg class="octicon octicon-light-bulb mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+<p><strong>量子计算</strong>：利用叠加态和纠缠态进行并行计算，极大提升计算能力。</p>
+</div>
+<ul>
+<li>Shor算法能够在<code class="notranslate">多项式时间</code>内分解<code class="notranslate">大整数</code>和<code class="notranslate">求解离散对数问题</code>，这将威胁<code class="notranslate">RSA</code>和<code class="notranslate">椭圆曲线加密</code>（ECC）。</li>
+<li>Grover算法可以显著加速密钥搜索，削弱对称加密算法（如AES）的安全性。</li>
+</ul>
+<p><strong>可能被量子计算机破解的算法</strong>：</p>
+<ul>
+<li><strong>公钥加密</strong>：RSA、ECC、Diffie-Hellman。</li>
+<li><strong>数字签名</strong>：ECDSA、DSA。</li>
+<li><strong>对称加密</strong>：虽然AES等对称加密算法本质上仍然安全，但Grover算法将使密钥长度的安全需求翻倍。</li>
+</ul>
+<h2>抗量子计算攻击的目标</h2>
+<p>开发能在量子计算机环境下仍然保持安全的加密算法，主要包括：</p>
+<ol>
+<li><strong>公钥加密</strong>：设计新的密钥交换和加密算法。</li>
+<li><strong>数字签名</strong>：提供安全的签名生成和验证方法。</li>
+<li><strong>对称加密</strong>：增强密钥长度（如从128位提升到256位）。</li>
+</ol>
+<h2>抗量子计算算法的分类</h2>
+<p>抗量子计算的密码学主要基于一些量子计算机无法有效解决的数学难题，包括：</p>
+<h4><strong>1. 基于格的密码学（Lattice-Based Cryptography）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>基于短向量问题（SVP）和学习同态（LWE）等难题。</li>
+<li>量子计算机难以快速求解高维格问题。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>适合构建公钥加密、签名和同态加密。</li>
+<li>代表算法：Kyber、Dilithium。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>2. 基于哈希的密码学（Hash-Based Cryptography）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>使用安全的哈希函数构建数字签名和验证。</li>
+<li>依赖哈希函数的抗碰撞性。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>签名速度快，可靠性强，但签名大小较大。</li>
+<li>代表算法：XMSS、SPHINCS+。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>3. 基于码的密码学（Code-Based Cryptography）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>基于纠错码理论（如McEliece加密）。</li>
+<li>攻击者需解决计算复杂的解码问题。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>加密安全性高，但公钥体积大。</li>
+<li>代表算法：Classic McEliece。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>4. 基于多变量多项式的密码学（Multivariate Cryptography）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>基于求解多变量多项式方程组的难题。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>签名和验证速度快，但公钥和签名体积大。</li>
+<li>代表算法：Rainbow。</li>
+</ul>
+</li>
+</ul>
+<h4><strong>5. 基于散列图的密码学（Isogeny-Based Cryptography）</strong></h4>
+<ul>
+<li>原理：
+<ul>
+<li>基于椭圆曲线同态映射（isogenies）的难解性。</li>
+</ul>
+</li>
+<li>特点：
+<ul>
+<li>公钥体积小，但计算复杂。</li>
+<li>代表算法：SIKE。</li>
+</ul>
+</li>
+</ul>
+<h2>应用场景</h2>
+<p><strong>区块链</strong>：</p>
+<ul>
+<li>抗量子签名算法可以保护用户交易和账户。</li>
+<li>确保智能合约在量子计算环境下的安全性。</li>
+</ul>
+<p><strong>通信安全</strong>：</p>
+<ul>
+<li>用于安全密钥交换协议（如TLS、VPN）。</li>
+</ul>
+<p><strong>云存储</strong>：</p>
+<ul>
+<li>确保云端存储的数据在长期内仍然不可被破解。</li>
+</ul>
+<p><strong>物联网（IoT）</strong>：</p>
+<ul>
+<li>为物联网设备提供轻量级的抗量子安全方案。</li>
+</ul>
+<h2>当前挑战</h2>
+<ol>
+<li><strong>计算效率</strong>：抗量子算法通常需要更高的计算资源，性能可能较传统算法低。</li>
+<li><strong>兼容性</strong>：新算法需要与现有协议和硬件兼容。</li>
+<li><strong>公钥和签名大小</strong>：某些抗量子算法的公钥或签名体积较大，不适合资源受限的设备。</li>
+</ol>
+<blockquote>
+<p>抗量子计算攻击技术是应对未来量子计算机威胁的关键密码学方向。通过引入基于格、哈希和纠错码等新型算法，能够有效保护数据在量子计算时代的安全性。这些技术不仅适用于未来的加密需求，也逐步在当代分布式系统、区块链和通信协议中得到试验和应用。</p>
+</blockquote></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://Carolynhomes.github.io/Carolynhomes">牧天白衣</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","Carolynhomes/Carolynhomes");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script>
+
+</html>
