@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 04 Dec 2024 04:38:13 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>论文碰到的点-01</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lun-wen-peng-dao-de-dian--01.html</link><description># 双线性映射&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 04 Dec 2024 04:39:58 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>论文碰到的点-01</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lun-wen-peng-dao-de-dian--01.html</link><description># 双线性映射&#13;
 &#13;
 双线性映射（Bilinear Mapping）是数学中一种重要的运算，其核心思想是`映射一个两变量函数到另一个值`，但这个映射对两个变量都是线性的。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lun-wen-peng-dao-de-dian--01.html</guid><pubDate>Tue, 03 Dec 2024 14:14:33 +0000</pubDate></item><item><title>Typora编辑的markdown文档莫名其妙消失或未保存</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Typora-bian-ji-de-markdown-wen-dang-mo-ming-qi-miao-xiao-shi-huo-wei-bao-cun.html</link><description>&gt;[!tip]&#13;
 &gt; 我是换了名字之后，文件内容忽然不见了&#13;
@@ -9,7 +9,7 @@
 白夜追凶——第一季23集&#13;
 &#13;
 # 电影&#13;
-&#13;
+- [ ] 柯南最新电影&#13;
 。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/zhui-ju-ji-lu.html</guid><pubDate>Mon, 02 Dec 2024 06:11:32 +0000</pubDate></item><item><title>dfs</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dfs.html</link><description># DFS简介&#13;
 &#13;
 搜索算法：穷举问题解空间部分/所有情况，从而求出问题的解&#13;
