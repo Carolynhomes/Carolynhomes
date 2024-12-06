@@ -194,11 +194,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6111cdef98b088dea82732cb29db98c603789321dc3b48d7356860c1356d77a5/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323130373935382e706e67"><img src="https://camo.githubusercontent.com/6111cdef98b088dea82732cb29db98c603789321dc3b48d7356860c1356d77a5/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323130373935382e706e67" alt="image-20241129210742156" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411292107958.png" style="max-width: 100%;"></a></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">itertools</span> <span class="pl-k">import</span> <span class="pl-s1">accumulate</span>
 <span class="pl-k">import</span> <span class="pl-s1">sys</span>
-<span class="pl-s1">input</span> <span class="pl-c1">=</span> <span class="pl-s1">sys</span>.<span class="pl-s1">stdin</span>.<span class="pl-s1">readline</span>
-<span class="pl-s1">print</span> <span class="pl-c1">=</span> <span class="pl-s1">sys</span>.<span class="pl-s1">stdout</span>.<span class="pl-s1">write</span>
+<span class="pl-s1">input</span> <span class="pl-c1">=</span> <span class="pl-s1">sys</span>.<span class="pl-c1">stdin</span>.<span class="pl-c1">readline</span>
+<span class="pl-s1">print</span> <span class="pl-c1">=</span> <span class="pl-s1">sys</span>.<span class="pl-c1">stdout</span>.<span class="pl-c1">write</span>
 
-<span class="pl-s1">n</span>, <span class="pl-s1">q</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">n</span>, <span class="pl-s1">q</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 
 <span class="pl-s1">a_bit</span> <span class="pl-c1">=</span> []
 
@@ -206,12 +206,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">31</span>):
     <span class="pl-s1">now_bit</span> <span class="pl-c1">=</span> []
     <span class="pl-k">for</span> <span class="pl-s1">x</span> <span class="pl-c1">in</span> <span class="pl-s1">a</span>:
-        <span class="pl-s1">now_bit</span>.<span class="pl-en">append</span>((<span class="pl-s1">x</span> <span class="pl-c1">&gt;&gt;</span> <span class="pl-s1">i</span>) <span class="pl-c1">&amp;</span> <span class="pl-c1">1</span>)
+        <span class="pl-s1">now_bit</span>.<span class="pl-c1">append</span>((<span class="pl-s1">x</span> <span class="pl-c1">&gt;&gt;</span> <span class="pl-s1">i</span>) <span class="pl-c1">&amp;</span> <span class="pl-c1">1</span>)
     <span class="pl-c"># 求前缀和，方便后续计算区间和</span>
-    <span class="pl-s1">a_bit</span>.<span class="pl-en">append</span>(<span class="pl-en">list</span>(<span class="pl-en">accumulate</span>(<span class="pl-s1">now_bit</span>)))
+    <span class="pl-s1">a_bit</span>.<span class="pl-c1">append</span>(<span class="pl-en">list</span>(<span class="pl-en">accumulate</span>(<span class="pl-s1">now_bit</span>)))
 
 <span class="pl-k">for</span> <span class="pl-s1">_</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">q</span>):
-    <span class="pl-s1">l</span>, <span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+    <span class="pl-s1">l</span>, <span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
     <span class="pl-s1">l</span> <span class="pl-c1">-=</span> <span class="pl-c1">1</span>
     <span class="pl-s1">r</span> <span class="pl-c1">-=</span> <span class="pl-c1">1</span>
 
@@ -230,7 +230,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3ebf4b039934c455b4a08a0efa1cb1126afd2ba03c13a3b496a012ad98168631/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323130393639332e706e67"><img src="https://camo.githubusercontent.com/3ebf4b039934c455b4a08a0efa1cb1126afd2ba03c13a3b496a012ad98168631/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323130393639332e706e67" alt="image-20241129210935645" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411292109693.png" style="max-width: 100%;"></a></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 
 <span class="pl-c"># 预处理前缀异或，方便后面求解区间异或</span>
 <span class="pl-s1">pre_xor</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-s1">n</span>
@@ -249,8 +249,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-s1">dic</span> <span class="pl-c1">=</span> {}
     <span class="pl-s1">dic</span>[<span class="pl-c1">0</span>] <span class="pl-c1">=</span> <span class="pl-c1">1</span>
     <span class="pl-k">for</span> <span class="pl-s1">j</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
-        <span class="pl-s1">ans</span> <span class="pl-c1">+=</span> <span class="pl-s1">dic</span>.<span class="pl-en">get</span>(<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>] <span class="pl-c1">^</span> <span class="pl-s1">xor</span>, <span class="pl-c1">0</span>)
-        <span class="pl-s1">dic</span>[<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>]] <span class="pl-c1">=</span> <span class="pl-s1">dic</span>.<span class="pl-en">get</span>(<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>], <span class="pl-c1">0</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>
+        <span class="pl-s1">ans</span> <span class="pl-c1">+=</span> <span class="pl-s1">dic</span>.<span class="pl-c1">get</span>(<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>] <span class="pl-c1">^</span> <span class="pl-s1">xor</span>, <span class="pl-c1">0</span>)
+        <span class="pl-s1">dic</span>[<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>]] <span class="pl-c1">=</span> <span class="pl-s1">dic</span>.<span class="pl-c1">get</span>(<span class="pl-s1">pre_xor</span>[<span class="pl-s1">j</span>], <span class="pl-c1">0</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>
 
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-s1">n</span> <span class="pl-c1">*</span> (<span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>) <span class="pl-c1">//</span> <span class="pl-c1">2</span> <span class="pl-c1">-</span> <span class="pl-s1">ans</span>
 <span class="pl-en">print</span>(<span class="pl-s1">ans</span>)</pre></div>

@@ -151,11 +151,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-k">import</span> <span class="pl-s1">string</span>
 
     <span class="pl-c"># lowercase letter</span>
-    <span class="pl-s1">lowercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s1">string</span>.<span class="pl-s1">ascii_lowercase</span>
+    <span class="pl-s1">lowercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s1">string</span>.<span class="pl-c1">ascii_lowercase</span>
     <span class="pl-en">print</span>(<span class="pl-s1">lowercase_letters</span>)
 
     <span class="pl-c"># uppercase letter</span>
-    <span class="pl-s1">uppercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s1">string</span>.<span class="pl-s1">ascii_uppercase</span>
+    <span class="pl-s1">uppercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s1">string</span>.<span class="pl-c1">ascii_uppercase</span>
     <span class="pl-en">print</span>(<span class="pl-s1">uppercase_letters</span>)
 
 
@@ -163,18 +163,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-c"># chr() and ord() functions allow us to get the letters based on ascii</span>
     <span class="pl-en">print</span>(<span class="pl-en">chr</span>(<span class="pl-c1">97</span>), <span class="pl-en">chr</span>(<span class="pl-c1">65</span>))  <span class="pl-c"># a A</span>
 
-    <span class="pl-s1">lowercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s">''</span>.<span class="pl-en">join</span>(<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'a'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>))
+    <span class="pl-s1">lowercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s">''</span>.<span class="pl-c1">join</span>(<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'a'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>))
     <span class="pl-en">print</span>(<span class="pl-s1">lowercase_letters</span>)
 
-    <span class="pl-s1">uppercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s">''</span>.<span class="pl-en">join</span>(<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'A'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'Z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>))
+    <span class="pl-s1">uppercase_letters</span> <span class="pl-c1">=</span> <span class="pl-s">''</span>.<span class="pl-c1">join</span>(<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'A'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'Z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>))
     <span class="pl-en">print</span>(<span class="pl-s1">uppercase_letters</span>)
 
 <span class="pl-k">def</span> <span class="pl-en">solution3</span>():
     <span class="pl-s1">lowercase_letters</span> <span class="pl-c1">=</span> [<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'a'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>)]
-    <span class="pl-en">print</span>(<span class="pl-s">''</span>.<span class="pl-en">join</span>(<span class="pl-s1">lowercase_letters</span>))
+    <span class="pl-en">print</span>(<span class="pl-s">''</span>.<span class="pl-c1">join</span>(<span class="pl-s1">lowercase_letters</span>))
 
     <span class="pl-s1">uppercase_letters</span> <span class="pl-c1">=</span> [<span class="pl-en">chr</span>(<span class="pl-s1">i</span>) <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-en">ord</span>(<span class="pl-s">'A'</span>), <span class="pl-en">ord</span>(<span class="pl-s">'Z'</span>) <span class="pl-c1">+</span> <span class="pl-c1">1</span>)]
-    <span class="pl-en">print</span>(<span class="pl-s">''</span>.<span class="pl-en">join</span>(<span class="pl-s1">uppercase_letters</span>))
+    <span class="pl-en">print</span>(<span class="pl-s">''</span>.<span class="pl-c1">join</span>(<span class="pl-s1">uppercase_letters</span>))
 
 <span class="pl-k">if</span> <span class="pl-s1">__name__</span> <span class="pl-c1">==</span> <span class="pl-s">'__main__'</span>: 
     <span class="pl-en">solution3</span>()</pre></div></div>

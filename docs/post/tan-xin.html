@@ -353,15 +353,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">heapq</span>  <span class="pl-c"># 堆</span>
 
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 
-<span class="pl-s1">heapq</span>.<span class="pl-en">heapify</span>(<span class="pl-s1">a</span>)  <span class="pl-c"># # 将无序的list转为最小堆</span>
+<span class="pl-s1">heapq</span>.<span class="pl-c1">heapify</span>(<span class="pl-s1">a</span>)  <span class="pl-c"># # 将无序的list转为最小堆</span>
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 
 <span class="pl-k">while</span> <span class="pl-en">len</span>(<span class="pl-s1">a</span>) <span class="pl-c1">!=</span> <span class="pl-c1">1</span>:
-    <span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s1">heapq</span>.<span class="pl-en">heappop</span>(<span class="pl-s1">a</span>)  <span class="pl-c"># 弹出并返回最小元素</span>
-    <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-s1">heapq</span>.<span class="pl-en">heappop</span>(<span class="pl-s1">a</span>)
-    <span class="pl-s1">heapq</span>.<span class="pl-en">heappush</span>(<span class="pl-s1">a</span>, <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>)  <span class="pl-c"># 向堆中添加元素</span>
+    <span class="pl-s1">x</span> <span class="pl-c1">=</span> <span class="pl-s1">heapq</span>.<span class="pl-c1">heappop</span>(<span class="pl-s1">a</span>)  <span class="pl-c"># 弹出并返回最小元素</span>
+    <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-s1">heapq</span>.<span class="pl-c1">heappop</span>(<span class="pl-s1">a</span>)
+    <span class="pl-s1">heapq</span>.<span class="pl-c1">heappush</span>(<span class="pl-s1">a</span>, <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>)  <span class="pl-c"># 向堆中添加元素</span>
     <span class="pl-s1">ans</span> <span class="pl-c1">+=</span> <span class="pl-s1">x</span> <span class="pl-c1">+</span> <span class="pl-s1">y</span>
 
 <span class="pl-en">print</span>(<span class="pl-s1">ans</span>)</pre></div>
@@ -377,10 +377,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c"># n个纪念品的价格</span>
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> []
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
-    <span class="pl-s1">a</span>.<span class="pl-en">append</span>(<span class="pl-en">int</span>(<span class="pl-en">input</span>()))
+    <span class="pl-s1">a</span>.<span class="pl-c1">append</span>(<span class="pl-en">int</span>(<span class="pl-en">input</span>()))
 
 <span class="pl-c"># 1. 排序</span>
-<span class="pl-s1">a</span>.<span class="pl-en">sort</span>()
+<span class="pl-s1">a</span>.<span class="pl-c1">sort</span>()
 <span class="pl-c"># 最小的和最大的下标</span>
 <span class="pl-s1">l</span>, <span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>, <span class="pl-s1">n</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>

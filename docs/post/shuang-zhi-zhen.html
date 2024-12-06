@@ -361,8 +361,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ul>
 <li>蓝桥 1372</li>
 </ul>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-v">S</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-c1">S</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 <span class="pl-c"># 找最小区间，满足区间之和 &gt;=S</span>
 <span class="pl-s1">min_len</span> <span class="pl-c1">=</span> <span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>
 <span class="pl-c"># [left, right)</span>
@@ -372,11 +372,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">tot</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 <span class="pl-k">while</span> <span class="pl-s1">left</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">n</span>:
     <span class="pl-c"># 不断扩展右端点，直至区间之和 &gt;= S</span>
-    <span class="pl-k">while</span> <span class="pl-s1">right</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">n</span> <span class="pl-c1">and</span> <span class="pl-s1">tot</span> <span class="pl-c1">&lt;</span> <span class="pl-v">S</span>:
+    <span class="pl-k">while</span> <span class="pl-s1">right</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">n</span> <span class="pl-c1">and</span> <span class="pl-s1">tot</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">S</span>:
         <span class="pl-s1">tot</span> <span class="pl-c1">+=</span> <span class="pl-s1">a</span>[<span class="pl-s1">right</span>]
         <span class="pl-s1">right</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span>
     
-    <span class="pl-k">if</span> <span class="pl-s1">tot</span> <span class="pl-c1">&gt;=</span> <span class="pl-v">S</span>:
+    <span class="pl-k">if</span> <span class="pl-s1">tot</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">S</span>:
         <span class="pl-s1">min_len</span> <span class="pl-c1">=</span> <span class="pl-en">min</span>(<span class="pl-s1">min_len</span>, <span class="pl-s1">right</span> <span class="pl-c1">-</span> <span class="pl-s1">left</span>) 
     
     <span class="pl-c"># 左端点往右走一步</span>
@@ -390,8 +390,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <ul>
 <li>蓝桥 1621</li>
 </ul>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 
 <span class="pl-c"># 找有多少个区间满足：至少k个数字大于等于m</span>
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>

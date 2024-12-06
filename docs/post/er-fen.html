@@ -506,7 +506,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c"># 当区间长度大于eps, 说明前3位小数不同</span>
 <span class="pl-c"># 否则, 前三位小数已确定</span>
 <span class="pl-k">while</span> <span class="pl-s1">right</span> <span class="pl-c1">-</span> <span class="pl-s1">left</span> <span class="pl-c1">&gt;=</span> <span class="pl-s1">eps</span>:
-    <span class="pl-en">print</span>(<span class="pl-s">"[{}, {}]"</span>.<span class="pl-en">format</span>(<span class="pl-s1">left</span>, <span class="pl-s1">right</span>))
+    <span class="pl-en">print</span>(<span class="pl-s">"[{}, {}]"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">left</span>, <span class="pl-s1">right</span>))
     <span class="pl-c"># 求中点</span>
     <span class="pl-s1">mid</span> <span class="pl-c1">=</span> (<span class="pl-s1">left</span> <span class="pl-c1">+</span> <span class="pl-s1">right</span>) <span class="pl-c1">/</span> <span class="pl-c1">2</span>
     <span class="pl-c"># 分类讨论: 当mid^2 &gt; 2, 则下一次为[left, mid]</span>
@@ -554,11 +554,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>蓝桥99</li>
 </ul>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/617348655516d80be684f955cb522986568b2ba999d8b9a61fa498fc77e699f4/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030323337302e706e67"><img src="https://camo.githubusercontent.com/617348655516d80be684f955cb522986568b2ba999d8b9a61fa498fc77e699f4/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030323337302e706e67" alt="image-20241129200233201" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411292002370.png" style="max-width: 100%;"></a></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-v">N</span>, <span class="pl-v">K</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c1">N</span>, <span class="pl-c1">K</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> []
-<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
-    <span class="pl-s1">x</span>, <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-    <span class="pl-s1">a</span>.<span class="pl-en">append</span>((<span class="pl-s1">x</span>, <span class="pl-s1">y</span>))
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
+    <span class="pl-s1">x</span>, <span class="pl-s1">y</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+    <span class="pl-s1">a</span>.<span class="pl-c1">append</span>((<span class="pl-s1">x</span>, <span class="pl-s1">y</span>))
 
 <span class="pl-c"># 二分答案</span>
 <span class="pl-k">def</span> <span class="pl-en">check</span>(<span class="pl-s1">x</span>):
@@ -566,7 +566,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>  <span class="pl-c"># 统计切出次数</span>
     <span class="pl-k">for</span> <span class="pl-s1">h</span>, <span class="pl-s1">w</span> <span class="pl-c1">in</span> <span class="pl-s1">a</span>:
         <span class="pl-s1">cnt</span> <span class="pl-c1">+=</span> (<span class="pl-s1">h</span> <span class="pl-c1">//</span> <span class="pl-s1">x</span>) <span class="pl-c1">*</span> (<span class="pl-s1">w</span> <span class="pl-c1">//</span> <span class="pl-s1">x</span>)
-    <span class="pl-k">return</span> <span class="pl-s1">cnt</span> <span class="pl-c1">&gt;=</span> <span class="pl-v">K</span>
+    <span class="pl-k">return</span> <span class="pl-s1">cnt</span> <span class="pl-c1">&gt;=</span> <span class="pl-c1">K</span>
 
 <span class="pl-s1">left</span>, <span class="pl-s1">right</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>, <span class="pl-c1">100000</span>
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>
@@ -582,28 +582,28 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>蓝桥364</li>
 </ul>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/3fcb90aef16b3e03d2a2308b873f6ce8bec63085a482e8338dcf07aa905446da/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030333036312e706e67"><img src="https://camo.githubusercontent.com/3fcb90aef16b3e03d2a2308b873f6ce8bec63085a482e8338dcf07aa905446da/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030333036312e706e67" alt="image-20241129200304007" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411292003061.png" style="max-width: 100%;"></a></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-v">L</span>, <span class="pl-v">N</span>, <span class="pl-v">M</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-<span class="pl-v">D</span> <span class="pl-c1">=</span> []
-<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
-    <span class="pl-v">D</span>.<span class="pl-en">append</span>(<span class="pl-en">int</span>(<span class="pl-en">input</span>()))
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c1">L</span>, <span class="pl-c1">N</span>, <span class="pl-c1">M</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+<span class="pl-c1">D</span> <span class="pl-c1">=</span> []
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
+    <span class="pl-c1">D</span>.<span class="pl-c1">append</span>(<span class="pl-en">int</span>(<span class="pl-en">input</span>()))
 
 <span class="pl-k">def</span> <span class="pl-en">check</span>(<span class="pl-s1">x</span>):
     <span class="pl-c"># 什么是合法？当最短跳跃距离为x时，移走的岩石数量是否不超过M个</span>
     <span class="pl-c"># 当前坐标: now_idx, 移除数量: cnt</span>
     <span class="pl-s1">now_idx</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
     <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
-    <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
+    <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
         <span class="pl-c"># 此时这块石头跳跃距离小于x，违反规则，所以需要移除</span>
-        <span class="pl-k">if</span> <span class="pl-v">D</span>[<span class="pl-s1">i</span>] <span class="pl-c1">-</span> <span class="pl-s1">now_idx</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">x</span>:
+        <span class="pl-k">if</span> <span class="pl-c1">D</span>[<span class="pl-s1">i</span>] <span class="pl-c1">-</span> <span class="pl-s1">now_idx</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">x</span>:
             <span class="pl-s1">cnt</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span>
         <span class="pl-k">else</span>: <span class="pl-c"># 此时可以正常跳跃</span>
-            <span class="pl-s1">now_idx</span> <span class="pl-c1">=</span> <span class="pl-v">D</span>[<span class="pl-s1">i</span>]
+            <span class="pl-s1">now_idx</span> <span class="pl-c1">=</span> <span class="pl-c1">D</span>[<span class="pl-s1">i</span>]
     <span class="pl-c"># 最后一个石头到终点的距离不能小于x</span>
-    <span class="pl-k">if</span> <span class="pl-v">L</span> <span class="pl-c1">-</span> <span class="pl-s1">now_idx</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">x</span>:
+    <span class="pl-k">if</span> <span class="pl-c1">L</span> <span class="pl-c1">-</span> <span class="pl-s1">now_idx</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">x</span>:
         <span class="pl-k">return</span> <span class="pl-c1">False</span>
-    <span class="pl-k">return</span> <span class="pl-s1">cnt</span> <span class="pl-c1">&lt;=</span> <span class="pl-v">M</span>
+    <span class="pl-k">return</span> <span class="pl-s1">cnt</span> <span class="pl-c1">&lt;=</span> <span class="pl-c1">M</span>
 
-<span class="pl-s1">left</span>, <span class="pl-s1">right</span>, <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>, <span class="pl-v">L</span>, <span class="pl-c1">1</span>
+<span class="pl-s1">left</span>, <span class="pl-s1">right</span>, <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>, <span class="pl-c1">L</span>, <span class="pl-c1">1</span>
 <span class="pl-k">while</span> <span class="pl-s1">left</span> <span class="pl-c1">&lt;=</span> <span class="pl-s1">right</span>:
     <span class="pl-s1">mid</span> <span class="pl-c1">=</span> (<span class="pl-s1">left</span> <span class="pl-c1">+</span> <span class="pl-s1">right</span>) <span class="pl-c1">//</span> <span class="pl-c1">2</span>
     <span class="pl-k">if</span> <span class="pl-en">check</span>(<span class="pl-s1">mid</span>):
@@ -616,7 +616,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>蓝桥3404</li>
 </ul>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/adc1baa62b9ed7ab79535815985edac0851310171b15943bab6769ecaa6ca9e5/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030333631312e706e67"><img src="https://camo.githubusercontent.com/adc1baa62b9ed7ab79535815985edac0851310171b15943bab6769ecaa6ca9e5/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313239323030333631312e706e67" alt="image-20241129200350561" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411292003611.png" style="max-width: 100%;"></a></p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-s1">left</span>, <span class="pl-s1">right</span> <span class="pl-c1">=</span> <span class="pl-c1">1</span>, <span class="pl-s1">n</span> <span class="pl-c1">*</span> <span class="pl-s1">m</span>
 
 <span class="pl-c"># 也可以先计算，然后在原始循环中判断是否合法</span>

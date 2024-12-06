@@ -544,7 +544,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 
 
-<span class="pl-s1">x</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">x</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 
 <span class="pl-c"># 记录每层选择数字</span>
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-s1">n</span>
@@ -552,7 +552,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 
 <span class="pl-en">dfs</span>(<span class="pl-c1">0</span>)
-<span class="pl-en">print</span>(<span class="pl-s">"累计计算次数={}"</span>.<span class="pl-en">format</span>(<span class="pl-s1">cnt</span>))</pre></div>
+<span class="pl-en">print</span>(<span class="pl-s">"累计计算次数={}"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">cnt</span>))</pre></div>
 <h2>剪枝</h2>
 <p><strong>把条件放在枚举的时候判断可以降低计算量</strong></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span>, <span class="pl-s1">last_val</span>):
@@ -581,7 +581,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>, <span class="pl-s1">i</span>)
 
 
-<span class="pl-s1">x</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">x</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 
 <span class="pl-c"># 记录每层选择数字</span>
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-s1">n</span>
@@ -589,14 +589,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 
 <span class="pl-en">dfs</span>(<span class="pl-c1">0</span>, <span class="pl-c1">1</span>)
-<span class="pl-en">print</span>(<span class="pl-s">"累计计算次数={}"</span>.<span class="pl-en">format</span>(<span class="pl-s1">cnt</span>))</pre></div>
+<span class="pl-en">print</span>(<span class="pl-s">"累计计算次数={}"</span>.<span class="pl-c1">format</span>(<span class="pl-s1">cnt</span>))</pre></div>
 <h2>模板</h2>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">def</span> <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span>):
     <span class="pl-s">"""</span>
 <span class="pl-s">    :param depth: 当前为第几重循环</span>
 <span class="pl-s">    :return:</span>
 <span class="pl-s">    """</span>
-    <span class="pl-k">if</span> <span class="pl-s1">depth</span> <span class="pl-c1">==</span> <span class="pl-v">N</span>:
+    <span class="pl-k">if</span> <span class="pl-s1">depth</span> <span class="pl-c1">==</span> <span class="pl-c1">N</span>:
         <span class="pl-c"># N重循环最内层执行的代码</span>
         <span class="pl-k">return</span>
     <span class="pl-c"># 每重循环进行的枚举选择</span></pre></div>
@@ -664,9 +664,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-c"># 不买</span>
     <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>, <span class="pl-s1">s</span>, <span class="pl-s1">cnt</span>)
 
-<span class="pl-s1">n</span>, <span class="pl-s1">m</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">n</span>, <span class="pl-s1">m</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-s1">m</span> <span class="pl-c1">*=</span> <span class="pl-c1">2</span>
-<span class="pl-s1">w</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">w</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 <span class="pl-s1">w</span> <span class="pl-c1">=</span> [<span class="pl-s1">x</span> <span class="pl-c1">*</span> <span class="pl-c1">2</span> <span class="pl-k">for</span> <span class="pl-s1">x</span> <span class="pl-c1">in</span> <span class="pl-s1">w</span>]
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>
 <span class="pl-en">dfs</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>)
@@ -700,12 +700,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
             <span class="pl-c"># 标记当前状态</span>
             <span class="pl-s1">vis</span>[<span class="pl-s1">i</span>] <span class="pl-c1">=</span> <span class="pl-c1">True</span>
             <span class="pl-c"># 记录当前路径</span>
-            <span class="pl-s1">path</span>.<span class="pl-en">append</span>(<span class="pl-s1">i</span>)
+            <span class="pl-s1">path</span>.<span class="pl-c1">append</span>(<span class="pl-s1">i</span>)
             <span class="pl-c"># 进行下一层搜索</span>
             <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
             <span class="pl-c"># 清空标记</span>
             <span class="pl-s1">vis</span>[<span class="pl-s1">i</span>] <span class="pl-c1">=</span> <span class="pl-c1">False</span>
-            <span class="pl-s1">path</span>.<span class="pl-en">pop</span>(<span class="pl-c1">-</span><span class="pl-c1">1</span>)
+            <span class="pl-s1">path</span>.<span class="pl-c1">pop</span>(<span class="pl-c1">-</span><span class="pl-c1">1</span>)
 
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-s1">path</span> <span class="pl-c1">=</span> []
@@ -714,7 +714,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h2>求子集</h2>
 <p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/c366609a4306409260dd4b00087f8d45fb169b650a95380273b9ba584bf273fc/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313330313435323539382e706e67"><img src="https://camo.githubusercontent.com/c366609a4306409260dd4b00087f8d45fb169b650a95380273b9ba584bf273fc/687474703a2f2f63646e2e6a7364656c6976722e6e65742f67682f4361726f6c796e686f6d65732f696d61676573406d61696e2f696d672f507974686f6e2f3230323431313330313435323539382e706e67" alt="image-20241130145242515" data-canonical-src="http://cdn.jsdelivr.net/gh/Carolynhomes/images@main/img/Python/202411301452598.png" style="max-width: 100%;"></a></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 <span class="pl-s1">path</span> <span class="pl-c1">=</span> []
 
 <span class="pl-k">def</span> <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span>):
@@ -723,9 +723,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-k">return</span>
 
     <span class="pl-c"># 选</span>
-    <span class="pl-s1">path</span>.<span class="pl-en">append</span>(<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>])
+    <span class="pl-s1">path</span>.<span class="pl-c1">append</span>(<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>])
     <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
-    <span class="pl-s1">path</span>.<span class="pl-en">pop</span>(<span class="pl-c1">-</span><span class="pl-c1">1</span>)
+    <span class="pl-s1">path</span>.<span class="pl-c1">pop</span>(<span class="pl-c1">-</span><span class="pl-c1">1</span>)
 
     <span class="pl-c"># 不选</span>
     <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
@@ -769,10 +769,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">sys</span>
 <span class="pl-c"># 扩栈：递归层数过大，需要设置最大栈空间</span>
-<span class="pl-s1">sys</span>.<span class="pl-en">setrecursionlimit</span>(<span class="pl-c1">100000</span>)
+<span class="pl-s1">sys</span>.<span class="pl-c1">setrecursionlimit</span>(<span class="pl-c1">100000</span>)
 
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">+</span> <span class="pl-s1">a</span>
 <span class="pl-s1">vis</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">*</span> (<span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
 
@@ -796,14 +796,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>lanqiao 178</li>
 </ul>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">sys</span>
-<span class="pl-s1">sys</span>.<span class="pl-en">setrecursionlimit</span>(<span class="pl-c1">1000000</span>)
+<span class="pl-s1">sys</span>.<span class="pl-c1">setrecursionlimit</span>(<span class="pl-c1">1000000</span>)
 
-<span class="pl-v">N</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
+<span class="pl-c1">N</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-v">Map</span> <span class="pl-c1">=</span> []
 <span class="pl-s1">vis</span> <span class="pl-c1">=</span> []
-<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
-    <span class="pl-v">Map</span>.<span class="pl-en">append</span>(<span class="pl-en">list</span>(<span class="pl-en">input</span>()))
-    <span class="pl-s1">vis</span>.<span class="pl-en">append</span>([<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-v">N</span>)
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
+    <span class="pl-v">Map</span>.<span class="pl-c1">append</span>(<span class="pl-en">list</span>(<span class="pl-en">input</span>()))
+    <span class="pl-s1">vis</span>.<span class="pl-c1">append</span>([<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-c1">N</span>)
 
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
 <span class="pl-s1">dir</span> <span class="pl-c1">=</span> [(<span class="pl-c1">1</span>, <span class="pl-c1">0</span>), (<span class="pl-c1">0</span>, <span class="pl-c1">1</span>), (<span class="pl-c1">-</span><span class="pl-c1">1</span>, <span class="pl-c1">0</span>), (<span class="pl-c1">0</span>, <span class="pl-c1">-</span><span class="pl-c1">1</span>)]
@@ -822,8 +822,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-k">if</span> <span class="pl-v">Map</span>[<span class="pl-s1">xx</span>][<span class="pl-s1">yy</span>] <span class="pl-c1">==</span> <span class="pl-s">'.'</span> <span class="pl-c1">and</span> <span class="pl-s1">vis</span>[<span class="pl-s1">xx</span>][<span class="pl-s1">yy</span>] <span class="pl-c1">==</span> <span class="pl-c1">0</span>:
             <span class="pl-en">dfs</span>(<span class="pl-s1">xx</span>, <span class="pl-s1">yy</span>)
 
-<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
-    <span class="pl-k">for</span> <span class="pl-s1">j</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-v">N</span>):
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
+    <span class="pl-k">for</span> <span class="pl-s1">j</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">N</span>):
         <span class="pl-k">if</span> <span class="pl-v">Map</span>[<span class="pl-s1">i</span>][<span class="pl-s1">j</span>] <span class="pl-c1">==</span> <span class="pl-s">'#'</span> <span class="pl-c1">and</span> <span class="pl-s1">vis</span>[<span class="pl-s1">i</span>][<span class="pl-s1">j</span>] <span class="pl-c1">==</span> <span class="pl-c1">0</span>:
             <span class="pl-s1">flag</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
             <span class="pl-en">dfs</span>(<span class="pl-s1">i</span>, <span class="pl-s1">j</span>)
@@ -857,16 +857,16 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-c"># 枚举第depth个学生能否加入当前组each_group</span>
         <span class="pl-c"># 前提：必须满足题意</span>
         <span class="pl-k">if</span> <span class="pl-en">check</span>(<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>], <span class="pl-s1">each_group</span>):
-            <span class="pl-s1">each_group</span>.<span class="pl-en">append</span>(<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>])
+            <span class="pl-s1">each_group</span>.<span class="pl-c1">append</span>(<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>])
             <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
-            <span class="pl-s1">each_group</span>.<span class="pl-en">pop</span>()
+            <span class="pl-s1">each_group</span>.<span class="pl-c1">pop</span>()
     <span class="pl-c"># 单独作为一组</span>
-    <span class="pl-v">Groups</span>.<span class="pl-en">append</span>([<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>]])
+    <span class="pl-v">Groups</span>.<span class="pl-c1">append</span>([<span class="pl-s1">a</span>[<span class="pl-s1">depth</span>]])
     <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)
-    <span class="pl-v">Groups</span>.<span class="pl-en">pop</span>()
+    <span class="pl-v">Groups</span>.<span class="pl-c1">pop</span>()
 
 <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
-<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>()))
+<span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
 <span class="pl-c"># ans表示最少能分多少队</span>
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-s1">n</span>
 <span class="pl-v">Groups</span> <span class="pl-c1">=</span> []
@@ -892,11 +892,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         <span class="pl-c"># 累计乘积要不超过100000: mul * (i ** (n - depth)) &gt; 100000:</span>
         <span class="pl-k">if</span> <span class="pl-s1">mul</span> <span class="pl-c1">*</span> (<span class="pl-s1">i</span> <span class="pl-c1">**</span> (<span class="pl-s1">n</span> <span class="pl-c1">-</span> <span class="pl-s1">depth</span>)) <span class="pl-c1">&gt;</span> <span class="pl-c1">100000</span>:
             <span class="pl-k">break</span>
-        <span class="pl-s1">path</span>.<span class="pl-en">append</span>(<span class="pl-s1">i</span>)
+        <span class="pl-s1">path</span>.<span class="pl-c1">append</span>(<span class="pl-s1">i</span>)
         <span class="pl-en">dfs</span>(<span class="pl-s1">depth</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>, <span class="pl-s1">i</span>, <span class="pl-s1">tot</span> <span class="pl-c1">+</span> <span class="pl-s1">i</span>, <span class="pl-s1">mul</span> <span class="pl-c1">*</span> <span class="pl-s1">i</span>)
-        <span class="pl-s1">path</span>.<span class="pl-en">pop</span>()
+        <span class="pl-s1">path</span>.<span class="pl-c1">pop</span>()
 
-<span class="pl-s1">t</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">t</span>, <span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> [<span class="pl-c1">0</span>] <span class="pl-c1">*</span> <span class="pl-c1">100001</span>
 <span class="pl-s1">path</span> <span class="pl-c1">=</span> []
 <span class="pl-en">dfs</span>(<span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>, <span class="pl-c1">1</span>)
@@ -904,7 +904,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-c1">100001</span>):
     <span class="pl-s1">ans</span>[<span class="pl-s1">i</span>] <span class="pl-c1">+=</span> <span class="pl-s1">ans</span>[<span class="pl-s1">i</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>]
 <span class="pl-k">for</span> <span class="pl-s1">_</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">t</span>):
-    <span class="pl-s1">l</span>, <span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+    <span class="pl-s1">l</span>, <span class="pl-s1">r</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
     <span class="pl-en">print</span>(<span class="pl-s1">ans</span>[<span class="pl-s1">r</span>] <span class="pl-c1">-</span> <span class="pl-s1">ans</span>[<span class="pl-s1">l</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>])</pre></div>
 <h1>记忆化搜索</h1>
 <p>记忆化：通过记录已经遍历过的状态的信息，从而避免对同一状态重<br>
@@ -942,7 +942,7 @@ $\textcolor{red}{记忆化=dfs+额外字典}$</p>
 <span class="pl-k">def</span> <span class="pl-en">dfs</span>(<span class="pl-s1">x</span>, <span class="pl-s1">y</span>, <span class="pl-s1">z</span>):
     <span class="pl-c"># 当前处于(x, y)，z表示是否使用喷气背包</span>
     <span class="pl-c"># 如果能逃离，返回True，否则返回False</span>
-    <span class="pl-k">if</span> <span class="pl-s1">x</span> <span class="pl-c1">==</span> <span class="pl-v">C</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span> <span class="pl-c1">and</span> <span class="pl-s1">y</span> <span class="pl-c1">==</span> <span class="pl-v">D</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>:
+    <span class="pl-k">if</span> <span class="pl-s1">x</span> <span class="pl-c1">==</span> <span class="pl-c1">C</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span> <span class="pl-c1">and</span> <span class="pl-s1">y</span> <span class="pl-c1">==</span> <span class="pl-c1">D</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>:
         <span class="pl-k">return</span> <span class="pl-c1">True</span>
 
     <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">4</span>):
@@ -960,13 +960,13 @@ $\textcolor{red}{记忆化=dfs+额外字典}$</p>
 
 <span class="pl-c"># 四个方向</span>
 <span class="pl-s1">dir</span> <span class="pl-c1">=</span> [(<span class="pl-c1">1</span>, <span class="pl-c1">0</span>), (<span class="pl-c1">0</span>, <span class="pl-c1">1</span>), (<span class="pl-c1">-</span><span class="pl-c1">1</span>, <span class="pl-c1">0</span>), (<span class="pl-c1">0</span>, <span class="pl-c1">-</span><span class="pl-c1">1</span>)]
-<span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
-<span class="pl-v">A</span>, <span class="pl-v">B</span>, <span class="pl-v">C</span>, <span class="pl-v">D</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
+<span class="pl-c1">A</span>, <span class="pl-c1">B</span>, <span class="pl-c1">C</span>, <span class="pl-c1">D</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-v">Map</span> <span class="pl-c1">=</span> []
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
-    <span class="pl-v">Map</span>.<span class="pl-en">append</span>(<span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())))
+    <span class="pl-v">Map</span>.<span class="pl-c1">append</span>(<span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())))
 
-<span class="pl-k">if</span> <span class="pl-en">dfs</span>(<span class="pl-v">A</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>, <span class="pl-v">B</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>, <span class="pl-c1">False</span>):
+<span class="pl-k">if</span> <span class="pl-en">dfs</span>(<span class="pl-c1">A</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>, <span class="pl-c1">B</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>, <span class="pl-c1">False</span>):
     <span class="pl-en">print</span>(<span class="pl-s">"Yes"</span>)
 <span class="pl-k">else</span>:
     <span class="pl-en">print</span>(<span class="pl-s">"No"</span>)</pre></div>
@@ -1001,10 +1001,10 @@ $\textcolor{red}{记忆化=dfs+额外字典}$</p>
                 <span class="pl-s1">ans</span> <span class="pl-c1">+=</span> <span class="pl-en">dfs</span>(<span class="pl-s1">xx</span>, <span class="pl-s1">yy</span>, <span class="pl-s1">z</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>, <span class="pl-s1">a</span>[<span class="pl-s1">x</span>][<span class="pl-s1">y</span>])
     <span class="pl-k">return</span> <span class="pl-s1">ans</span> <span class="pl-c1">%</span> <span class="pl-c1">1000000007</span>
 
-<span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())
+<span class="pl-s1">n</span>, <span class="pl-s1">m</span>, <span class="pl-s1">k</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
 <span class="pl-s1">a</span> <span class="pl-c1">=</span> [[<span class="pl-c1">0</span>] <span class="pl-c1">*</span> (<span class="pl-s1">m</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>)]
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
-    <span class="pl-s1">a</span>.<span class="pl-en">append</span>([<span class="pl-c1">0</span>] <span class="pl-c1">+</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-en">split</span>())))
+    <span class="pl-s1">a</span>.<span class="pl-c1">append</span>([<span class="pl-c1">0</span>] <span class="pl-c1">+</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())))
 <span class="pl-en">print</span>(<span class="pl-en">dfs</span>(<span class="pl-c1">1</span>, <span class="pl-c1">1</span>, <span class="pl-c1">0</span>, <span class="pl-c1">0</span>))</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
