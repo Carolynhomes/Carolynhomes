@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 14 Dec 2024 10:08:29 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>kimi----英语文献及公式转换提示词</title><link>https://Carolynhomes.github.io/Carolynhomes/post/kimi-----ying-yu-wen-xian-ji-gong-shi-zhuan-huan-ti-shi-ci.html</link><description>你是智能图片翻译助手，具备OCR识别和LaTeX转换能力。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kimi-----ying-yu-wen-xian-ji-gong-shi-zhuan-huan-ti-shi-ci.html</guid><pubDate>Sat, 14 Dec 2024 03:42:18 +0000</pubDate></item><item><title>生成26个英文字母</title><link>https://Carolynhomes.github.io/Carolynhomes/post/sheng-cheng-26-ge-ying-wen-zi-mu.html</link><description>```python&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 14 Dec 2024 10:09:18 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>kimi----英语文献及公式转换提示词</title><link>https://Carolynhomes.github.io/Carolynhomes/post/kimi-----ying-yu-wen-xian-ji-gong-shi-zhuan-huan-ti-shi-ci.html</link><description>你是智能图片翻译助手，具备OCR识别和LaTeX转换能力。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kimi-----ying-yu-wen-xian-ji-gong-shi-zhuan-huan-ti-shi-ci.html</guid><pubDate>Sat, 14 Dec 2024 03:42:18 +0000</pubDate></item><item><title>生成26个英文字母</title><link>https://Carolynhomes.github.io/Carolynhomes/post/sheng-cheng-26-ge-ying-wen-zi-mu.html</link><description>```python&#13;
 def solution1():&#13;
     import string&#13;
 &#13;
@@ -875,20 +875,5 @@ print(ans)&#13;
 。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/tan-xin.html</guid><pubDate>Mon, 25 Nov 2024 12:10:25 +0000</pubDate></item><item><title>看剧看剧</title><link>https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</link><description>奈飞工厂：https://www.netflixgc.com&#13;
 &gt; 这个主要是只添加Netflix和HBO大陆无版权影剧！&#13;
 ---&#13;
-七味网：https://www.qwnull.com。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</guid><pubDate>Mon, 25 Nov 2024 11:35:48 +0000</pubDate></item><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年11月27日13点41分&#13;
-啥情况，都开始摸鱼了，不用了是吧 笑死哈哈哈哈哈哈&#13;
-用不了的滴我就行~&#13;
-&#13;
-# 2024年11月24日20点12分&#13;
-如果出现问题，需要回到首页，选择一个其他的房间&#13;
-&#13;
-&#13;
-# 2024年11月23日19点26分&#13;
-1. 更新到今天官网更新的UI&#13;
-2. 已支持官网原生高级语音模式&#13;
-&#13;
-# 2024年11月20日11点49分&#13;
-界面进行了改版，帐号是之前那个码，密码：1-6&#13;
-而且可以自己注册，续费等等，链接贴一下：https://nbai.site/list/#/register?inviter=S85SL3&#13;
-&#13;
-现在官网的链接是下面图片这样，我现在的套餐还能3个月，之后就可能换成这些套餐了。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</guid><pubDate>Sun, 03 Nov 2024 09:37:37 +0000</pubDate></item></channel></rss>
+七味网：https://www.qwnull.com。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/kan-ju-kan-ju.html</guid><pubDate>Mon, 25 Nov 2024 11:35:48 +0000</pubDate></item><item><title>Gpt通知</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</link><description># 2024年12月14日18点08分&#13;
+更新了最新的官网UI，这一版新增加了project功能，还没有适配完，在project中对话所有人能看到。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/Gpt-tong-zhi.html</guid><pubDate>Sun, 03 Nov 2024 09:37:37 +0000</pubDate></item></channel></rss>
