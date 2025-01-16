@@ -1,5 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 14:41:54 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>B2029 大象喝水</title><link>https://Carolynhomes.github.io/Carolynhomes/post/B2029%20-da-xiang-he-shui.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 14:42:46 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5707 【深基2.例12】上学迟到</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</link><description>```python
+s, v = map(int, input().split())
+# s, v = 100, 0.3
+t = 10
+hour, minutes = 0, 0
+
+if s % v == 0:
+	t += s // v
+else:
+	t += s // v + 1
+
+# 接下来，计算时分
+for i in range(1, 100):
+	if i * 60 &gt; t:
+		minutes = str(int(i * 60 - t))
+		if 0 &lt;= int(minutes) &lt; 10:
+			minutes = '0' + minutes 
+
+		hour = str((8 - i + 24) % 24)
+		if 0 &lt;= int(hour) &lt; 10:
+			hour = '0' + hour 
+
+		break
+	else:
+		continue
+
+
+time = str(hour) + ':' + str(minutes)
+print(time)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</guid><pubDate>Thu, 16 Jan 2025 14:42:00 +0000</pubDate></item><item><title>B2029 大象喝水</title><link>https://Carolynhomes.github.io/Carolynhomes/post/B2029%20-da-xiang-he-shui.html</link><description>```python
 h, r = map(int, input().split())
 # h, r = 23, 11
 pai = 3.14
