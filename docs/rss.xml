@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 14:42:46 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5707 【深基2.例12】上学迟到</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 14:43:20 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5706 【深基2.例8】再分肥宅水</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</link><description>```python
+t, n = input().split()
+t = float(t)
+n = int(n)
+
+print('{:.3f}'.format(t / n))
+print(n * 2)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</guid><pubDate>Thu, 16 Jan 2025 14:42:54 +0000</pubDate></item><item><title>P5707 【深基2.例12】上学迟到</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</link><description>```python
 s, v = map(int, input().split())
 # s, v = 100, 0.3
 t = 10
