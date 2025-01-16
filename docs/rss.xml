@@ -1,18 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 14:44:26 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5703 【深基2.例5】苹果采购</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5703%20%E3%80%90-shen-ji-2.-li-5%E3%80%91-ping-guo-cai-gou.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 16 Jan 2025 16:16:20 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5703 【深基2.例5】苹果采购</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5703%20%E3%80%90-shen-ji-2.-li-5%E3%80%91-ping-guo-cai-gou.html</link><description>```python
 avg_amount, student_amount = map(int, input().split())
 print(avg_amount * student_amount)
 ```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5703%20%E3%80%90-shen-ji-2.-li-5%E3%80%91-ping-guo-cai-gou.html</guid><pubDate>Thu, 16 Jan 2025 14:44:03 +0000</pubDate></item><item><title>P5704 【深基2.例6】字母转换</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5704%20%E3%80%90-shen-ji-2.-li-6%E3%80%91-zi-mu-zhuan-huan.html</link><description>```python
 test_str = input()
 print(test_str.upper())
-```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5704%20%E3%80%90-shen-ji-2.-li-6%E3%80%91-zi-mu-zhuan-huan.html</guid><pubDate>Thu, 16 Jan 2025 14:43:36 +0000</pubDate></item><item><title>P5706 【深基2.例8】再分肥宅水</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</link><description>```python
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5704%20%E3%80%90-shen-ji-2.-li-6%E3%80%91-zi-mu-zhuan-huan.html</guid><pubDate>Thu, 16 Jan 2025 14:43:36 +0000</pubDate></item><item><title>P5705 【深基2.例7】数字反转</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5705%20%E3%80%90-shen-ji-2.-li-7%E3%80%91-shu-zi-fan-zhuan.html</link><description>```python
+input_float = str(input())
+# input_float = 'abc'
+reverse_str = input_float[::-1]
+output_float = float(reverse_str)
+print(output_float)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5705%20%E3%80%90-shen-ji-2.-li-7%E3%80%91-shu-zi-fan-zhuan.html</guid><pubDate>Thu, 16 Jan 2025 14:43:16 +0000</pubDate></item><item><title>P5706 【深基2.例8】再分肥宅水</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</link><description>```python
 t, n = input().split()
 t = float(t)
 n = int(n)
 
 print('{:.3f}'.format(t / n))
 print(n * 2)
-```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</guid><pubDate>Thu, 16 Jan 2025 14:42:54 +0000</pubDate></item><item><title>P5707 【深基2.例12】上学迟到</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</link><description>```python
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5706%20%E3%80%90-shen-ji-2.-li-8%E3%80%91-zai-fen-fei-zhai-shui.html</guid><pubDate>Thu, 16 Jan 2025 14:42:54 +0000</pubDate></item><item><title>P5708 【深基2.习2】三角形面积</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5708%20%E3%80%90-shen-ji-2.-xi-2%E3%80%91-san-jiao-xing-mian-ji.html</link><description>```python
+a, b, c = map(float, input().split())
+p = (a + b + c) / 2
+
+area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+print('{:.1f}'.format(area))
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5708%20%E3%80%90-shen-ji-2.-xi-2%E3%80%91-san-jiao-xing-mian-ji.html</guid><pubDate>Thu, 16 Jan 2025 14:42:28 +0000</pubDate></item><item><title>P5707 【深基2.例12】上学迟到</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5707%20%E3%80%90-shen-ji-2.-li-12%E3%80%91-shang-xue-chi-dao.html</link><description>```python
 s, v = map(int, input().split())
 # s, v = 100, 0.3
 t = 10
@@ -64,7 +77,16 @@ minute = distance % 60
 hour = (distance - minute) / 60
 
 print(int(hour), int(minute))
-```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1425%20-xiao-yu-de-you-yong-shi-jian.html</guid><pubDate>Thu, 16 Jan 2025 14:41:10 +0000</pubDate></item><item><title>P3954 [NOIP2017 普及组] 成绩</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P3954%20%5BNOIP2017%20-pu-ji-zu-%5D%20-cheng-ji.html</link><description>```python
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1425%20-xiao-yu-de-you-yong-shi-jian.html</guid><pubDate>Thu, 16 Jan 2025 14:41:10 +0000</pubDate></item><item><title>P1421 小玉买文具</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1421%20-xiao-yu-mai-wen-ju.html</link><description>```python
+a, b = map(int, input().split())
+# a, b = 10, 3
+
+bid_price = 19
+total_money = a * 10 + b
+
+res = total_money // bid_price
+print(res)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1421%20-xiao-yu-mai-wen-ju.html</guid><pubDate>Thu, 16 Jan 2025 14:40:49 +0000</pubDate></item><item><title>P3954 [NOIP2017 普及组] 成绩</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P3954%20%5BNOIP2017%20-pu-ji-zu-%5D%20-cheng-ji.html</link><description>```python
 a, b, c = map(int, input().split())
 # a, b, c = 60, 90, 80 
 
