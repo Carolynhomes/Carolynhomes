@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 02:54:41 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5711 【深基3.例3】闰年判断</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5711%20%E3%80%90-shen-ji-3.-li-3%E3%80%91-run-nian-pan-duan.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 02:56:31 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5712 【深基3.例4】Apples</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5712%20%E3%80%90-shen-ji-3.-li-4%E3%80%91Apples.html</link><description>```python
+x = int(input())
+# x = 3
+if x == 0 or x == 1:
+	print(f'Today, I ate {x} apple.')
+else:
+	print(f'Today, I ate {x} apples.')。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5712%20%E3%80%90-shen-ji-3.-li-4%E3%80%91Apples.html</guid><pubDate>Fri, 17 Jan 2025 02:56:11 +0000</pubDate></item><item><title>P5711 【深基3.例3】闰年判断</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5711%20%E3%80%90-shen-ji-3.-li-3%E3%80%91-run-nian-pan-duan.html</link><description>```python
 n = int(input())
 # n = 1900
 if n % 4 == 0 and n % 100 != 0 or n % 400 == 0:
