@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 03:39:00 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5715 【深基3.例8】三位数排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5715%20%E3%80%90-shen-ji-3.-li-8%E3%80%91-san-wei-shu-pai-xu.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 03:46:25 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5716 【深基3.例9】月份天数</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5716%20%E3%80%90-shen-ji-3.-li-9%E3%80%91-yue-fen-tian-shu.html</link><description>```python
+y, m = map(int, input().split())
+# y, m = 2000, 2
+
+list_special = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+list_normal = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+def is_special(year):
+	if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+		return list_special
+	else:
+		return list_normal
+
+month_of_year = is_special(y)
+print(month_of_year[m])。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5716%20%E3%80%90-shen-ji-3.-li-9%E3%80%91-yue-fen-tian-shu.html</guid><pubDate>Fri, 17 Jan 2025 03:45:59 +0000</pubDate></item><item><title>P5715 【深基3.例8】三位数排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5715%20%E3%80%90-shen-ji-3.-li-8%E3%80%91-san-wei-shu-pai-xu.html</link><description>```python
 a, b, c= map(int, input().split())
 # a, b, c = 1, 14, 5
 temp = [a, b, c]
