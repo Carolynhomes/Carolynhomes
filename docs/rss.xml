@@ -1,5 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 04:27:57 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1909 [NOIP2016 普及组] 买铅笔</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1909%20%5BNOIP2016%20-pu-ji-zu-%5D%20-mai-qian-bi.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 06:36:59 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5717 【深基3.习8】三角形分类</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5717%20%E3%80%90-shen-ji-3.-xi-8%E3%80%91-san-jiao-xing-fen-lei.html</link><description>```python
+a, b, c = map(int, input().split())
+
+edge = sorted([a, b, c])
+a, b, c = edge  # 这样分配给从小到大的三个元素
+
+if a + b  &lt;= c and c - b &gt;= a:
+	print('Not triangle')
+else:
+    if a**2 + b**2 == c**2:
+        print('Right triangle')
+
+    if a**2 + b**2 &gt; c**2:
+        print('Acute triangle')
+
+    if a**2 + b**2 &lt; c**2:
+        print('Obtuse triangle')
+
+    if a == b or b == c or a == c:
+        print('Isosceles triangle')
+
+    if a == c and b == c:
+        print('Equilateral triangle')
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5717%20%E3%80%90-shen-ji-3.-xi-8%E3%80%91-san-jiao-xing-fen-lei.html</guid><pubDate>Fri, 17 Jan 2025 06:36:33 +0000</pubDate></item><item><title>P1909 [NOIP2016 普及组] 买铅笔</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1909%20%5BNOIP2016%20-pu-ji-zu-%5D%20-mai-qian-bi.html</link><description>```python
 n = int(input())
 total = 0
 min = 10000000
