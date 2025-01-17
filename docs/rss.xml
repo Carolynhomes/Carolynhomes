@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 06:36:59 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5717 【深基3.习8】三角形分类</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5717%20%E3%80%90-shen-ji-3.-xi-8%E3%80%91-san-jiao-xing-fen-lei.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 08:07:14 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1422 小玉家的电费</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1422%20-xiao-yu-jia-de-dian-fei.html</link><description>```python
+usage = int(input())
+expense = 0
+if usage &lt;= 150:
+	expense = 0.4463 * usage
+elif 151 &lt;= usage &lt;= 400:
+	expense = 0.4463 * 150 + (usage - 150) * 0.4663
+else:
+	expense = 0.4463  * 150 + 250 * 0.4663 + (usage - 400) * 0.5663
+
+print(f'{expense:.1f}')。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1422%20-xiao-yu-jia-de-dian-fei.html</guid><pubDate>Fri, 17 Jan 2025 08:06:52 +0000</pubDate></item><item><title>P5717 【深基3.习8】三角形分类</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5717%20%E3%80%90-shen-ji-3.-xi-8%E3%80%91-san-jiao-xing-fen-lei.html</link><description>```python
 a, b, c = map(int, input().split())
 
 edge = sorted([a, b, c])
