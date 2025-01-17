@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 04:03:38 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1085 [NOIP2004 普及组] 不高兴的津津</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1085%20%5BNOIP2004%20-pu-ji-zu-%5D%20-bu-gao-xing-de-jin-jin.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 04:27:57 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1909 [NOIP2016 普及组] 买铅笔</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1909%20%5BNOIP2016%20-pu-ji-zu-%5D%20-mai-qian-bi.html</link><description>```python
+n = int(input())
+total = 0
+min = 10000000
+for i in range(3):
+	amount, price = map(int, input().split())
+	if n % amount == 0:
+		number = n // amount
+	else:
+		number = int(n / amount) + 1
+
+	total = number * price
+	if total &lt; min:
+		min = total
+
+print(min)
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1909%20%5BNOIP2016%20-pu-ji-zu-%5D%20-mai-qian-bi.html</guid><pubDate>Fri, 17 Jan 2025 04:27:31 +0000</pubDate></item><item><title>P1085 [NOIP2004 普及组] 不高兴的津津</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1085%20%5BNOIP2004%20-pu-ji-zu-%5D%20-bu-gao-xing-de-jin-jin.html</link><description>```python
 max, res, day = 0, 0, 0
 for i in range(1, 8):
 	time1, time2 = map(int, input().split())
