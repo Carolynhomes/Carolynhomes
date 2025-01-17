@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 23:36:02 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5718 【深基4.例2】找最小值</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5718%20%E3%80%90-shen-ji-4.-li-2%E3%80%91-zhao-zui-xiao-zhi.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 23:40:04 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5719 【深基4.例3】分类平均</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5719%20%E3%80%90-shen-ji-4.-li-3%E3%80%91-fen-lei-ping-jun.html</link><description>```python
+n, k = map(int, input().split())
+res1, count1 = 0, 0
+res2, count2 = 0, 0
+
+for i in range(1, n+1):
+    if i % k == 0:
+        res1 += i
+        count1 += 1
+    else:
+        res2 += i
+        count2 += 1
+
+ans1 = f'{res1/count1:.1f}'
+ans2 = f'{res2/count2:.1f}'
+
+print(ans1, ans2)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5719%20%E3%80%90-shen-ji-4.-li-3%E3%80%91-fen-lei-ping-jun.html</guid><pubDate>Fri, 17 Jan 2025 23:39:36 +0000</pubDate></item><item><title>P5718 【深基4.例2】找最小值</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5718%20%E3%80%90-shen-ji-4.-li-2%E3%80%91-zhao-zui-xiao-zhi.html</link><description>```python
 n = int(input())
 content = [int(x) for x in input().split()]
 
