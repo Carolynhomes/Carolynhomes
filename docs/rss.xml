@@ -1,5 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 18 Jan 2025 03:38:44 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5722 【深基4.例11】数列求和</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5722%20%E3%80%90-shen-ji-4.-li-11%E3%80%91-shu-lie-qiu-he.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 18 Jan 2025 03:51:49 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5723 【深基4.例13】质数口袋</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5723%20%E3%80%90-shen-ji-4.-li-13%E3%80%91-zhi-shu-kou-dai.html</link><description>```python
+L = int(input())
+ans = []
+sum = 0
+data = [1] * 100001
+
+def is_prime(data):
+    for i in range(2, 101):
+        for j in range(i * 2, 100001, i):
+            data[j] = 0
+
+# 首先，筛一下
+is_prime(data)
+
+# 再开始进行其他的
+for i in range(2, 100001):
+    if data[i]:
+        sum += i
+        if sum &gt; L:
+            break
+        ans.append(i)
+
+for i in range(len(ans)):
+    print(ans[i])
+print(len(ans))。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5723%20%E3%80%90-shen-ji-4.-li-13%E3%80%91-zhi-shu-kou-dai.html</guid><pubDate>Sat, 18 Jan 2025 03:51:17 +0000</pubDate></item><item><title>P5722 【深基4.例11】数列求和</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5722%20%E3%80%90-shen-ji-4.-li-11%E3%80%91-shu-lie-qiu-he.html</link><description>```python
 n = int(input())
 sum = 0
 
