@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 18 Jan 2025 01:58:08 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1035 [NOIP2002 普及组] 级数求和</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1035%20%5BNOIP2002%20-pu-ji-zu-%5D%20-ji-shu-qiu-he.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 18 Jan 2025 03:36:34 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P2669 [NOIP2015 普及组] 金币</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P2669%20%5BNOIP2015%20-pu-ji-zu-%5D%20-jin-bi.html</link><description>```python
+k = int(input())
+border = 1
+sum = 0
+count = 0
+
+for i in range(1, k+1):
+    count += 1
+    if count &lt;= border:
+        sum += border
+    else:
+        sum += border + 1
+        border += 1
+        count = 1
+
+print(sum)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P2669%20%5BNOIP2015%20-pu-ji-zu-%5D%20-jin-bi.html</guid><pubDate>Sat, 18 Jan 2025 03:36:03 +0000</pubDate></item><item><title>P1035 [NOIP2002 普及组] 级数求和</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1035%20%5BNOIP2002%20-pu-ji-zu-%5D%20-ji-shu-qiu-he.html</link><description>```python
 k = int(input())
 
 data = 0
