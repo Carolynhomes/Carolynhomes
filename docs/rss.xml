@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 17 Jan 2025 23:40:04 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5719 【深基4.例3】分类平均</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5719%20%E3%80%90-shen-ji-4.-li-3%E3%80%91-fen-lei-ping-jun.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 18 Jan 2025 01:23:18 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5720 【深基4.例4】一尺之棰</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5720%20%E3%80%90-shen-ji-4.-li-4%E3%80%91-yi-chi-zhi-chui.html</link><description>```python
+a = int(input())
+day = 1
+
+while a != 1:
+    a //= 2
+    day += 1
+
+print(day)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5720%20%E3%80%90-shen-ji-4.-li-4%E3%80%91-yi-chi-zhi-chui.html</guid><pubDate>Sat, 18 Jan 2025 01:22:52 +0000</pubDate></item><item><title>P5719 【深基4.例3】分类平均</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5719%20%E3%80%90-shen-ji-4.-li-3%E3%80%91-fen-lei-ping-jun.html</link><description>```python
 n, k = map(int, input().split())
 res1, count1 = 0, 0
 res2, count2 = 0, 0
