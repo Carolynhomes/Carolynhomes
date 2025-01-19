@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 19 Jan 2025 01:24:31 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1423 小玉在游泳</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1423%20-xiao-yu-zai-you-yong.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 19 Jan 2025 01:25:21 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1307 [NOIP2011 普及组] 数字反转</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1307%20%5BNOIP2011%20-pu-ji-zu-%5D%20-shu-zi-fan-zhuan.html</link><description>```python
+n = int(input())
+
+if n &gt;= 0:
+    print(int(str(n)[::-1]))
+else:
+    trans = -n
+    print('-' + str(int(str(trans)[::-1])))。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1307%20%5BNOIP2011%20-pu-ji-zu-%5D%20-shu-zi-fan-zhuan.html</guid><pubDate>Sun, 19 Jan 2025 01:24:49 +0000</pubDate></item><item><title>P1423 小玉在游泳</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1423%20-xiao-yu-zai-you-yong.html</link><description>```python
 s = float(input())
 now_length = 2
 previous = 2
