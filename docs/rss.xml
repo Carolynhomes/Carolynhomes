@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 19 Jan 2025 02:05:54 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5725 【深基4.习8】求三角形</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5725%20%E3%80%90-shen-ji-4.-xi-8%E3%80%91-qiu-san-jiao-xing.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 19 Jan 2025 02:27:50 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P5726 【深基4.习9】打分</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5726%20%E3%80%90-shen-ji-4.-xi-9%E3%80%91-da-fen.html</link><description>```python
+n = int(input())
+data = [int(x) for x in input().split()]
+
+max_data = max(data)
+min_data = min(data)
+data.remove(max_data)
+data.remove(min_data)
+
+print(f'{sum(data)/(n-2):.2f}')。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P5726%20%E3%80%90-shen-ji-4.-xi-9%E3%80%91-da-fen.html</guid><pubDate>Sun, 19 Jan 2025 02:27:30 +0000</pubDate></item><item><title>P5725 【深基4.习8】求三角形</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P5725%20%E3%80%90-shen-ji-4.-xi-8%E3%80%91-qiu-san-jiao-xing.html</link><description>```python
 n = int(input())
 
 counter = 1
