@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 28 Jan 2025 05:53:50 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2060 裁纸刀</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2060%20-cai-zhi-dao.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 28 Jan 2025 06:53:37 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>17153 班级活动</title><link>https://Carolynhomes.github.io/Carolynhomes/post/17153%20-ban-ji-huo-dong.html</link><description>```python
+def main():
+    n = int(input())
+    data = [int(x) for x in input().split()]
+    dic = {}
+    amount_1 = 0
+    amount_2 = 0
+    
+    for i in data:
+        dic[i] = dic.get(i, 0) + 1
+
+    for i, j in dic.items():
+        if j == 1:
+            amount_1 += 1
+
+        if j &gt; 2:
+            amount_2 += j - 2
+
+    if amount_1 &gt; amount_2:
+        res = amount_2 + (amount_1 - amount_2) // 2
+    else:
+        res = amount_2
+    
+    print(res)
+    
+    
+if __name__ == '__main__':
+    main()
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/17153%20-ban-ji-huo-dong.html</guid><pubDate>Tue, 28 Jan 2025 06:53:09 +0000</pubDate></item><item><title>2060 裁纸刀</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2060%20-cai-zhi-dao.html</link><description>```python
 def main():
     row, col = map(int, input().split())
     sum = 4 + row - 1 + row * (col - 1)
