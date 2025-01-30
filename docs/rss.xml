@@ -1,5 +1,75 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 30 Jan 2025 03:51:50 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>virtualbox安装centos7</title><link>https://Carolynhomes.github.io/Carolynhomes/post/virtualbox-an-zhuang-centos7.html</link><description>## 在virtualbox安装centos7
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 30 Jan 2025 04:23:52 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>yum源配置</title><link>https://Carolynhomes.github.io/Carolynhomes/post/yum-yuan-pei-zhi.html</link><description>## yum源配置
+
+执行下面代码：
+
+```shell
+cd /etc/yum.repos.d/
+vi local.repo
+# 按i输入下列内容
+
+```
+
+然后 :%d 回车，清空里面内容，然后复制下面的内容进文件
+
+```shell
+# CentOS-Base.repo
+#
+# The mirror system uses the connecting IP address of the client and the
+# update status of each mirror to pick mirrors that are updated to and
+# geographically close to the client.  You should use this for CentOS updates
+# unless you are manually picking other mirrors.
+#
+# If the mirrorlist= does not work for you, as a fall back you can try the 
+# remarked out baseurl= line instead.
+#
+#
+ 
+[base]
+name=CentOS7
+baseurl=https://repo.huaweicloud.com/centos/$releasever/os/$basearch/
+gpgcheck=0
+
+ 
+#released updates 
+[updates]
+name=CentOS-$releasever - Updates - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/updates/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=updates
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+ 
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/extras/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=extras
+gpgcheck=1
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+ 
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus - repo.huaweicloud.com
+baseurl=https://repo.huaweicloud.com/centos/$releasever/centosplus/$basearch/
+#mirrorlist=https://mirrorlist.centos.org/?release=$releasever&amp;arch=$basearch&amp;repo=centosplus
+gpgcheck=1
+enabled=0
+gpgkey=https://repo.huaweicloud.com/centos/RPM-GPG-KEY-CentOS-7
+
+
+```
+
+然后输入完成后按esc，然后输入:wq
+
+保存退出后，更新yum源
+
+```shell
+yum clean all # 清除系统所有的yum缓存
+yum makecache # 生成新的yum缓存
+yum repolist
+```
+
+OK。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/yum-yuan-pei-zhi.html</guid><pubDate>Thu, 30 Jan 2025 04:23:23 +0000</pubDate></item><item><title>virtualbox安装centos7</title><link>https://Carolynhomes.github.io/Carolynhomes/post/virtualbox-an-zhuang-centos7.html</link><description>## 在virtualbox安装centos7
 
 ![Image](https://github.com/user-attachments/assets/e04ad614-0a39-40d3-953f-be67ae8a46d0)
 
