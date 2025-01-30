@@ -1,3 +1,7 @@
+# 关机 重启
+重启：`sudo reboot`
+关机：`sudo shutdown now`
+
 # 查看ip地址
 `ip addr`
 
