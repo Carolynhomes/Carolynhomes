@@ -1,5 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 30 Jan 2025 05:58:48 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>常见的linux命令</title><link>https://Carolynhomes.github.io/Carolynhomes/post/chang-jian-de-linux-ming-ling.html</link><description># 关机 重启
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 31 Jan 2025 00:59:05 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1042 [NOIP2003 普及组] 乒乓球</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1042%20%5BNOIP2003%20-pu-ji-zu-%5D%20-ping-pang-qiu.html</link><description>```python
+def solution(score_str, rule):
+    w_count, l_count = 0, 0
+    res = []
+    for char in score_str:
+        if char == 'W':
+            w_count += 1
+        elif char == 'L':
+            l_count += 1
+        elif char == 'E':  # 记录的是最后一轮的比分
+            res.append(str(w_count) + ':' + str(l_count))
+            break
+
+        if (w_count &gt;= rule or l_count &gt;= rule) and abs(w_count - l_count) &gt;= 2:
+            res.append(str(w_count) + ':' + str(l_count))
+            w_count, l_count = 0, 0
+    return res
+    
+
+if __name__ == '__main__':
+    score_str = ''
+    while True:
+        score = map(str, input().strip().split())
+        score_list = list(score)
+        score_str += score_list[0]
+        if 'E' in score_list[0]:
+            break
+    for x in solution(score_str, 11):
+        print(x)
+    print()
+    for x in solution(score_str, 21):
+        print(x)
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1042%20%5BNOIP2003%20-pu-ji-zu-%5D%20-ping-pang-qiu.html</guid><pubDate>Fri, 31 Jan 2025 00:58:38 +0000</pubDate></item><item><title>常见的linux命令</title><link>https://Carolynhomes.github.io/Carolynhomes/post/chang-jian-de-linux-ming-ling.html</link><description># 关机 重启
 重启：`sudo reboot`
 关机：`sudo shutdown now`
 
