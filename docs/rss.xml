@@ -1,5 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 06:17:10 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1563 [NOIP 2016 提高组] 玩具谜题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1563%20%5BNOIP%202016%20-ti-gao-zu-%5D%20-wan-ju-mi-ti.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 06:25:28 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1563 [NOIP 2016 提高组] 玩具谜题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1563%20%5BNOIP%202016%20-ti-gao-zu-%5D%20-wan-ju-mi-ti.html</link><description>```python
+def solution(n, m, data, instruct):
+    cur = 0  # 第一个人的位置
+    for i in range(m):
+        # 方向、步数
+        direction, steps = instruct[i]
+        # 判断当前位置的朝向与指令的方向一致否
+        # 如果相同，那就是顺时针，那就需要减
+        # 不相同就是 逆时针，那就是加
+        if data[cur][0] == direction:
+            steps *= -1
+
+        # 更新位置
+        cur = (cur + n + steps) % n
+
+    print(data[cur][1])
+        
+
+
+if __name__ == '__main__':
+    n, m = map(int, input().split())
+    
+    data = []  # 初始化一个空列表，列表中的每个元素都是0-str
+    for i in range(n):
+        number, word = input().split()
+        data.append([int(number), word])
+
+    instruct = []
+    for i in range(m):
+        count, number = input().split()
+        instruct.append([int(count), int(number)])
+
+    solution(n, m, data, instruct)
+    
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1563%20%5BNOIP%202016%20-ti-gao-zu-%5D%20-wan-ju-mi-ti.html</guid><pubDate>Sun, 02 Feb 2025 06:25:08 +0000</pubDate></item><item><title>P1563 [NOIP 2016 提高组] 玩具谜题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1563%20%5BNOIP%202016%20-ti-gao-zu-%5D%20-wan-ju-mi-ti.html</link><description>```python
 def solution(n, m, data, instruct):
     cur = 0  # 第一个人的位置
     for i in range(m):
