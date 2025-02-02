@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 04:19:24 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>使用完totalcmd之后，默认的文件资源管理器不能使用——解决方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-wan-totalcmd-zhi-hou-%EF%BC%8C-mo-ren-de-wen-jian-zi-yuan-guan-li-qi-bu-neng-shi-yong-%E2%80%94%E2%80%94-jie-jue-fang-fa.html</link><description>将下面内容保存到文本文件中，并且设置后缀名为.reg，双击运行即可。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-wan-totalcmd-zhi-hou-%EF%BC%8C-mo-ren-de-wen-jian-zi-yuan-guan-li-qi-bu-neng-shi-yong-%E2%80%94%E2%80%94-jie-jue-fang-fa.html</guid><pubDate>Sun, 02 Feb 2025 04:19:02 +0000</pubDate></item><item><title>P1042 [NOIP2003 普及组] 乒乓球</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1042%20%5BNOIP2003%20-pu-ji-zu-%5D%20-ping-pang-qiu.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 04:43:52 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>7z打开压缩包之后显示乱码的解决方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/7z-da-kai-ya-suo-bao-zhi-hou-xian-shi-luan-ma-de-jie-jue-fang-fa.html</link><description>先把7z.exe的安装路径放到系统的环境变量中
+
+然后，在cmd的命令行中执行下面命令：
+
+```
+7z x '压缩包文件的完整目录' -o'解压文件目录' -mp=936
+```
+&gt;[!tip]
+&gt; 添加-mcp=936参数即可，936代表GBK，-mcp 即method code page，x代表eXtract.
+
+**注意：** -o之后没有空格
+
+[参考链接](https://blog.csdn.net/qq_43780850/article/details/129134210)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/7z-da-kai-ya-suo-bao-zhi-hou-xian-shi-luan-ma-de-jie-jue-fang-fa.html</guid><pubDate>Sun, 02 Feb 2025 04:43:32 +0000</pubDate></item><item><title>使用完totalcmd之后，默认的文件资源管理器不能使用——解决方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-wan-totalcmd-zhi-hou-%EF%BC%8C-mo-ren-de-wen-jian-zi-yuan-guan-li-qi-bu-neng-shi-yong-%E2%80%94%E2%80%94-jie-jue-fang-fa.html</link><description>将下面内容保存到文本文件中，并且设置后缀名为.reg，双击运行即可。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-wan-totalcmd-zhi-hou-%EF%BC%8C-mo-ren-de-wen-jian-zi-yuan-guan-li-qi-bu-neng-shi-yong-%E2%80%94%E2%80%94-jie-jue-fang-fa.html</guid><pubDate>Sun, 02 Feb 2025 04:19:02 +0000</pubDate></item><item><title>P1042 [NOIP2003 普及组] 乒乓球</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1042%20%5BNOIP2003%20-pu-ji-zu-%5D%20-ping-pang-qiu.html</link><description>```python
 def solution(score_str, rule):
     w_count, l_count = 0, 0
     res = []
