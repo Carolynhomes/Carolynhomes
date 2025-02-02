@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 04:43:52 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>7z打开压缩包之后显示乱码的解决方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/7z-da-kai-ya-suo-bao-zhi-hou-xian-shi-luan-ma-de-jie-jue-fang-fa.html</link><description>先把7z.exe的安装路径放到系统的环境变量中
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Feb 2025 04:59:19 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>7z打开压缩包之后显示乱码的解决方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/7z-da-kai-ya-suo-bao-zhi-hou-xian-shi-luan-ma-de-jie-jue-fang-fa.html</link><description>先把7z.exe的安装路径放到系统的环境变量中
 
 然后，在cmd的命令行中执行下面命令：
 
 ```
-7z x '压缩包文件的完整目录' -o'解压文件目录' -mp=936
+7z x '压缩包文件的完整目录' -o'解压文件目录' -mcp=936
 ```
 &gt;[!tip]
 &gt; 添加-mcp=936参数即可，936代表GBK，-mcp 即method code page，x代表eXtract.
