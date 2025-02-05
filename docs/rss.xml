@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 05 Feb 2025 13:31:22 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>枚举题目</title><link>https://Carolynhomes.github.io/Carolynhomes/post/mei-ju-ti-mu.html</link><description># LanqiaoOJ 160 字符计数
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 05 Feb 2025 13:32:51 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>枚举相关题目</title><link>https://Carolynhomes.github.io/Carolynhomes/post/mei-ju-xiang-guan-ti-mu.html</link><description>&gt; o((&gt;ω&lt; ))o
+# LanqiaoOJ 160 字符计数
 ```python
 import os
 import sys
@@ -101,7 +102,7 @@ for i in range(n):
 
 for row in res:
     print(' '.join(map(str, row)))
-```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/mei-ju-ti-mu.html</guid><pubDate>Wed, 05 Feb 2025 13:30:59 +0000</pubDate></item><item><title>桶排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/tong-pai-xu.html</link><description>&gt; 先记录下，有需要的时候再来细看
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/mei-ju-xiang-guan-ti-mu.html</guid><pubDate>Wed, 05 Feb 2025 13:30:59 +0000</pubDate></item><item><title>桶排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/tong-pai-xu.html</link><description>&gt; 先记录下，有需要的时候再来细看
 
 桶排序是一种非比较排序算法，其基本思想是将待排序的数据分到有限数量的桶中，然后对每个桶中的数据分别进行排序，最后将所有桶中的数据按顺序合并起来。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/tong-pai-xu.html</guid><pubDate>Wed, 05 Feb 2025 10:49:47 +0000</pubDate></item><item><title>合并排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/he-bing-pai-xu.html</link><description>```python
 def Merge(A, B):
