@@ -1,5 +1,36 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 05 Feb 2025 09:31:22 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>★★★★★快速排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-kuai-su-pai-xu.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Wed, 05 Feb 2025 10:27:15 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>合并排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/he-bing-pai-xu.html</link><description>```python
+def Merge(A, B):
+    # 合并两个列表
+    res = []
+    while len(A) != 0 and len(B) != 0:
+        if A[0] &lt;= B[0]:
+            res.append(A.pop(0))
+        else:
+            res.append(B.pop(0))
+
+    res.expend(A)
+    res.expend(B)
+    return res
+    
+
+def MergeSort(A):
+    if len(A) &lt; 2:
+        return A
+
+    mid = len(A) // 2
+    left = MergeSort(A[:mid])
+    right = MergeSort(A[mid:])
+    
+    return Merge(left, right)
+
+    
+n = int(input())
+a = list(map(int, input().split()))
+
+print(' '.join(map(str, MergeSort(a)))
+    
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/he-bing-pai-xu.html</guid><pubDate>Wed, 05 Feb 2025 10:26:48 +0000</pubDate></item><item><title>★★★★★快速排序</title><link>https://Carolynhomes.github.io/Carolynhomes/post/%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-kuai-su-pai-xu.html</link><description>```python
 def partition(a, left, right):
     '''划分函数
     用来将比基准值的小于放到mid的左边，大于的放右边
