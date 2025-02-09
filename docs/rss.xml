@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 08 Feb 2025 13:52:52 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>excel：看一个日期是星期几</title><link>https://Carolynhomes.github.io/Carolynhomes/post/excel%EF%BC%9A-kan-yi-ge-ri-qi-shi-xing-qi-ji.html</link><description>- 首先输入日期：2021/1/1
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 02:41:48 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>使用python来处理日期问题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-python-lai-chu-li-ri-qi-wen-ti.html</link><description>```python
+from datetime import *
+
+
+date1 = datetime(1901, 1, 1)
+date2 = datetime(2000, 12, 31)
+print(date1.weekday())  # 输出1，表示周二。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-python-lai-chu-li-ri-qi-wen-ti.html</guid><pubDate>Sun, 09 Feb 2025 02:41:25 +0000</pubDate></item><item><title>excel：看一个日期是星期几</title><link>https://Carolynhomes.github.io/Carolynhomes/post/excel%EF%BC%9A-kan-yi-ge-ri-qi-shi-xing-qi-ji.html</link><description>- 首先输入日期：2021/1/1
 - 然后右键单元格
 - 设置单元格格式
 - **数字——分类——星期三**（看下图）
