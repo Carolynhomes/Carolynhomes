@@ -85,8 +85,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>先估计可能可以拼出 3000 多个数。</p>
 <p>在 Excel 中输出 1～3500，然后检查 1 用了多少次（搜索有多少个 1）、2 用了多少次，依次类推，<strong>最后发现 1 用得最多，且 1～3181 用了 2021 个 1，所以答案是 3181。</strong></p>
+<p><strong>用txt文件比较简单，excel不行</strong></p>
 <p>这种方法简单直接。</p>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">print</span>(<span class="pl-c1">3181</span>)</pre></div></div>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-en">print</span>(<span class="pl-c1">3181</span>)</pre></div>
+<h1>模拟实现</h1>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">s</span> <span class="pl-c1">=</span> [<span class="pl-s">'0'</span>, <span class="pl-s">'1'</span>, <span class="pl-s">'2'</span>, <span class="pl-s">'3'</span>, <span class="pl-s">'4'</span>, <span class="pl-s">'5'</span>, <span class="pl-s">'6'</span>, <span class="pl-s">'7'</span>, <span class="pl-s">'8'</span>, <span class="pl-s">'9'</span>] <span class="pl-c1">*</span> <span class="pl-c1">2021</span>
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-c1">10000</span>):
+    <span class="pl-s1">a</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">str</span>(<span class="pl-s1">i</span>))
+    <span class="pl-k">try</span>:
+        <span class="pl-k">for</span> <span class="pl-s1">j</span> <span class="pl-c1">in</span> <span class="pl-s1">a</span>: <span class="pl-s1">s</span>.<span class="pl-c1">remove</span>(<span class="pl-s1">j</span>)  <span class="pl-c"># 去掉这个卡片</span>
+    <span class="pl-k">except</span>:
+        <span class="pl-en">print</span>(<span class="pl-s1">i</span> <span class="pl-c1">-</span> <span class="pl-c1">1</span>)
+        <span class="pl-k">break</span></pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
