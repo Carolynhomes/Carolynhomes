@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 12:33:05 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2141 山</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</link><description>![Image](https://github.com/user-attachments/assets/0054d30a-f1e6-4691-ad76-42177eee68b4)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 13:00:22 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>610 分数</title><link>https://Carolynhomes.github.io/Carolynhomes/post/610%20-fen-shu.html</link><description># 方法一
+一个一个加
+```python
+a, b = 1, 0
+for i in range(0, 20):
+    b += a
+    a *= 2
+print('%d/%d' % (b, a / 2))
+```
+# 方法二
+使用等比公式来化简，然后输出即可
+```python
+print('%d/%d'%(2 ** 20 -1,2 ** 19)) #注意**表示乘方
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/610%20-fen-shu.html</guid><pubDate>Sun, 09 Feb 2025 13:00:00 +0000</pubDate></item><item><title>2141 山</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</link><description>![Image](https://github.com/user-attachments/assets/0054d30a-f1e6-4691-ad76-42177eee68b4)
 
 ```python
 ans = 0
