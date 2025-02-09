@@ -1,5 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 03:17:42 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>方向</title><link>https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</link><description>&gt; 不是按重要程度排序的
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 12:33:05 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2141 山</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</link><description>![Image](https://github.com/user-attachments/assets/0054d30a-f1e6-4691-ad76-42177eee68b4)
+
+```python
+ans = 0
+# 山的长度是偶数的情况，在[20, 20222]内构造
+# “山”的左边的一半即可
+for i in range(20, 20223):
+    flag = 1
+    s = str(i)
+    # 判断左半边的单调性
+    for i in range(0, len(s)-1):
+        # 非单调不减
+        if s[i] &gt; s[i+1]:
+            flag = 0  # 不合法
+            break
+    # 得到了左半边，可以构造一个“山”数
+    if flag == 1:   ans += 1 
+
+# [11, 9999]  奇数的情况  [11111, 999999999]
+for i in range(11, 10000):
+    flag = 1
+    s = str(i)
+    for i in range(0, len(s)-1):
+        if s[i] &gt; s[i+1]:
+            flag = 0
+            break
+    # s[i+1]得到的是  s的最后一个字符
+    if flag == 1:   ans += 10 - int(s[i+1])
+
+print(ans)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</guid><pubDate>Sun, 09 Feb 2025 12:32:41 +0000</pubDate></item><item><title>方向</title><link>https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</link><description>&gt; 不是按重要程度排序的
 # 第一：论文
 
 # 第二：导师项目
