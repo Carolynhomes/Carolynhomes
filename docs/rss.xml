@@ -1,5 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 09 Feb 2025 13:00:22 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>610 分数</title><link>https://Carolynhomes.github.io/Carolynhomes/post/610%20-fen-shu.html</link><description># 方法一
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 03:32:06 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>Lanqiao 174</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%20174.html</link><description># 思路
+自己写的时候其实题目都不太理解，当然也是没写出来的
+
+# 答案
+
+![Image](https://github.com/user-attachments/assets/74ed2529-c835-442a-a6d9-6823db313988)
+
+![Image](https://github.com/user-attachments/assets/6c093a0b-2a4a-4dab-a00b-c618ca3d422a)
+
+```python
+from math import *
+import os
+import sys
+
+# 请在此输入您的代码
+n, s = map(int, input().split())
+data = list(map(int, input().split()))
+
+data.sort()
+avg = s / n
+sum = 0
+
+for i in range(n):
+    if data[i] * (n - i) &lt; s:
+        sum += pow(data[i]-avg, 2)
+        s -= data[i]
+    else:
+        cur_avg = s / (n - i)
+        sum += pow(cur_avg-avg, 2) * (n - i)
+        break
+
+print('{:.4f}'.format(sqrt(sum/n)))
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%20174.html</guid><pubDate>Mon, 10 Feb 2025 03:31:38 +0000</pubDate></item><item><title>610 分数</title><link>https://Carolynhomes.github.io/Carolynhomes/post/610%20-fen-shu.html</link><description># 方法一
 一个一个加
 ```python
 a, b = 1, 0
