@@ -1,5 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 03:51:08 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>Lanqiao 2107</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%202107.html</link><description># 自己的思路
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 04:45:27 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>★★★Lanqiao 1517</title><link>https://Carolynhomes.github.io/Carolynhomes/post/%E2%98%85%E2%98%85%E2%98%85Lanqiao%201517.html</link><description># 注意
+&gt;[!important]
+&gt;这个题型一定要记住
+&gt;这个代码思路，非常有用！！！！！
+```python
+dir = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+m, n = map(int, input().split())
+data = []
+for i in range(m): data.append(input().split())
+
+x, y = -1, 0
+d = 0
+sum = 0
+while sum &lt; m * n:
+    sum += 1
+    now_x, now_y = x + dir[d][0], y + dir[d][1]
+    if now_x &lt; 0 or now_x &gt;= m or now_y &lt; 0 or now_y &gt;= n or data[now_x][now_y] == -1:
+        d = (d + 1) % 4
+        x, y = x + dir[d][0], y + dir[d][1]
+    else:
+        x, y = now_x, now_y
+    
+    print(data[x][y], end=' ' if sum != m * n else '')
+    data[x][y] = -1
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/%E2%98%85%E2%98%85%E2%98%85Lanqiao%201517.html</guid><pubDate>Mon, 10 Feb 2025 04:45:01 +0000</pubDate></item><item><title>Lanqiao 2107</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%202107.html</link><description># 自己的思路
 举例子进行分析的时候，发现，当前位置距离最远端的位置乘2，就是能生长的最高长度
 
 ```python
