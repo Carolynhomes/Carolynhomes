@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 05:32:25 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>动态规划</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dong-tai-gui-hua.html</link><description># 解题框架
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 08:25:01 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>洛谷 P4956</title><link>https://Carolynhomes.github.io/Carolynhomes/post/luo-gu-%20P4956.html</link><description>```python
+n = int(input())
+n //= 52  # 得到一个星期筹集多少
+for x in range(100, 0, -1):
+    if (n - 7 * x) % 21 == 0 and (n - 7 * x) // 21 &gt; 0:
+        k = (n - 7 * x) // 21
+        print(x)
+        print(k)
+        break
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/luo-gu-%20P4956.html</guid><pubDate>Mon, 10 Feb 2025 08:24:34 +0000</pubDate></item><item><title>动态规划</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dong-tai-gui-hua.html</link><description># 解题框架
 **明确「状态」-&gt; 明确「选择」 -&gt; 定义 dp 数组/函数的含义。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/dong-tai-gui-hua.html</guid><pubDate>Mon, 10 Feb 2025 05:31:58 +0000</pubDate></item><item><title>列表的基本操作</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lie-biao-de-ji-ben-cao-zuo.html</link><description>![Image](https://github.com/user-attachments/assets/1e2fc90f-8bcd-45f0-a7b4-5ec63ff9aab6)
 
 ![Image](https://github.com/user-attachments/assets/c8c064e7-34cc-466f-8d67-145dacfbed97)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lie-biao-de-ji-ben-cao-zuo.html</guid><pubDate>Mon, 10 Feb 2025 05:02:20 +0000</pubDate></item><item><title>★★★Lanqiao 1517</title><link>https://Carolynhomes.github.io/Carolynhomes/post/%E2%98%85%E2%98%85%E2%98%85Lanqiao%201517.html</link><description># 注意
