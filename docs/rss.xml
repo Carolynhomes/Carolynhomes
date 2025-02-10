@@ -1,5 +1,89 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 12:23:02 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1089 [NOIP 2004 提高组] 津津的储蓄计划</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1089%20%5BNOIP%202004%20-ti-gao-zu-%5D%20-jin-jin-de-chu-xu-ji-hua.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 14:47:06 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P4924 [1007] 魔法少女小Scarlet</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P4924%20%5B1007%5D%20-mo-fa-shao-nv-xiao-Scarlet.html</link><description># 豆包给的
+## 逆时针的公式推导
+
+![Image](https://github.com/user-attachments/assets/6e7ea1be-4406-4a72-8b73-605c1fb9ae02)
+
+![Image](https://github.com/user-attachments/assets/8d5ecce7-258f-443f-a2f6-4fe5263842cd)
+
+## 顺时针的公式推导
+
+![Image](https://github.com/user-attachments/assets/24dd9f35-5cf7-4bae-978f-4bc2aebb5328)
+
+![Image](https://github.com/user-attachments/assets/c4632138-7ebf-499f-b3f8-896e67209f41)
+
+# 自己参考他人C++答案写的代码
+```python
+n, m = map(int, input().split())
+
+datas = [[0] * (n+1) for _ in range(n+1)]
+init = 1
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        datas[i][j] = init
+        init += 1
+
+# 临时存放旋转之后的内容
+temp = [[0] * (n+1) for _ in range(n+1)]
+for i in range(m):
+    x, y, r, z = map(int, input().split())
+    if z == 0:
+        # 顺时针时候
+        # 第i行第j列，移动到了，倒数第i列第j行
+        # 细细体会一下  手法
+        # x-y 可以归根到 0,0  因为一般都是相等的
+        # x+y归根到最后，x+y-i 也就是 倒数第i
+        for i in range(x-r, x+r+1):
+            for j in range(y-r, y+r+1):
+                temp[x-y+j][x+y-i] = datas[i][j]
+        
+        for i in range(x-r, x+r+1):
+            for j in range(y-r, y+r+1):
+                datas[i][j] = temp[i][j]
+    else:
+        # 第i行第i列，移动到了，倒数第j行第i列
+        for i in range(x-r, x+r+1):
+            for j in range(y-r, y+r+1):
+                temp[x+y-j][y-x+i] = datas[i][j]
+        
+        for i in range(x-r, x+r+1):
+            for j in range(y-r, y+r+1):
+                datas[i][j] = temp[i][j]
+
+
+for i in range(1, n+1):
+    for j in range(1, n+1):
+        print(datas[i][j], end=' ')
+    print()
+
+
+
+```
+# AC的代码
+&gt; 豆包使用numpy来优化的
+```python
+import numpy as np
+
+n, m = map(int, input().split())
+# 使用numpy创建矩阵
+datas = np.arange(1, n * n + 1).reshape(n, n)
+
+for _ in range(m):
+    x, y, r, z = map(int, input().split())
+    x -= 1  # 因为numpy索引从0开始
+    y -= 1
+    sub_matrix = datas[x - r:x + r + 1, y - r:y + r + 1].copy()
+    if z == 0:
+        # 顺时针旋转90度
+        sub_matrix = np.rot90(sub_matrix, k=-1)
+    else:
+        # 逆时针旋转90度
+        sub_matrix = np.rot90(sub_matrix, k=1)
+    datas[x - r:x + r + 1, y - r:y + r + 1] = sub_matrix
+
+for row in datas:
+    print(*row)
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P4924%20%5B1007%5D%20-mo-fa-shao-nv-xiao-Scarlet.html</guid><pubDate>Mon, 10 Feb 2025 14:46:30 +0000</pubDate></item><item><title>P1089 [NOIP 2004 提高组] 津津的储蓄计划</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1089%20%5BNOIP%202004%20-ti-gao-zu-%5D%20-jin-jin-de-chu-xu-ji-hua.html</link><description>```python
 data = []
 for i in range(12):
     x = int(input())
