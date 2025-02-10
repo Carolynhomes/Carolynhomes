@@ -1,5 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 08:25:01 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>洛谷 P4956</title><link>https://Carolynhomes.github.io/Carolynhomes/post/luo-gu-%20P4956.html</link><description>```python
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 10 Feb 2025 12:23:02 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>P1089 [NOIP 2004 提高组] 津津的储蓄计划</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P1089%20%5BNOIP%202004%20-ti-gao-zu-%5D%20-jin-jin-de-chu-xu-ji-hua.html</link><description>```python
+data = []
+for i in range(12):
+    x = int(input())
+    data.append(x)
+init = 300
+storage = 0
+
+for month, expense in enumerate(data):
+    reminder = init - expense
+    if reminder &gt;= 100:
+        storage += reminder // 100 * 100
+        reminder -= reminder // 100 * 100
+    if reminder &lt; 0:
+        print(f'-{month+1}')
+        break
+
+    init = reminder + 300
+
+if reminder &gt;= 0:
+    now_money = 1.2 * storage + reminder
+    print(int(now_money))
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/P1089%20%5BNOIP%202004%20-ti-gao-zu-%5D%20-jin-jin-de-chu-xu-ji-hua.html</guid><pubDate>Mon, 10 Feb 2025 12:22:40 +0000</pubDate></item><item><title>洛谷 P4956</title><link>https://Carolynhomes.github.io/Carolynhomes/post/luo-gu-%20P4956.html</link><description>```python
 n = int(input())
 n //= 52  # 得到一个星期筹集多少
 for x in range(100, 0, -1):
