@@ -22,3 +22,11 @@ n = int(input())
 for i in range(n):
     print(max(i, n-i-1)*2)
 ```
+
+or 
+
+```python
+n = int(input())
+for i in range(1, n+1):
+    print(max(i-1, n-i)*2)
+```

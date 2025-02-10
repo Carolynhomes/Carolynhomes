@@ -33,6 +33,14 @@ for i in range(n):
 n = int(input())
 for i in range(n):
     print(max(i, n-i-1)*2)
+```
+
+or 
+
+```python
+n = int(input())
+for i in range(1, n+1):
+    print(max(i-1, n-i)*2)
 ```。">
 <meta property="og:title" content="Lanqiao 2107">
 <meta property="og:description" content="# 自己的思路
@@ -58,6 +66,14 @@ for i in range(n):
 n = int(input())
 for i in range(n):
     print(max(i, n-i-1)*2)
+```
+
+or 
+
+```python
+n = int(input())
+for i in range(1, n+1):
+    print(max(i-1, n-i)*2)
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%202107.html">
@@ -146,7 +162,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/2fc08446-cd22-472a-a768-246415148560"><img src="https://github.com/user-attachments/assets/2fc08446-cd22-472a-a768-246415148560" alt="Image" style="max-width: 100%;"></a></p>
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
-    <span class="pl-en">print</span>(<span class="pl-en">max</span>(<span class="pl-s1">i</span>, <span class="pl-s1">n</span><span class="pl-c1">-</span><span class="pl-s1">i</span><span class="pl-c1">-</span><span class="pl-c1">1</span>)<span class="pl-c1">*</span><span class="pl-c1">2</span>)</pre></div></div>
+    <span class="pl-en">print</span>(<span class="pl-en">max</span>(<span class="pl-s1">i</span>, <span class="pl-s1">n</span><span class="pl-c1">-</span><span class="pl-s1">i</span><span class="pl-c1">-</span><span class="pl-c1">1</span>)<span class="pl-c1">*</span><span class="pl-c1">2</span>)</pre></div>
+<p>or</p>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-s1">n</span><span class="pl-c1">+</span><span class="pl-c1">1</span>):
+    <span class="pl-en">print</span>(<span class="pl-en">max</span>(<span class="pl-s1">i</span><span class="pl-c1">-</span><span class="pl-c1">1</span>, <span class="pl-s1">n</span><span class="pl-c1">-</span><span class="pl-s1">i</span>)<span class="pl-c1">*</span><span class="pl-c1">2</span>)</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
