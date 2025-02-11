@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="
+<meta name="description" content="# 自己写的，翻阅了资料
 ```python
 n = int(input())
 students = {}
@@ -32,9 +32,30 @@ for item in sorted_items:
     if top <= 5:
         print(item[0], item[1][3])
         top += 1
-```。">
+```
+
+# 答案的写法
+```python
+n = int(input())
+scores = []
+for i in range(n):
+    score = list(map(int, input().split()))
+    # 学号、总分、语、数、英
+    scores.append([i+1, sum(score)] + score)
+
+# 按总分、语文成绩的顺序排序，学号缺省是从小到大
+index = reversed((1, 2))
+for i in index:
+    scores.sort(key=lambda x: x[i], reverse=True)
+    # scores = sorted(scores,key=lambda x:x[i],reverse=True)
+
+for i in range(5):
+    print(scores[i][0], scores[i][1])
+```
+## 代码逻辑梳理
+`index = reversed((1, 2))`：创建一个迭代器，依次返回 2 和 1。">
 <meta property="og:title" content="Lanqiao 531  奖学金 ——对字典排序的一个经典例子">
-<meta property="og:description" content="
+<meta property="og:description" content="# 自己写的，翻阅了资料
 ```python
 n = int(input())
 students = {}
@@ -56,7 +77,28 @@ for item in sorted_items:
     if top <= 5:
         print(item[0], item[1][3])
         top += 1
-```。">
+```
+
+# 答案的写法
+```python
+n = int(input())
+scores = []
+for i in range(n):
+    score = list(map(int, input().split()))
+    # 学号、总分、语、数、英
+    scores.append([i+1, sum(score)] + score)
+
+# 按总分、语文成绩的顺序排序，学号缺省是从小到大
+index = reversed((1, 2))
+for i in index:
+    scores.sort(key=lambda x: x[i], reverse=True)
+    # scores = sorted(scores,key=lambda x:x[i],reverse=True)
+
+for i in range(5):
+    print(scores[i][0], scores[i][1])
+```
+## 代码逻辑梳理
+`index = reversed((1, 2))`：创建一个迭代器，依次返回 2 和 1。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%20531%20%20-jiang-xue-jin-%20%E2%80%94%E2%80%94-dui-zi-dian-pai-xu-de-yi-ge-jing-dian-li-zi.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -127,7 +169,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
+<div class="markdown-body" id="postBody"><h1>自己写的，翻阅了资料</h1>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
 <span class="pl-s1">students</span> <span class="pl-c1">=</span> {}
 <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
     <span class="pl-s1">chinese</span>, <span class="pl-s1">math</span>, <span class="pl-s1">english</span> <span class="pl-c1">=</span> <span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>())
@@ -146,7 +189,28 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">for</span> <span class="pl-s1">item</span> <span class="pl-c1">in</span> <span class="pl-s1">sorted_items</span>:
     <span class="pl-k">if</span> <span class="pl-s1">top</span> <span class="pl-c1">&lt;=</span> <span class="pl-c1">5</span>:
         <span class="pl-en">print</span>(<span class="pl-s1">item</span>[<span class="pl-c1">0</span>], <span class="pl-s1">item</span>[<span class="pl-c1">1</span>][<span class="pl-c1">3</span>])
-        <span class="pl-s1">top</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span></pre></div></div>
+        <span class="pl-s1">top</span> <span class="pl-c1">+=</span> <span class="pl-c1">1</span></pre></div>
+<h1>答案的写法</h1>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
+<span class="pl-s1">scores</span> <span class="pl-c1">=</span> []
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
+    <span class="pl-s1">score</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
+    <span class="pl-c"># 学号、总分、语、数、英</span>
+    <span class="pl-s1">scores</span>.<span class="pl-c1">append</span>([<span class="pl-s1">i</span><span class="pl-c1">+</span><span class="pl-c1">1</span>, <span class="pl-en">sum</span>(<span class="pl-s1">score</span>)] <span class="pl-c1">+</span> <span class="pl-s1">score</span>)
+
+<span class="pl-c"># 按总分、语文成绩的顺序排序，学号缺省是从小到大</span>
+<span class="pl-s1">index</span> <span class="pl-c1">=</span> <span class="pl-en">reversed</span>((<span class="pl-c1">1</span>, <span class="pl-c1">2</span>))
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-s1">index</span>:
+    <span class="pl-s1">scores</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">key</span><span class="pl-c1">=</span><span class="pl-k">lambda</span> <span class="pl-s1">x</span>: <span class="pl-s1">x</span>[<span class="pl-s1">i</span>], <span class="pl-s1">reverse</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)
+    <span class="pl-c"># scores = sorted(scores,key=lambda x:x[i],reverse=True)</span>
+
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">5</span>):
+    <span class="pl-en">print</span>(<span class="pl-s1">scores</span>[<span class="pl-s1">i</span>][<span class="pl-c1">0</span>], <span class="pl-s1">scores</span>[<span class="pl-s1">i</span>][<span class="pl-c1">1</span>])</pre></div>
+<h2>代码逻辑梳理</h2>
+<p><code class="notranslate">index = reversed((1, 2))</code>：创建一个迭代器，依次返回 2 和 1。这意味着先按语文成绩排序，再按总分排序。</p>
+<p><code class="notranslate">for i in index:</code>：遍历 index 中的元素，先使用语文成绩作为排序键对 scores 列表进行降序排序，然后再使用总分作为排序键进行降序排序。<strong>这样就能保证最终的排序结果先按总分降序，总分相同的情况下按语文成绩降序。</strong></p>
+<p>最后通过 <code class="notranslate">for i in range(5): print(scores[i][0], scores[i][1]) </code>输出排名前 5 的学生的学号和总分。<br>
+示例说明</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

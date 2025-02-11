@@ -1,4 +1,4 @@
-
+# 自己写的，翻阅了资料
 ```python
 n = int(input())
 students = {}
@@ -21,3 +21,29 @@ for item in sorted_items:
         print(item[0], item[1][3])
         top += 1
 ```
+
+# 答案的写法
+```python
+n = int(input())
+scores = []
+for i in range(n):
+    score = list(map(int, input().split()))
+    # 学号、总分、语、数、英
+    scores.append([i+1, sum(score)] + score)
+
+# 按总分、语文成绩的顺序排序，学号缺省是从小到大
+index = reversed((1, 2))
+for i in index:
+    scores.sort(key=lambda x: x[i], reverse=True)
+    # scores = sorted(scores,key=lambda x:x[i],reverse=True)
+
+for i in range(5):
+    print(scores[i][0], scores[i][1])
+```
+## 代码逻辑梳理
+`index = reversed((1, 2))`：创建一个迭代器，依次返回 2 和 1。这意味着先按语文成绩排序，再按总分排序。
+
+`for i in index:`：遍历 index 中的元素，先使用语文成绩作为排序键对 scores 列表进行降序排序，然后再使用总分作为排序键进行降序排序。**这样就能保证最终的排序结果先按总分降序，总分相同的情况下按语文成绩降序。**
+
+最后通过 `for i in range(5): print(scores[i][0], scores[i][1]) `输出排名前 5 的学生的学号和总分。
+示例说明
