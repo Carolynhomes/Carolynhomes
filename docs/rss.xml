@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 11 Feb 2025 02:59:57 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>python：sort()和sorted()</title><link>https://Carolynhomes.github.io/Carolynhomes/post/python%EF%BC%9Asort%28%29-he-sorted%28%29.html</link><description>在 Python 中，`sort` 和 `sorted` 都用于对数据进行排序，但它们之间存在一些重要的区别。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/python%EF%BC%9Asort%28%29-he-sorted%28%29.html</guid><pubDate>Tue, 11 Feb 2025 02:59:36 +0000</pubDate></item><item><title>numpy</title><link>https://Carolynhomes.github.io/Carolynhomes/post/numpy.html</link><description>### `np.arange` 方法
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 11 Feb 2025 07:51:07 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>Lanqiao 531  奖学金 ——对字典排序的一个经典例子</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%20531%20%20-jiang-xue-jin-%20%E2%80%94%E2%80%94-dui-zi-dian-pai-xu-de-yi-ge-jing-dian-li-zi.html</link><description>
+```python
+n = int(input())
+students = {}
+for i in range(n):
+    chinese, math, english = map(int, input().split())
+    total_score = chinese + math + english
+    students[i+1] = [chinese, math, english, total_score]
+
+# 定义排序规则函数
+def sort_key(item):
+    key, value = item
+    # 对需要降序排序的元素取负
+    return [-value[3], -value[0], key]
+
+sorted_items = sorted(students.items(), key=sort_key)
+
+top = 1
+for item in sorted_items:
+    if top &lt;= 5:
+        print(item[0], item[1][3])
+        top += 1
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/Lanqiao%20531%20%20-jiang-xue-jin-%20%E2%80%94%E2%80%94-dui-zi-dian-pai-xu-de-yi-ge-jing-dian-li-zi.html</guid><pubDate>Tue, 11 Feb 2025 07:50:40 +0000</pubDate></item><item><title>python：sort()和sorted()</title><link>https://Carolynhomes.github.io/Carolynhomes/post/python%EF%BC%9Asort%28%29-he-sorted%28%29.html</link><description>在 Python 中，`sort` 和 `sorted` 都用于对数据进行排序，但它们之间存在一些重要的区别。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/python%EF%BC%9Asort%28%29-he-sorted%28%29.html</guid><pubDate>Tue, 11 Feb 2025 02:59:36 +0000</pubDate></item><item><title>numpy</title><link>https://Carolynhomes.github.io/Carolynhomes/post/numpy.html</link><description>### `np.arange` 方法
 #### 功能
 `np.arange` 用于创建一个一维的 `numpy` 数组，数组中的元素是在指定范围内按照一定步长生成的连续整数或者浮点数。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/numpy.html</guid><pubDate>Tue, 11 Feb 2025 02:29:26 +0000</pubDate></item><item><title>numpy：arange和reshape方法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/numpy%EF%BC%9Aarange-he-reshape-fang-fa.html</link><description>在你提供的代码里，`np.arange` 和 `reshape` 是 `numpy` 库中非常实用的两个方法，下面为你详细介绍这两个方法。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/numpy%EF%BC%9Aarange-he-reshape-fang-fa.html</guid><pubDate>Tue, 11 Feb 2025 02:22:59 +0000</pubDate></item><item><title>P4924 [1007] 魔法少女小Scarlet</title><link>https://Carolynhomes.github.io/Carolynhomes/post/P4924%20%5B1007%5D%20-mo-fa-shao-nv-xiao-Scarlet.html</link><description># 豆包给的
 ## 逆时针的公式推导
