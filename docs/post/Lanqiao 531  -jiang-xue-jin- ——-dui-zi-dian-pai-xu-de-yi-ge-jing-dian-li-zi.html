@@ -210,7 +210,35 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p><code class="notranslate">index = reversed((1, 2))</code>：创建一个迭代器，依次返回 2 和 1。这意味着先按语文成绩排序，再按总分排序。</p>
 <p><code class="notranslate">for i in index:</code>：遍历 index 中的元素，先使用语文成绩作为排序键对 scores 列表进行降序排序，然后再使用总分作为排序键进行降序排序。<strong>这样就能保证最终的排序结果先按总分降序，总分相同的情况下按语文成绩降序。</strong></p>
 <p>最后通过 <code class="notranslate">for i in range(5): print(scores[i][0], scores[i][1]) </code>输出排名前 5 的学生的学号和总分。<br>
-示例说明</p></div>
+示例说明</p>
+<h1>第三种答案</h1>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">import</span> <span class="pl-s1">functools</span>
+
+<span class="pl-c"># 1 表示逆序，-1表示升序</span>
+<span class="pl-k">def</span> <span class="pl-en">cmp</span>(<span class="pl-s1">n1</span>, <span class="pl-s1">n2</span>):
+    <span class="pl-k">if</span> <span class="pl-s1">n1</span>[<span class="pl-c1">1</span>] <span class="pl-c1">!=</span> <span class="pl-s1">n2</span>[<span class="pl-c1">1</span>]:
+        <span class="pl-c"># 总分不一样，高分在前</span>
+        <span class="pl-k">return</span> <span class="pl-c1">-</span><span class="pl-c1">1</span> <span class="pl-k">if</span> <span class="pl-s1">n1</span>[<span class="pl-c1">1</span>] <span class="pl-c1">&gt;</span> <span class="pl-s1">n2</span>[<span class="pl-c1">1</span>] <span class="pl-k">else</span> <span class="pl-c1">1</span>
+    <span class="pl-k">elif</span> <span class="pl-s1">n1</span>[<span class="pl-c1">2</span>] <span class="pl-c1">!=</span> <span class="pl-s1">n2</span>[<span class="pl-c1">2</span>]:
+        <span class="pl-c"># 总分一样，语文成绩高的在钱</span>
+        <span class="pl-k">return</span> <span class="pl-c1">-</span><span class="pl-c1">1</span> <span class="pl-k">if</span> <span class="pl-s1">n1</span>[<span class="pl-c1">2</span>] <span class="pl-c1">&gt;</span> <span class="pl-s1">n2</span>[<span class="pl-c1">2</span>] <span class="pl-k">else</span> <span class="pl-c1">1</span>
+    <span class="pl-k">else</span>:
+        <span class="pl-c"># 都一样的话，学号小的在前面</span>
+        <span class="pl-k">return</span> <span class="pl-c1">1</span> <span class="pl-k">if</span> <span class="pl-s1">n1</span>[<span class="pl-c1">0</span>] <span class="pl-c1">&gt;</span> <span class="pl-s1">n2</span>[<span class="pl-c1">0</span>] <span class="pl-k">else</span> <span class="pl-c1">1</span>
+
+<span class="pl-s1">n</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>())
+<span class="pl-s1">scores</span> <span class="pl-c1">=</span> []
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-s1">n</span>):
+    <span class="pl-s1">score</span> <span class="pl-c1">=</span> <span class="pl-en">list</span>(<span class="pl-en">map</span>(<span class="pl-s1">int</span>, <span class="pl-en">input</span>().<span class="pl-c1">split</span>()))
+    <span class="pl-c"># 学号、总分、语、数、英</span>
+    <span class="pl-s1">scores</span>.<span class="pl-c1">append</span>([<span class="pl-s1">i</span><span class="pl-c1">+</span><span class="pl-c1">1</span>, <span class="pl-en">sum</span>(<span class="pl-s1">score</span>)] <span class="pl-c1">+</span> <span class="pl-s1">score</span>)
+
+<span class="pl-s1">scores</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">key</span><span class="pl-c1">=</span><span class="pl-s1">functools</span>.<span class="pl-c1">cmp_to_key</span>(<span class="pl-s1">cmp</span>))
+<span class="pl-c"># scores = sorted(scores, key=functools.cmp_to_key(cmp))</span>
+    
+
+<span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">5</span>):
+    <span class="pl-en">print</span>(<span class="pl-s1">scores</span>[<span class="pl-s1">i</span>][<span class="pl-c1">0</span>], <span class="pl-s1">scores</span>[<span class="pl-s1">i</span>][<span class="pl-c1">1</span>])</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

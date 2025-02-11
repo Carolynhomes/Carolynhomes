@@ -47,3 +47,33 @@ for i in range(5):
 
 最后通过 `for i in range(5): print(scores[i][0], scores[i][1]) `输出排名前 5 的学生的学号和总分。
 示例说明
+# 第三种答案
+```python
+import functools
+
+# 1 表示逆序，-1表示升序
+def cmp(n1, n2):
+    if n1[1] != n2[1]:
+        # 总分不一样，高分在前
+        return -1 if n1[1] > n2[1] else 1
+    elif n1[2] != n2[2]:
+        # 总分一样，语文成绩高的在钱
+        return -1 if n1[2] > n2[2] else 1
+    else:
+        # 都一样的话，学号小的在前面
+        return 1 if n1[0] > n2[0] else 1
+
+n = int(input())
+scores = []
+for i in range(n):
+    score = list(map(int, input().split()))
+    # 学号、总分、语、数、英
+    scores.append([i+1, sum(score)] + score)
+
+scores.sort(key=functools.cmp_to_key(cmp))
+# scores = sorted(scores, key=functools.cmp_to_key(cmp))
+    
+
+for i in range(5):
+    print(scores[i][0], scores[i][1])
+```
