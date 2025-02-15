@@ -1,5 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 15 Feb 2025 03:35:38 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>Win32DiskImager-U盘写入工具</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Win32DiskImager-U-pan-xie-ru-gong-ju.html</link><description>主要功能是来写Linux系统等img文件到SD和USB卡中
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sat, 15 Feb 2025 03:44:02 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>很久之前（只是记录保存下）——搭建个人网站</title><link>https://Carolynhomes.github.io/Carolynhomes/post/hen-jiu-zhi-qian-%EF%BC%88-zhi-shi-ji-lu-bao-cun-xia-%EF%BC%89%E2%80%94%E2%80%94-da-jian-ge-ren-wang-zhan.html</link><description>## 参考教程
+
+1. [使用Hexo从0到1搭建个人博客详细教程（超详细，超简单)](https://developer.aliyun.com/article/1218122)
+2. Hexo文档
+3. [Butterfly](https://butterfly.js.org/)
+4. [hexo + typora 图片插入解决办法 ](https://www.cnblogs.com/himeka/p/16306906.html)
+
+## 碰到的问题
+
+### ★★★★★将更改的内容同步到网页
+
+&gt; hexo c &amp;&amp; hexo g &amp;&amp; hexo d
+
+### 新建文章
+
+&gt; hexo new 文章名
+
+### 运行`npm install -g hexo-cli`时显示 'nmp' 不是内部或外部命令，也不是可运行的程序
+
+- 解决方案：[[点击这里](https://www.cnblogs.com/ldq678/p/10291824.html)](https://www.cnblogs.com/ldq678/p/10291824.html)
+
+### npm install 一直卡在 idealTree:node_global: sill idealTree buildDeps
+
+- 解决方案:[[点击这里](https://blog.csdn.net/m0_65085680/article/details/136558403)](https://blog.csdn.net/m0_65085680/article/details/136558403)
+
+### 在使用 hexo init 的时候出现下面这样的情况
+
+![Image](https://github.com/user-attachments/assets/f4152ac4-9ed6-473b-95ce-b255ded7f7e2)
+
+- 解决方案：[点击这里](https://blog.csdn.net/qq_59039063/article/details/132459418)
+
+    如果中途一直卡在 idealTree:node_global: sill idealTree buildDeps
+
+- 解决方案：[点击这里](https://blog.csdn.net/m0_71645665/article/details/135972210?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-135972210-blog-135844440.235^v43^pc_blog_bottom_relevance_base6&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3)
+
+### git 如何管理员权限运行
+
+- 解决方案: [点击这里](https://blog.csdn.net/weixin_46386699/article/details/130871420)
+
+## 知识点
+
+- `hexo x`: c-清除之前的；g-生成一下；s-推到本地；d-推到git
+-。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/hen-jiu-zhi-qian-%EF%BC%88-zhi-shi-ji-lu-bao-cun-xia-%EF%BC%89%E2%80%94%E2%80%94-da-jian-ge-ren-wang-zhan.html</guid><pubDate>Sat, 15 Feb 2025 03:43:41 +0000</pubDate></item><item><title>Win32DiskImager-U盘写入工具</title><link>https://Carolynhomes.github.io/Carolynhomes/post/Win32DiskImager-U-pan-xie-ru-gong-ju.html</link><description>主要功能是来写Linux系统等img文件到SD和USB卡中
 
 官网：https://win32diskimager.org/。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/Win32DiskImager-U-pan-xie-ru-gong-ju.html</guid><pubDate>Sat, 15 Feb 2025 03:35:07 +0000</pubDate></item><item><title>WizTree-查看磁盘中各部分所占内存的软件</title><link>https://Carolynhomes.github.io/Carolynhomes/post/WizTree--cha-kan-ci-pan-zhong-ge-bu-fen-suo-zhan-nei-cun-de-ruan-jian.html</link><description>WizTree: https://diskanalyzer.com/
 
