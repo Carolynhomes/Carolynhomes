@@ -7,20 +7,36 @@
     - `key`：可选参数，用于指定一个函数，该函数接受一个元素作为参数，并返回一个用于排序的键。默认值为 `None`，表示直接比较元素本身。
     - `reverse`：可选参数，布尔值。如果设置为 `True`，则按降序排序；默认值为 `False`，表示按升序排序。
 - **示例代码**：
+#### 在普通列表中的应用
 ```python
-numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+# 创建一个普通列表
+numbers = [5, 2, 9, 1, 5, 6]
+
+# 使用 sort() 方法进行升序排序
 numbers.sort()
-print(numbers)  # 输出: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+print("升序排序后的列表:", numbers)
 
-# 使用 key 参数按字符串长度排序
-words = ["apple", "banana", "cherry", "date"]
-words.sort(key=len)
-print(words)  # 输出: ['date', 'apple', 'cherry', 'banana']
-
-# 降序排序
-numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+# 如果需要降序排序，可以使用 sort(reverse=True)
 numbers.sort(reverse=True)
-print(numbers)  # 输出: [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1]
+print("降序排序后的列表:", numbers)
+```
+#### 在多维列表中的应用
+```python
+# 创建一个二维列表
+people = [
+    ["Alice", 30],
+    ["Bob", 25],
+    ["Charlie", 35],
+    ["David", 20]
+]
+
+# 根据年龄（即子列表的第二个元素）进行排序
+people.sort(key=lambda person: person[1])
+print("根据年龄升序排序后的列表:", people)
+
+# 如果需要根据年龄降序排序
+people.sort(key=lambda person: person[1], reverse=True)
+print("根据年龄降序排序后的列表:", people)
 ```
 
 ### 2. `sorted` 方法

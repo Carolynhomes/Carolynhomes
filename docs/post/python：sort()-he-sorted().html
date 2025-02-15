@@ -96,19 +96,33 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </li>
 <li><strong>示例代码</strong>：</li>
 </ul>
-<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-s1">numbers</span> <span class="pl-c1">=</span> [<span class="pl-c1">3</span>, <span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">1</span>, <span class="pl-c1">5</span>, <span class="pl-c1">9</span>, <span class="pl-c1">2</span>, <span class="pl-c1">6</span>, <span class="pl-c1">5</span>, <span class="pl-c1">3</span>, <span class="pl-c1">5</span>]
+<h4>在普通列表中的应用</h4>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 创建一个普通列表</span>
+<span class="pl-s1">numbers</span> <span class="pl-c1">=</span> [<span class="pl-c1">5</span>, <span class="pl-c1">2</span>, <span class="pl-c1">9</span>, <span class="pl-c1">1</span>, <span class="pl-c1">5</span>, <span class="pl-c1">6</span>]
+
+<span class="pl-c"># 使用 sort() 方法进行升序排序</span>
 <span class="pl-s1">numbers</span>.<span class="pl-c1">sort</span>()
-<span class="pl-en">print</span>(<span class="pl-s1">numbers</span>)  <span class="pl-c"># 输出: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]</span>
+<span class="pl-en">print</span>(<span class="pl-s">"升序排序后的列表:"</span>, <span class="pl-s1">numbers</span>)
 
-<span class="pl-c"># 使用 key 参数按字符串长度排序</span>
-<span class="pl-s1">words</span> <span class="pl-c1">=</span> [<span class="pl-s">"apple"</span>, <span class="pl-s">"banana"</span>, <span class="pl-s">"cherry"</span>, <span class="pl-s">"date"</span>]
-<span class="pl-s1">words</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">key</span><span class="pl-c1">=</span><span class="pl-s1">len</span>)
-<span class="pl-en">print</span>(<span class="pl-s1">words</span>)  <span class="pl-c"># 输出: ['date', 'apple', 'cherry', 'banana']</span>
-
-<span class="pl-c"># 降序排序</span>
-<span class="pl-s1">numbers</span> <span class="pl-c1">=</span> [<span class="pl-c1">3</span>, <span class="pl-c1">1</span>, <span class="pl-c1">4</span>, <span class="pl-c1">1</span>, <span class="pl-c1">5</span>, <span class="pl-c1">9</span>, <span class="pl-c1">2</span>, <span class="pl-c1">6</span>, <span class="pl-c1">5</span>, <span class="pl-c1">3</span>, <span class="pl-c1">5</span>]
+<span class="pl-c"># 如果需要降序排序，可以使用 sort(reverse=True)</span>
 <span class="pl-s1">numbers</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">reverse</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)
-<span class="pl-en">print</span>(<span class="pl-s1">numbers</span>)  <span class="pl-c"># 输出: [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1]</span></pre></div>
+<span class="pl-en">print</span>(<span class="pl-s">"降序排序后的列表:"</span>, <span class="pl-s1">numbers</span>)</pre></div>
+<h4>在多维列表中的应用</h4>
+<div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-c"># 创建一个二维列表</span>
+<span class="pl-s1">people</span> <span class="pl-c1">=</span> [
+    [<span class="pl-s">"Alice"</span>, <span class="pl-c1">30</span>],
+    [<span class="pl-s">"Bob"</span>, <span class="pl-c1">25</span>],
+    [<span class="pl-s">"Charlie"</span>, <span class="pl-c1">35</span>],
+    [<span class="pl-s">"David"</span>, <span class="pl-c1">20</span>]
+]
+
+<span class="pl-c"># 根据年龄（即子列表的第二个元素）进行排序</span>
+<span class="pl-s1">people</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">key</span><span class="pl-c1">=</span><span class="pl-k">lambda</span> <span class="pl-s1">person</span>: <span class="pl-s1">person</span>[<span class="pl-c1">1</span>])
+<span class="pl-en">print</span>(<span class="pl-s">"根据年龄升序排序后的列表:"</span>, <span class="pl-s1">people</span>)
+
+<span class="pl-c"># 如果需要根据年龄降序排序</span>
+<span class="pl-s1">people</span>.<span class="pl-c1">sort</span>(<span class="pl-s1">key</span><span class="pl-c1">=</span><span class="pl-k">lambda</span> <span class="pl-s1">person</span>: <span class="pl-s1">person</span>[<span class="pl-c1">1</span>], <span class="pl-s1">reverse</span><span class="pl-c1">=</span><span class="pl-c1">True</span>)
+<span class="pl-en">print</span>(<span class="pl-s">"根据年龄降序排序后的列表:"</span>, <span class="pl-s1">people</span>)</pre></div>
 <h3>2. <code class="notranslate">sorted</code> 方法</h3>
 <ul>
 <li><strong>所属对象</strong>：<code class="notranslate">sorted</code> 是 Python 的内置函数，可以对任何可迭代对象（如列表、元组、字符串、集合等）进行排序。</li>
