@@ -1,5 +1,206 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 17 Feb 2025 06:18:01 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2025.2.17</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025.2.17.html</link><description>今后不吃外卖了，少吃汉堡之类的了，少喝奶茶之类的，一周最多一次 好吧
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 17 Feb 2025 10:21:50 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>前缀和</title><link>https://Carolynhomes.github.io/Carolynhomes/post/qian-zhui-he.html</link><description># 前缀和概念
+
+![Image](https://github.com/user-attachments/assets/4a214a37-1c52-4032-a834-71957e36ff9a)
+
+# 前缀和性质
+
+![Image](https://github.com/user-attachments/assets/4275db51-81c7-467d-9e86-6c6247273319)
+
+```python
+# 求a的前缀和
+def  get_presum(a):
+    # 下标从0开始
+    n = len(a)
+    sum = [0] * n
+    sum[0] = a[0]
+    for i in range(1, n):
+        sum[i] = sum[i-1] + a[i]
+    return sum
+
+# 快速求区间a[l]+...+a[r]之和
+def get_sum(sum, l, r):
+    if l == 0:
+        return sum[r]
+    else:
+        return sum[r] - sum[l-1]
+
+a = [1, 2, 3, 4, 5]
+print(a)
+# print(get_presum(a))
+
+sum = get_presum(a)
+print(get_sum(sum, 1, 4))
+```
+
+- 第二种求前缀和方法
+
+```python
+from itertools import accumulate
+
+def get_presum(a):
+    presum = list(accumulate(a))
+    return presum
+```
+
+# 题目
+
+## 蓝桥 3382
+
+```python
+from itertools import accumulate
+
+MOD = 1000000007
+
+def get_presum(a):
+    '''计算前缀和'''
+    pre_sum = list(accumulate(a))
+    res = [data % MOD for data in pre_sum]
+    return res
+
+def get_section_sum(pre_sum, l, r):
+    '''计算区间长度内所有元素的和'''
+    if l == 0:
+        return pre_sum[r]
+    else:
+        return (pre_sum[r] - pre_sum[l-1] + MOD) % MOD
+
+
+n, m = map(int, input().split())
+datas = list(map(int, input().split()))
+
+# 生成所有元素 k次方之后的列表  
+pre_sum_k = []
+for i in range(1, 6):
+    temp_sum = [x ** i for x in datas]
+    pre_sum_k.append(get_presum(temp_sum))
+
+for _ in range(m):
+    l, r, k = map(int, input().split())
+    ans = get_section_sum(pre_sum_k[k-1], l-1, r-1)
+    print(ans)
+
+```
+
+## 蓝桥 3419	
+
+```python
+# 自己写的，没有听课，啥也没干，就自己写的, oh yeah
+import os
+import sys
+
+# 请在此输入您的代码
+from itertools import accumulate
+
+def get_presum(a):
+    pre_sum = list(accumulate(a))
+    return pre_sum
+
+def get_section_sum(pre_sum, l, r):
+    if l == 0:
+        return pre_sum[r]
+    else:
+        return pre_sum[r] - pre_sum[l-1]
+
+target = input()
+datas = []
+for char in target:
+    if char == 'L':
+        datas.append(-1)
+    else:
+        datas.append(1)
+
+pre_sum = get_presum(datas)
+max_ans = -1
+for i in range(0, len(target)-1):
+    for j in range(i+1, len(target)):
+        if get_section_sum(pre_sum, i, j) == 0:
+            ans = j - i + 1
+            if ans &gt; max_ans:
+                max_ans = ans
+                
+print(max_ans)
+```
+
+# 二维前缀和
+
+![Image](https://github.com/user-attachments/assets/e1c81ff4-2b96-4d9c-a205-538bc91c8b42)
+
+![Image](https://github.com/user-attachments/assets/d1df0764-7cc2-4398-a337-f5224521d92a)
+
+```python
+# 输出一个二维 list
+def output(a, n):
+    for i in range(1, n+1):
+        print(' '.join(map(str, a[i][1:])))
+
+n, m = map(int, input().split())
+
+# 下标从1开始
+a = [[0] * (m + 1) for i in range(n + 1)]
+sum = [[0] * (m + 1) for i in range(n + 1)]
+
+# 输入一个二维数组
+for i in range(1, n + 1):
+    a[i] = [0] + list(map(int, input().split()))
+output(a, n)
+
+print('-' * 20)
+
+for i in range(1, n + 1):
+    for j in range(1, m + 1):
+        sum[i][j] = sum[i-1][j] + sum[i][j-1] - sum[i-1][j-1] + a[i][j]
+output(sum, n)
+```
+
+# 二维前缀和作用
+
+- 求矩阵里子矩阵的和
+
+![Image](https://github.com/user-attachments/assets/b1d3dd1b-8cf0-40cc-b6a3-7ee29bee8ac6)
+
+# 题目
+
+## 蓝桥 2109
+
+&gt; 只能过 70% ，用pypy3提交，因为这个循环更快一点
+&gt;
+&gt; 最后数据量是500的时候，超时了，之后补充
+
+```python
+import os
+import sys
+
+# 请在此输入您的代码
+n, m, k = map(int, input().split())
+datas = [[0] * (m + 1) for _ in range(n + 1)]
+for i in range(1, n + 1):
+    datas[i] = [0] + list(map(int, input().split()))
+
+res = [[0] * (m + 1) for _ in range(n + 1)]
+for i in range(1, n + 1):
+    for j in range(1, m + 1):
+        # 获得二维列表的前缀和
+        res[i][j] = res[i-1][j] + res[i][j-1] - res[i-1][j-1] + datas[i][j]
+
+
+def get_sum(res, x1, y1, x2, y2):
+    '''获得所有的子矩阵的和'''
+    return res[x2][y2] - res[x1-1][y2] - res[x2][y1-1] + res[x1-1][y1-1]
+
+ans = 0
+# 遍历左上角和右下角
+for x1 in range(1, n + 1):
+    for y1 in range(1, m + 1):
+        for x2 in range(x1, n + 1):
+            for y2 in range(y1, m + 1):
+                if get_sum(res, x1, y1, x2, y2) &lt;= k:
+                    ans += 1
+
+print(ans)
+```
+
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/qian-zhui-he.html</guid><pubDate>Mon, 17 Feb 2025 10:21:24 +0000</pubDate></item><item><title>2025.2.17</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025.2.17.html</link><description>今后不吃外卖了，少吃汉堡之类的了，少喝奶茶之类的，一周最多一次 好吧
 
 多运动 少久坐  多学习哦 U•ェ•*U。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/2025.2.17.html</guid><pubDate>Mon, 17 Feb 2025 06:17:40 +0000</pubDate></item><item><title>递归</title><link>https://Carolynhomes.github.io/Carolynhomes/post/di-gui.html</link><description># 递归
 
