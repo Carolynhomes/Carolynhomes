@@ -189,7 +189,9 @@ def check(x):
     # 每行元素都是 i  2i 3i  ... 
     cnt = 0
     for i in range(1, n + 1):
+        # 每行最多只有m个元素
         cnt += min(m, x // i)
+    # 因为会有重复的元素，所以至少是k才可以
     return cnt >= k
 
 ans = 0
@@ -390,7 +392,9 @@ def check(x):
     # 每行元素都是 i  2i 3i  ... 
     cnt = 0
     for i in range(1, n + 1):
+        # 每行最多只有m个元素
         cnt += min(m, x // i)
+    # 因为会有重复的元素，所以至少是k才可以
     return cnt >= k
 
 ans = 0
@@ -630,7 +634,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-c"># 每行元素都是 i  2i 3i  ... </span>
     <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
     <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>):
+        <span class="pl-c"># 每行最多只有m个元素</span>
         <span class="pl-s1">cnt</span> <span class="pl-c1">+=</span> <span class="pl-en">min</span>(<span class="pl-s1">m</span>, <span class="pl-s1">x</span> <span class="pl-c1">//</span> <span class="pl-s1">i</span>)
+    <span class="pl-c"># 因为会有重复的元素，所以至少是k才可以</span>
     <span class="pl-k">return</span> <span class="pl-s1">cnt</span> <span class="pl-c1">&gt;=</span> <span class="pl-s1">k</span>
 
 <span class="pl-s1">ans</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>

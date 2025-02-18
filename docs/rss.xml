@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 09:20:47 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2025年2月18日16点12分</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025-nian-2-yue-18-ri-16-dian-12-fen.html</link><description>醉了醉了，刚挂失，然后补办了一个校园卡，结果刚刚在椅子上乱窜的时候，突然发现在地上，啊啊啊啊啊，花了10块钱 淦啊
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 09:23:38 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2025年2月18日16点12分</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025-nian-2-yue-18-ri-16-dian-12-fen.html</link><description>醉了醉了，刚挂失，然后补办了一个校园卡，结果刚刚在椅子上乱窜的时候，突然发现在地上，啊啊啊啊啊，花了10块钱 淦啊
 
 离谱啊，这卡怎么能正好掉在椅子踏板的正下方，我还移动了一下椅子看了看，都没发现！！！！/(ㄒoㄒ)/~~
 
@@ -2479,7 +2479,9 @@ def check(x):
     # 每行元素都是 i  2i 3i  ... 
     cnt = 0
     for i in range(1, n + 1):
+        # 每行最多只有m个元素
         cnt += min(m, x // i)
+    # 因为会有重复的元素，所以至少是k才可以
     return cnt &gt;= k
 
 ans = 0
