@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 08:14:12 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2025年2月18日16点12分</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025-nian-2-yue-18-ri-16-dian-12-fen.html</link><description>醉了醉了，刚挂失，然后补办了一个校园卡，结果刚刚在椅子上乱窜的时候，突然发现在地上，啊啊啊啊啊，花了10块钱 淦啊
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 08:37:35 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>2025年2月18日16点12分</title><link>https://Carolynhomes.github.io/Carolynhomes/post/2025-nian-2-yue-18-ri-16-dian-12-fen.html</link><description>醉了醉了，刚挂失，然后补办了一个校园卡，结果刚刚在椅子上乱窜的时候，突然发现在地上，啊啊啊啊啊，花了10块钱 淦啊
 
 离谱啊，这卡怎么能正好掉在椅子踏板的正下方，我还移动了一下椅子看了看，都没发现！！！！/(ㄒoㄒ)/~~
 
@@ -2651,124 +2651,126 @@ print(ten_to_k(16, 31))&#13;
 挂梯子的时候：https://paste.org.cn/&#13;
 &gt; [!tip]&#13;
 &gt; 下面这个证书过期了，可能会报不安全，无碍~&#13;
-。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/dai-ma-zhan-tie.html</guid><pubDate>Tue, 26 Nov 2024 06:47:44 +0000</pubDate></item><item><title>双指针</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-zhi-zhen.html</link><description>双指针：在区间操作时，利用两个下标同时遍历，进行高效操作&#13;
-&#13;
-`双指针利用性质可以把O(n²)时间降低到O(n)`&#13;
-&#13;
-## 反向扫描&#13;
-&#13;
-**两个指针，反向遍历**&#13;
-&#13;
-一般用于**有序数组** 或者 **字符串类**的问题&#13;
-&#13;
-### 例题&#13;
-&#13;
-- 回文字符串 蓝桥1371&#13;
-&#13;
-```python&#13;
-s = input()&#13;
-l, r = 0, len(s) - 1&#13;
-flag = 'Y'&#13;
-while l &lt;= r:&#13;
-    if s[l] == s[r]:&#13;
-        l += 1&#13;
-        r -= 1&#13;
-    else:&#13;
-        flag = 'N'&#13;
-        break&#13;
-&#13;
-print(flag) &#13;
-```&#13;
-&#13;
-```python&#13;
-s = input()&#13;
-if s == s[::-1]:&#13;
-    print('Y')&#13;
-else:&#13;
-    print('N')&#13;
-```&#13;
-&#13;
-## 同向扫描--滑动窗口&#13;
-&#13;
-始终维护一个【left，right】的区间&#13;
-&#13;
-维护`[left,right]`区间中的信息：**区间和、各个元素个数等**&#13;
-&#13;
-- 左端点往右移动表示`删除元素`&#13;
-&#13;
-- 右端点往右移动表示`增加元素`&#13;
-&#13;
-当移动到尾部则停止，或满足特殊条件时停止&#13;
-&#13;
-### 例题&#13;
-&#13;
-- 蓝桥 1372&#13;
-&#13;
-```python&#13;
-n, S = map(int, input().split())&#13;
-a = list(map(int, input().split()))&#13;
-# 找最小区间，满足区间之和 &gt;=S&#13;
-min_len = n + 1&#13;
-# [left, right)&#13;
-left, right = 0, 0&#13;
-&#13;
-# tot表示滑动窗口[left, right)之间的区间和&#13;
-tot = 0&#13;
-while left &lt; n:&#13;
-    # 不断扩展右端点，直至区间之和 &gt;= S&#13;
-    while right &lt; n and tot &lt; S:&#13;
-        tot += a[right]&#13;
-        right += 1&#13;
-    &#13;
-    if tot &gt;= S:&#13;
-        min_len = min(min_len, right - left) &#13;
-    &#13;
-    # 左端点往右走一步&#13;
-    tot -= a[left]&#13;
-    left += 1&#13;
-&#13;
-if min_len == n + 1:&#13;
-    min_len = 0&#13;
-&#13;
-print(min_len)&#13;
-```&#13;
-&#13;
-- 蓝桥 1621&#13;
-&#13;
-```python&#13;
-n, m, k = map(int, input().split())&#13;
-a = list(map(int, input().split()))&#13;
-&#13;
-# 找有多少个区间满足：至少k个数字大于等于m&#13;
-ans = 0&#13;
-&#13;
-# [left, right)&#13;
-left, right = 0, 0&#13;
-&#13;
-# cnt 表示滑动窗口[left, right)中大于等于m的元素个数&#13;
-cnt = 0&#13;
-while left &lt; n:&#13;
-    # 不断扩展右端点，直至区间恰好有k个元素大于等于m&#13;
-    while right &lt; n and cnt &lt; k:&#13;
-        if a[right] &gt;= m:&#13;
-            cnt += 1&#13;
-        right += 1&#13;
-    &#13;
-    if cnt &gt;= k:&#13;
-        # [left, righ-1]&#13;
-        #...&#13;
-        # [left, n-1]&#13;
-        # n-1-(right-1)+1 = n - right + 1&#13;
-        ans += n - right + 1&#13;
-    &#13;
-    # 左端点往右走一步&#13;
-    if a[left] &gt;= m:&#13;
-        cnt -= 1&#13;
-    left += 1&#13;
-&#13;
-print(ans)&#13;
-```&#13;
-&#13;
+。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/dai-ma-zhan-tie.html</guid><pubDate>Tue, 26 Nov 2024 06:47:44 +0000</pubDate></item><item><title>双指针</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-zhi-zhen.html</link><description>双指针：在区间操作时，利用两个下标同时遍历，进行高效操作
+
+`双指针利用性质可以把O(n²)时间降低到O(n)`
+
+![Image](https://github.com/user-attachments/assets/d853fdeb-5b57-4411-a9f5-292b1554cc66)
+
+## 反向扫描
+
+**两个指针，反向遍历**
+
+一般用于**有序数组** 或者 **字符串类**的问题
+
+### 例题
+
+- 回文字符串 蓝桥1371
+
+```python
+s = input()
+l, r = 0, len(s) - 1
+flag = 'Y'
+while l &lt;= r:
+    if s[l] == s[r]:
+        l += 1
+        r -= 1
+    else:
+        flag = 'N'
+        break
+
+print(flag) 
+```
+
+```python
+s = input()
+if s == s[::-1]:
+    print('Y')
+else:
+    print('N')
+```
+
+## 同向扫描--滑动窗口
+
+始终维护一个【left，right】的区间
+
+维护`[left,right]`区间中的信息：**区间和、各个元素个数等**
+
+- 左端点往右移动表示`删除元素`
+
+- 右端点往右移动表示`增加元素`
+
+当移动到尾部则停止，或满足特殊条件时停止
+
+### 例题
+
+- 蓝桥 1372
+
+```python
+n, S = map(int, input().split())
+a = list(map(int, input().split()))
+# 找最小区间，满足区间之和 &gt;=S
+min_len = n + 1
+# [left, right)
+left, right = 0, 0
+
+# tot表示滑动窗口[left, right)之间的区间和
+tot = 0
+while left &lt; n:
+    # 不断扩展右端点，直至区间之和 &gt;= S
+    while right &lt; n and tot &lt; S:
+        tot += a[right]
+        right += 1
+    
+    if tot &gt;= S:
+        min_len = min(min_len, right - left) 
+    
+    # 左端点往右走一步
+    tot -= a[left]
+    left += 1
+
+if min_len == n + 1:
+    min_len = 0
+
+print(min_len)
+```
+
+- 蓝桥 1621
+
+```python
+n, m, k = map(int, input().split())
+a = list(map(int, input().split()))
+
+# 找有多少个区间满足：至少k个数字大于等于m
+ans = 0
+
+# [left, right)
+left, right = 0, 0
+
+# cnt 表示滑动窗口[left, right)中大于等于m的元素个数
+cnt = 0
+while left &lt; n:
+    # 不断扩展右端点，直至区间恰好有k个元素大于等于m
+    while right &lt; n and cnt &lt; k:
+        if a[right] &gt;= m:
+            cnt += 1
+        right += 1
+    
+    if cnt &gt;= k:
+        # [left, righ-1]
+        #...
+        # [left, n-1]
+        # n-1-(right-1)+1 = n - right + 1
+        ans += n - right + 1
+    
+    # 左端点往右走一步
+    if a[left] &gt;= m:
+        cnt -= 1
+    left += 1
+
+print(ans)
+```
+
 。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shuang-zhi-zhen.html</guid><pubDate>Mon, 25 Nov 2024 12:58:34 +0000</pubDate></item><item><title>贪心</title><link>https://Carolynhomes.github.io/Carolynhomes/post/tan-xin.html</link><description>## 贪心概念&#13;
 &#13;
 贪心：把整体问题分解成多个步骤，在每个步骤都选取当前步骤的最优方案，直到所有步骤结束，每个步骤不会影响后续步骤&#13;
