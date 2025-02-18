@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 01:32:15 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>上应大校园卡补办流程</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shang-ying-da-xiao-yuan-qia-bu-ban-liu-cheng.html</link><description>![Image](https://github.com/user-attachments/assets/4eaf72a3-e015-46f5-a2e5-70119b72d1be)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shang-ying-da-xiao-yuan-qia-bu-ban-liu-cheng.html</guid><pubDate>Tue, 18 Feb 2025 01:31:54 +0000</pubDate></item><item><title>20252月18日06:10:16</title><link>https://Carolynhomes.github.io/Carolynhomes/post/20252-yue-18-ri-06-10-16.html</link><description>&gt; 看到微信视频号里面有一个视频的评论，很有感触，想纪念一下
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Tue, 18 Feb 2025 06:21:40 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>离散化</title><link>https://Carolynhomes.github.io/Carolynhomes/post/li-san-hua.html</link><description># 离散化概念
+
+![Image](https://github.com/user-attachments/assets/c37f2359-b84e-4eb5-8190-4eb01c2252b2)
+
+## 离散化的步骤
+
+1. 把a拷贝一份设置为b
+2. 对b排序、去重
+3. 把a中每个元素设置为b数组的下标（二分查找）
+
+# 实现
+
+```python
+from bisect import *
+
+def discrete(a):
+    '''把列表a离散化'''
+    b = list(set(a))  # 这样就去重了
+    b.sort()
+
+    ans = []
+    for i in range(len(a)):
+        # bisect_left()用于在有序序列中查找某个元素应该插入的位置，使得插入后序列仍然保持有序。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/li-san-hua.html</guid><pubDate>Tue, 18 Feb 2025 06:21:14 +0000</pubDate></item><item><title>上应大校园卡补办流程</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shang-ying-da-xiao-yuan-qia-bu-ban-liu-cheng.html</link><description>![Image](https://github.com/user-attachments/assets/4eaf72a3-e015-46f5-a2e5-70119b72d1be)。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/shang-ying-da-xiao-yuan-qia-bu-ban-liu-cheng.html</guid><pubDate>Tue, 18 Feb 2025 01:31:54 +0000</pubDate></item><item><title>20252月18日06:10:16</title><link>https://Carolynhomes.github.io/Carolynhomes/post/20252-yue-18-ri-06-10-16.html</link><description>&gt; 看到微信视频号里面有一个视频的评论，很有感触，想纪念一下
 
 终于明白朝花夕拾是什么意思了，当你三十岁的时候，去买十八岁的东西，去二十岁想去的地方，已经毫无意义。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/20252-yue-18-ri-06-10-16.html</guid><pubDate>Mon, 17 Feb 2025 22:11:24 +0000</pubDate></item><item><title>与云存储安全相关的关键技术方向</title><link>https://Carolynhomes.github.io/Carolynhomes/post/yu-yun-cun-chu-an-quan-xiang-guan-de-guan-jian-ji-shu-fang-xiang.html</link><description>在云存储环境下，为应对不同安全风险发展出的这些关键技术细分方向，各自有着不同的作用：
 
