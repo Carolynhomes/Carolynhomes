@@ -22,11 +22,10 @@
 
 ## 二分法的步骤
 
-1、候选区间**【left,right】**
-2、不断循环，直至区间满足特定条件
-
-​	2.1、计算中点**mid=(left+right)/2**
-​	2.2、判断中点是否合法，根据中点的计算结果调整**【left,right】**
+- 候选区间**【left,right】**
+- 不断循环，直至区间满足特定条件
+    - 计算中点**mid=(left+right)/2**
+    - 判断中点是否合法，根据中点的计算结果调整**【left,right】**
 
 ## 二分法的用途
 
@@ -187,6 +186,7 @@ left, right = 1, n * m
 # 也可以先计算，然后在原始循环中判断是否合法
 def check(x):
     # 求n*m矩阵中有多少个元素小于等于x
+    # 每行元素都是 i  2i 3i  ... 
     cnt = 0
     for i in range(1, n + 1):
         cnt += min(m, x // i)
@@ -223,11 +223,10 @@ print(ans)
 
 ## 二分法的步骤
 
-1、候选区间**【left,right】**
-2、不断循环，直至区间满足特定条件
-
-​	2.1、计算中点**mid=(left+right)/2**
-​	2.2、判断中点是否合法，根据中点的计算结果调整**【left,right】**
+- 候选区间**【left,right】**
+- 不断循环，直至区间满足特定条件
+    - 计算中点**mid=(left+right)/2**
+    - 判断中点是否合法，根据中点的计算结果调整**【left,right】**
 
 ## 二分法的用途
 
@@ -388,6 +387,7 @@ left, right = 1, n * m
 # 也可以先计算，然后在原始循环中判断是否合法
 def check(x):
     # 求n*m矩阵中有多少个元素小于等于x
+    # 每行元素都是 i  2i 3i  ... 
     cnt = 0
     for i in range(1, n + 1):
         cnt += min(m, x // i)
@@ -487,10 +487,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>前提：单调性</p>
 <p>核心：利用单调性调整二分查找的区间</p>
 <h2>二分法的步骤</h2>
-<p>1、候选区间**【left,right】**<br>
-2、不断循环，直至区间满足特定条件</p>
-<p>​	2.1、计算中点<strong>mid=(left+right)/2</strong><br>
-​	2.2、判断中点是否合法，根据中点的计算结果调整**【left,right】**</p>
+<ul>
+<li>候选区间**【left,right】**</li>
+<li>不断循环，直至区间满足特定条件
+<ul>
+<li>计算中点<strong>mid=(left+right)/2</strong></li>
+<li>判断中点是否合法，根据中点的计算结果调整**【left,right】**</li>
+</ul>
+</li>
+</ul>
 <h2>二分法的用途</h2>
 <p>1、查找有序列表a中元素x的下标</p>
 <ul>
@@ -622,6 +627,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c"># 也可以先计算，然后在原始循环中判断是否合法</span>
 <span class="pl-k">def</span> <span class="pl-en">check</span>(<span class="pl-s1">x</span>):
     <span class="pl-c"># 求n*m矩阵中有多少个元素小于等于x</span>
+    <span class="pl-c"># 每行元素都是 i  2i 3i  ... </span>
     <span class="pl-s1">cnt</span> <span class="pl-c1">=</span> <span class="pl-c1">0</span>
     <span class="pl-k">for</span> <span class="pl-s1">i</span> <span class="pl-c1">in</span> <span class="pl-en">range</span>(<span class="pl-c1">1</span>, <span class="pl-s1">n</span> <span class="pl-c1">+</span> <span class="pl-c1">1</span>):
         <span class="pl-s1">cnt</span> <span class="pl-c1">+=</span> <span class="pl-en">min</span>(<span class="pl-s1">m</span>, <span class="pl-s1">x</span> <span class="pl-c1">//</span> <span class="pl-s1">i</span>)
