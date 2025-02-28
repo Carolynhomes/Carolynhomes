@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 28 Feb 2025 08:38:15 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>蓝桥杯打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</link><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:37:49 +0000</pubDate></item><item><title>VX小程序打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</link><description># 2025年2月28日
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 28 Feb 2025 08:38:38 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>蓝桥杯打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</link><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:37:49 +0000</pubDate></item><item><title>VX小程序打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</link><description># 2025年2月28日
 。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:33:30 +0000</pubDate></item><item><title>各种安装教程</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ge-zhong-an-zhuang-jiao-cheng.html</link><description># nodejs
 https://blog.csdn.net/qq_60870118/article/details/129727274
 # Visual Studio
@@ -847,14 +847,19 @@ for i in range(11, 10000):
     if flag == 1:   ans += 10 - int(s[i+1])
 
 print(ans)
-```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</guid><pubDate>Sun, 09 Feb 2025 12:32:41 +0000</pubDate></item><item><title>方向</title><link>https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</link><description>&gt; 不是按重要程度排序的
-# 第一：论文
-
-# 第二：导师项目
-
-# 第三：蓝桥杯
-
-# 第四：五子棋。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</guid><pubDate>Sun, 09 Feb 2025 02:44:09 +0000</pubDate></item><item><title>使用python来处理日期问题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-python-lai-chu-li-ri-qi-wen-ti.html</link><description>```python
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/2141%20-shan.html</guid><pubDate>Sun, 09 Feb 2025 12:32:41 +0000</pubDate></item><item><title>方向</title><link>https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</link><description># 论文 [打卡处]()
+&gt;[!important]
+&gt; 一周两篇论文（卧槽，天黑了，看能不能坚持一下）
+# 技术
+## 1 微信小程序 [打卡处](https://carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html)
+&gt;[!important]
+&gt; 首先是微信小程序，跟着尚硅谷的，好像是完整的，可以跟
+## 2 flask [打卡处]()
+&gt;[!tip]
+&gt; 因为有比较完整的教程，所以跟这个先
+# 蓝桥杯 [打卡处]()
+&gt;[!warning]
+&gt; 最后几周了，且行且珍惜吧，算法还是很重要的，各个地方。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/fang-xiang.html</guid><pubDate>Sun, 09 Feb 2025 02:44:09 +0000</pubDate></item><item><title>使用python来处理日期问题</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shi-yong-python-lai-chu-li-ri-qi-wen-ti.html</link><description>```python
 from datetime import *
 
 
