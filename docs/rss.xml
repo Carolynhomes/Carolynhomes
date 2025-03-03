@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Sun, 02 Mar 2025 15:01:34 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>日常的论文进度</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</link><description># 2025年3月2日
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Mon, 03 Mar 2025 05:33:52 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>日常的论文进度</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</link><description># 2025年3月2日
 正在看一篇《Popularity-based multiple-replica cloud storage integrity auditing for big data》，而且看的是全英文的，没有进行翻译，有可能会看的很慢。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</guid><pubDate>Fri, 28 Feb 2025 08:38:05 +0000</pubDate></item><item><title>蓝桥杯打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</link><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:37:49 +0000</pubDate></item><item><title>VX小程序打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</link><description># 2025年2月28日
 &gt; 已经跟着前三个的教程和视频自己动手操作了，已成
 
@@ -12,7 +12,14 @@
 - 05-小程序模板语法
 - 06-小程序生命周期
 
-# 2025年3月2日。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:33:30 +0000</pubDate></item><item><title>各种安装教程</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ge-zhong-an-zhuang-jiao-cheng.html</link><description># nodejs
+# 2025年3月3日 
+- 07-小程序原生API
+- 08-小程序自定义组件（部分）
+&gt;[!tip]
+&gt; 07的内容的话，我感觉  很难记住，只能回顾下，到时候用到的时候再来使用，现在只能了解一下用法
+&gt; 东西感觉有点多~
+&gt;
+&gt; 08的话只看了一丢丢，07内容还是很多的。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:33:30 +0000</pubDate></item><item><title>各种安装教程</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ge-zhong-an-zhuang-jiao-cheng.html</link><description># nodejs
 https://blog.csdn.net/qq_60870118/article/details/129727274
 # Visual Studio
 https://blog.csdn.net/qq_44859843/article/details/135024973
