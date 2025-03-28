@@ -1,5 +1,95 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 14 Mar 2025 02:34:48 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>解释DeepL翻译限制</title><link>https://Carolynhomes.github.io/Carolynhomes/post/jie-shi-DeepL-fan-yi-xian-zhi.html</link><description>https://blog.csdn.net/u014635210/article/details/129976242。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/jie-shi-DeepL-fan-yi-xian-zhi.html</guid><pubDate>Thu, 06 Mar 2025 09:40:57 +0000</pubDate></item><item><title>日常的论文进度</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</link><description># 2025年3月2日
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 28 Mar 2025 04:28:56 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>队列</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dui-lie.html</link><description># 队列  Queue
+```python
+from queue import Queue
+
+q = Queue(maxsize=3)  # 最大容量为3
+q.put(1)  # 入队
+q.put(2)
+
+print(q.get())  # 出队  FIFO
+print(q.get())
+
+print(q.qsize())  # 当前队列大小  ---&gt; 0，因为 已经出去了2个元素了
+
+print(q.empty())  # 是否为空---&gt; True
+
+```
+# 双端队列  deque
+```python
+from collections import deque
+
+q = deque()
+
+'''
+  --------------
+尾  2 1      0       首
+  --------------
+'''
+q.append(1)  # 队尾入队
+q.append(2)
+
+q.appendleft(0)  # 队首入队
+
+print(q.popleft())  # 队首出队 ---&gt; 0
+print(q.pop())  # 队尾出队  ---&gt; 2
+```
+
+# 最小堆
+```python
+# 通常用堆 heap 来实现
+# 最小堆
+import heapq
+
+heap = []
+heapq.heappush(heap, 3)  # 插入元素
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 2)
+
+print(heapq.heappop(heap))  # 弹出最小值 ---&gt; 1
+print(heap)  # 剩余堆 ---&gt; [2, 3]
+```
+
+# 最大堆
+```python
+# 最大堆 负数模拟
+import heapq
+
+max_heap = []
+heapq.heappush(max_heap, -3)  # 存入负数
+heapq.heappush(max_heap, -1)
+heapq.heappush(max_heap, -2)
+
+print(-heapq.heappop(max_heap))  # 弹出最大值  3
+print(max_heap)  # [-2, -1]
+```
+
+# 优先队列  heapq模拟
+```python
+# 优先队列   带优先级
+import heapq  # heapq 模块仅提供了  最小堆 的实现
+
+priority_queue = []
+heapq.heappush(priority_queue, (2, 'Task 2'))  # (优先级，数据)
+heapq.heappush(priority_queue, (1, 'Task 1'))
+heapq.heappush(priority_queue, (3, 'Task 3'))
+
+print(heapq.heappop(priority_queue))  # 弹出优先级最高的  (1, 'Task 1')
+```
+
+# 优先队列 PriorityQueue
+```python
+from queue import PriorityQueue
+
+priority_queue = PriorityQueue()
+priority_queue.put((2, 'Task 2'))
+priority_queue.put((1, 'Task 1'))
+priority_queue.put((3, 'Task 3'))
+
+print(priority_queue.get())  # (1, 'Task 1')
+print(priority_queue.qsize())  # 剩余任务数   2
+
+```。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/dui-lie.html</guid><pubDate>Fri, 28 Mar 2025 04:28:34 +0000</pubDate></item><item><title>解释DeepL翻译限制</title><link>https://Carolynhomes.github.io/Carolynhomes/post/jie-shi-DeepL-fan-yi-xian-zhi.html</link><description>https://blog.csdn.net/u014635210/article/details/129976242。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/jie-shi-DeepL-fan-yi-xian-zhi.html</guid><pubDate>Thu, 06 Mar 2025 09:40:57 +0000</pubDate></item><item><title>日常的论文进度</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</link><description># 2025年3月2日
 正在看一篇《Popularity-based multiple-replica cloud storage integrity auditing for big data》，而且看的是全英文的，没有进行翻译，有可能会看的很慢。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/ri-chang-de-lun-wen-jin-du.html</guid><pubDate>Fri, 28 Feb 2025 08:38:05 +0000</pubDate></item><item><title>蓝桥杯打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</link><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/lan-qiao-bei-da-qia-chu.html</guid><pubDate>Fri, 28 Feb 2025 08:37:49 +0000</pubDate></item><item><title>VX小程序打卡处</title><link>https://Carolynhomes.github.io/Carolynhomes/post/VX-xiao-cheng-xu-da-qia-chu.html</link><description># 2025年2月28日
 &gt; 已经跟着前三个的教程和视频自己动手操作了，已成
 
