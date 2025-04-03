@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Fri, 28 Mar 2025 04:28:56 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>队列</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dui-lie.html</link><description># 队列  Queue
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 03 Apr 2025 02:48:33 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>哈希碰撞</title><link>https://Carolynhomes.github.io/Carolynhomes/post/ha-xi-peng-zhuang.html</link><description># 哈希碰撞（Hash Collision）
+
+## 定义
+
+哈希碰撞是指两个不同的输入数据，通过哈希函数后得到了相同的哈希值（也称哈希摘要）。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/ha-xi-peng-zhuang.html</guid><pubDate>Thu, 03 Apr 2025 02:48:14 +0000</pubDate></item><item><title>队列</title><link>https://Carolynhomes.github.io/Carolynhomes/post/dui-lie.html</link><description># 队列  Queue
 ```python
 from queue import Queue
 
