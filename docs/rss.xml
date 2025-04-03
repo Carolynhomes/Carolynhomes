@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 03 Apr 2025 02:49:48 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>双花攻击</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-hua-gong-ji.html</link><description>## 双花攻击（Double Spending）
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>牧天白衣</title><link>https://Carolynhomes.github.io/Carolynhomes</link><description>哎，今天又是美好的一天哟！！！！！</description><copyright>牧天白衣</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Carolynhomes.github.io/Carolynhomes</link></image><lastBuildDate>Thu, 03 Apr 2025 02:56:21 +0000</lastBuildDate><managingEditor>牧天白衣</managingEditor><ttl>60</ttl><webMaster>牧天白衣</webMaster><item><title>共识算法</title><link>https://Carolynhomes.github.io/Carolynhomes/post/gong-shi-suan-fa.html</link><description># 共识算法
+
+&gt; [!tip]
+&gt;
+&gt; 共识算法在区块链分布式系统中扮演着至关重要的角色，其主要目的是确保网络中的所有节点就账本状态达成一致，从而维护系统的一致性和可靠性。</description><guid isPermaLink="true">https://Carolynhomes.github.io/Carolynhomes/post/gong-shi-suan-fa.html</guid><pubDate>Thu, 03 Apr 2025 02:55:49 +0000</pubDate></item><item><title>双花攻击</title><link>https://Carolynhomes.github.io/Carolynhomes/post/shuang-hua-gong-ji.html</link><description>## 双花攻击（Double Spending）
 
 **定义**：
 
